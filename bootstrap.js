@@ -1,7 +1,7 @@
 
 /* Language: ?lang= in the URL → Previous selection → Browser language, in that order. Change it using the 🌐 button on the lock screen */
 (function(){
- window.LANGS=[['ko','한국어'],['en','English'],['ja','日本語'],['zh','简体中文'],['vi','Tiếng Việt'],['th','ภาษาไทย'],['id','Bahasa Indonesia']];
+ window.LANGS=[['en','English'],['ko','한국어'],['ja','日本語'],['zh','简体中文'],['th','ภาษาไทย']];
  const ok=l=>LANGS.some(x=>x[0]===l);let sel=null;
  try{sel=new URLSearchParams(location.search).get('lang')}catch(e){}
  if(!ok(sel)){try{sel=localStorage.getItem('wb_lang')}catch(e){}}

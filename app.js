@@ -1,24 +1,23 @@
 'use strict';
 /* ============================================================
-   원빈의 iPhone — UI / 모션 / 게임 진행
-   (대사·기록 데이터는 data.js)
+   KAISOO NEVER DIE
    ============================================================ */
 const $=s=>document.querySelector(s);
 const SCREEN=$('#screen'),APP=$('#appL'),HOME=$('#homeL'),LOCK=$('#lockL'),OV=$('#ov'),PLAYER=$('#player');
 const base=Date.now();let timeOffset=0;
 const elapsed=()=>(Date.now()-base)/1000+timeOffset;
 
-/* ---------- 상태 ---------- */
+/* ---------- STATUS ---------- */
 let view='lock',curDark=true,SC=1,lastRect=null,animTok=0,firstOpen=true,pendingOpen=null;
 let pincode='',noteId=0,selectedDay=17,calMonth=10,chatId='이소희',videoIndex=0,mailId=0,missOnly=false,safSearch=false;
-let unread={서연:3,지우:3,유리:3,지원:3,'체육학부 공지':3};
-let soheeUnread=0,todayChat=[],incoming=0,replyStage=0,lineIdx=0,typing=false,pendingText='',replyBusy=false;
+let unread={서연:2,지우:3,유리:3,지원:3,'체육학부 공지':3}; //kakao unread; same names for all language
+let ksooUnread=0,todayChat=[],incoming=0,replyStage=0,lineIdx=0,typing=false,pendingText='',replyBusy=false;
 let alarmStates=Array(7).fill(true),readMail=new Set(),nowSong=-1,flashOn=false;
 let callState='',phoneDone=false,declined=0,callStart=0,callPrev='',nextCallAt=0,ringIv=null,ringTo=null,capIdx=-1,extraCalls=[];
 let askedCall=false,callName='이소희',callTimers=[],busySent=false,declineSent=false,rbIv=null;
 let lockNotes=[{title:t('bdayTitle'),body:fmtMD(11,21)+' · '+t('inDays',35),app:'rem',time:t('now')}];
 
-/* ---------- 유틸 ---------- */
+/* ---------- UTILITIES ---------- */
 const pad=n=>String(n).padStart(2,'0');
 const esc=v=>String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const clock12=()=>{const d=new Date();return((d.getHours()%12)||12)+':'+pad(d.getMinutes())};
@@ -30,7 +29,7 @@ const vib=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
 const t_=t;const T={duration:460,easing:'cubic-bezier(.32,.72,0,1)'};
 function devRadius(){return document.getElementById('phone').classList.contains('mob')?0:56}
 
-/* ---------- 아이콘 (자체 제작, 실제 앱 로고 아님) ---------- */
+/* ---------- APP ICONS ---------- */
 const g=(p,o='')=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ${o}>${p}</svg>`;
 const G={
  chevL:`<svg viewBox="0 0 12 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2 2 10l8 8"/></svg>`,
@@ -128,7 +127,7 @@ function appIcon(id){
  case'rem':return W('',`<rect width="60" height="60" fill="#fff"/><circle cx="16" cy="19" r="4.5" fill="#007aff"/><circle cx="16" cy="31" r="4.5" fill="#ff3b30"/><circle cx="16" cy="43" r="4.5" fill="#ff9500"/><g stroke="#d6d6db" stroke-width="2"><path d="M25 19h24M25 31h24M25 43h24"/></g>`);
  }return''}
 
-/* ---------- 사운드 (WebAudio로 직접 합성) ---------- */
+/* ---------- Sound (synthesized directly using WebAudio) ---------- */
 let AC=null;
 function ac(){if(!AC){try{AC=new(window.AudioContext||window.webkitAudioContext)()}catch(e){}}if(AC&&AC.state==='suspended')AC.resume();return AC}
 function tone(f,t0,dur,vol=.12,type='sine'){const a=ac();if(!a)return;const t=a.currentTime+t0,o=a.createOscillator(),gn=a.createGain();o.type=type;o.frequency.value=f;gn.gain.setValueAtTime(0,t);gn.gain.linearRampToValueAtTime(vol,t+.008);gn.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(gn).connect(a.destination);o.start(t);o.stop(t+dur+.05)}
@@ -136,14 +135,14 @@ function sfx(k){if(k==='key')tone(2400,0,.025,.035,'triangle');else if(k==='msg'
 function ringOnce(){[[784,0],[988,.2],[1175,.4],[988,.6],[784,1.0],[988,1.2],[1175,1.4],[1319,1.6]].forEach(([f,t])=>{tone(f,t,.35,.11);tone(f*2,t,.18,.03)})}
 document.addEventListener('pointerdown',()=>ac(),{once:true});
 
-/* ---------- 상태바 / 아일랜드 ---------- */
+/* ---------- STATUS BAR ---------- */
 function setStatus(dark){curDark=!!dark;$('#sb').classList.toggle('light',curDark);$('#hb').classList.toggle('light',curDark)}
 const ART=['media/sohee_01.jpg','media/sohee_02.jpg','media/sohee_03.jpg','','media/sohee_04.jpg'];
 const ARTIST=['sohee','sohee','sohee',t('voiceMemo'),'sohee'];
 function updateIsland(){typeof updateCrumb==='function'&&updateCrumb();const on=nowSong>=0&&!PLAYER.paused&&!['music','lock','pin'].includes(view)&&!OV.querySelector('.np,.call,.viewer');const il=$('#island');il.classList.toggle('act',on);if(on){const a=ART[nowSong];il.querySelector('.ia').style.backgroundImage=a?`url(${a})`:'linear-gradient(135deg,#ff9a9e,#fa2d48)'}}
 
 /* ============================================================
-   잠금화면 / 암호
+   Lock Screen / Passcode
    ============================================================ */
 function ncardHTML(n){const ic=n.app==='kakao'?`<div class="ni" style="position:relative;overflow:visible"><img src="media/sohee_kakao_profile.jpg" style="width:38px;height:38px;border-radius:50%;object-fit:cover;display:block"><span style="position:absolute;right:-4px;bottom:-4px;width:18px;height:18px;border-radius:5px;overflow:hidden;border:1.5px solid rgba(255,255,255,.9)">${appIcon('kakao')}</span></div>`:`<div class="ni">${appIcon(n.app)}</div>`;
  return `${ic}<div class="nt"><div class="nh"><span>${esc(n.title)}</span><small>${n.time}</small></div><div class="nb">${esc(n.body)}</div></div>`}
@@ -175,7 +174,7 @@ function renderPin(){$('#pinL').innerHTML=`<div class="pt">${t('enterPass')}</di
  <div class="pbot"><button onclick="vib(10)">${t('emergency')}</button><button id="pcancel" onclick="pinCancelOrDel()">${pincode?t('delete'):t('cancel')}</button></div>`}
 function pinDots(){$('#pdots').innerHTML=[0,1,2,3].map(i=>`<i class="${i<pincode.length?'on':''}"></i>`).join('');$('#pcancel').textContent=pincode?t('delete'):t('cancel')}
 function pinPress(n,el){if(pincode.length>=4)return;el.classList.add('dn');setTimeout(()=>el.classList.remove('dn'),90);sfx('key');vib(8);pincode+=n;pinDots();
- if(pincode.length===4){if(pincode==='1121'){setTimeout(unlock,140)}else{setTimeout(()=>{const d=$('#pdots');d.classList.remove('shake');void d.offsetWidth;d.classList.add('shake');vib([60,40,60]);setTimeout(()=>{pincode='';pinDots()},420)},120)}}}
+ if(pincode.length===4){if(pincode==='1288'){setTimeout(unlock,140)}else{setTimeout(()=>{const d=$('#pdots');d.classList.remove('shake');void d.offsetWidth;d.classList.add('shake');vib([60,40,60]);setTimeout(()=>{pincode='';pinDots()},420)},120)}}}
 function pinCancelOrDel(){if(pincode){pincode=pincode.slice(0,-1);pinDots();return}pinCancel()}
 function pinCancel(){view='lock';const p=$('#pinL');p.animate([{opacity:1},{opacity:0,transform:'translateY(30px)'}],{duration:300}).onfinish=()=>p.style.display='none';
  const lk=$('#lkc');lk.getAnimations().forEach(a=>a.cancel());lk.style.pointerEvents='';lk.animate([{transform:'translateY(-120px)',opacity:0},{transform:'none',opacity:1}],{duration:450,easing:'cubic-bezier(.2,.9,.25,1)'});$('#wall').classList.remove('dim')}
@@ -186,9 +185,9 @@ function unlock(){sfx('unlock');view='home';$('#wall').classList.remove('dim');
  setStatus(true);if(pendingOpen){pendingOpen=null;setTimeout(()=>{chatId='이소희';openApp('chat',HOME.querySelector('.app[data-app="kakao"] .icon'))},520)}}
 
 /* ============================================================
-   홈 화면
+   HOME SCREEN
    ============================================================ */
-function badgeOf(id){if(id==='phone')return 3+declined;if(id==='mail')return[0,1].filter(i=>!readMail.has(i)).length;if(id==='kakao')return Object.values(unread).reduce((a,b)=>a+b,0)+soheeUnread;return 0}
+function badgeOf(id){if(id==='phone')return 3+declined;if(id==='mail')return[0,1].filter(i=>!readMail.has(i)).length;if(id==='kakao')return Object.values(unread).reduce((a,b)=>a+b,0)+ksooUnread;return 0}
 function appBtn(id){const b=badgeOf(id);return `<button class="app" data-app="${id}" onclick="openApp('${id}',this.firstElementChild)"><div class="icon"><div class="ic">${appIcon(id)}</div>${b?`<span class="bdg">${b}</span>`:''}</div><span class="lbl">${t('app_'+id)}</span></button>`}
 function renderHome(){
  HOME.innerHTML=`<div class="hgrid">
@@ -199,7 +198,7 @@ function renderHome(){
  <div class="dock">${['phone','safari','kakao','music'].map(appBtn).join('')}</div>`}
 
 /* ============================================================
-   화면 전환 엔진
+   Screen Transition Engine
    ============================================================ */
 const PARENT={note:'notes',chat:'kakao',maild:'mail',reel:'instagram',screentime:'settings'};
 const rootOf=v=>PARENT[v]||v;
@@ -251,13 +250,13 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')hbAction();else if(e
 document.addEventListener('mouseup',e=>{if(e.button===3){e.preventDefault();goBack()}});
 try{history.pushState({wb:1},'');addEventListener('popstate',()=>{goBack();history.pushState({wb:1},'')})}catch(e){}
 
-/* ---------- 공통 템플릿 ---------- */
+/* ---------- Common Template---------- */
 function navHTML(o){return `<div class="nav ${o.solid?'solid':''}">${o.back!==undefined?`<button class="nb-back" onclick="${o.backFn||'back()'}">${G.chevL}${o.back}</button>`:(o.left||'<span></span>')}<div class="nb-title">${o.title||''}</div><div class="nb-right">${o.right||''}</div></div>`}
 function tabbar(items,on,cls=''){return `<div class="tabbar ${cls}">${items.map(([ic,l],i)=>`<button class="${i===on?'on':''}">${G[ic]||ic}<span>${l}</span></button>`).join('')}</div>`}
 const sw=(on,fn)=>`<button class="sw ${on?'on':''}" onclick="this.classList.toggle('on');vib(8);${fn||''}"></button>`;
 
 /* ============================================================
-   앱 화면들
+   APP SCREENS
    ============================================================ */
 const VIEWS={};
 
@@ -270,7 +269,7 @@ VIEWS.notes=()=>({cls:'grouped notes-pg',html:navHTML({title:t('app_notes'),back
  <div class="toolbar"><span style="width:24px"></span><span style="color:#000;align-self:center;font-size:11px">${t('nNotes',notes.length)}</span>${G.compose}</div>`});
 VIEWS.note=()=>{const n=notes[noteId];return{cls:'notes-pg',html:navHTML({title:'',back:t('app_notes'),right:G.share+G.dots,solid:false})+`<div class="scroll"><div class="note-v"><div class="nd">${noteDate(n[3],true)}</div><h2>${esc(n[0])}</h2>${esc(n[2])}</div></div><div class="toolbar">${G.check}${G.camera}${G.pen}${G.compose}</div>`}};
 
-/* --- 캘린더 --- */
+/* --- CALENDAR --- */
 function calEvents(){if(calMonth===11)return selectedDay===21?['🎂 '+t('bdayEvent')]:[];return events[selectedDay]||[]}
 VIEWS.calendar=()=>{const nov=calMonth===11,first=nov?0:4,days=nov?30:31;let c='';for(let i=0;i<first;i++)c+='<div></div>';
  for(let d=1;d<=days;d++){const dow=(first+d-1)%7,has=nov?d===21:!!events[d],td=!nov&&d===17;c+=`<button class="cal-d ${td?'td':''} ${d===selectedDay?'sel':''} ${dow===0||dow===6?'we':''}" onclick="selectedDay=${d};show('calendar')"><span>${d}</span>${has?'<i></i>':''}</button>`}
@@ -280,14 +279,14 @@ VIEWS.calendar=()=>{const nov=calMonth===11,first=nov?0:4,days=nov?30:31;let c='
  <div class="tabbar" style="color:#ff3b30">${[t('today'),t('calendars'),t('inbox')].map(x=>`<button style="color:#ff3b30;font-size:16px;justify-content:center">${x}</button>`).join('')}</div>`}};
 function calNav(d){const n=calMonth+d;if(n<10||n>11)return;calMonth=n;selectedDay=n===11?21:17;const pg=show('calendar');pg.querySelector('#calg').animate([{transform:`translateX(${d*40}%)`,opacity:0},{transform:'none',opacity:1}],{duration:350,easing:'cubic-bezier(.2,.9,.25,1)'})}
 
-/* --- 시계 --- */
+/* --- CLOCK --- */
 VIEWS.clock=()=>({cls:'dark',dark:true,html:`<div class="nav" style="color:#ff9f0a"><button style="color:#ff9f0a;font-size:17px;justify-self:start;padding-left:8px">${t('edit')}</button><div class="nb-title">${t('alarm')}</div><div class="nb-right" style="color:#ff9f0a">${G.plus}</div></div><div class="scroll"><h1 class="lt">${t('alarm')}</h1>
  <div style="margin:10px 16px 4px;font-size:15px;font-weight:600;display:flex;gap:6px;align-items:center">${t('sleepWake')}</div><div style="padding:8px 16px 14px;color:#8e8e93;font-size:15px;border-bottom:.5px solid rgba(255,255,255,.15)">${t('noAlarm')} <span style="float:right;color:#ff9f0a">${t('setUp')}</span></div>
  <div style="margin:18px 16px 4px;font-size:15px;font-weight:600">${t('other')}</div>
  ${Array.from({length:7},(_,i)=>`<div class="alarm ${alarmStates[i]?'':'off'}"><div><div class="at">${(p=>p.before?`<small>${p.dp}</small>${p.tm}`:`${p.tm}<small style="margin-left:4px">${p.dp}</small>`)(alarmParts(7,i))}</div><div class="al">${t('alarmLabel')}</div></div>${sw(alarmStates[i],`alarmStates[${i}]=!alarmStates[${i}];this.closest('.alarm').classList.toggle('off',!alarmStates[${i}])`)}</div>`).join('')}</div>
  ${tabbar([['globe',t('worldClock')],['alarm',t('alarm')],['stopwatch',t('stopwatch')],['timer',t('timer')]],1).replace('class="on"','class="on" style="color:#ff9f0a"')}`});
 
-/* --- 전화 --- */
+/* --- PHONE --- */
 function callWhen(s){if(s.startsWith('오늘 ')){const [h,m]=s.slice(3).split(':').map(Number);return ampm(h*60+m)}const w=s.split(' ')[0];if(w==='어제')return t('yesterday');if(KO_WD[w]!=null){return wdLong(2026,10,11+KO_WD[w])}return w}
 const callNameDisp=n=>n.replace(/^(.+?)( \(\d+\))?$/,(m,a,b)=>dn(a)+(b||''));
 VIEWS.phone=()=>{const all=[...extraCalls,...calls].filter(c=>!missOnly||c[2]==='부재중');
@@ -296,20 +295,20 @@ VIEWS.phone=()=>{const all=[...extraCalls,...calls].filter(c=>!missOnly||c[2]===
  ${all.map(c=>`<div class="prow ${c[2]==='부재중'?'miss':''}" style="cursor:pointer" onclick="dial('${esc(c[0].replace(/ \(\d+\)$/,''))}')"><span class="pi">${c[2]==='발신'?'<svg viewBox="0 0 24 24"><path d="M6.6 3.2c.6-.3 1.4-.1 1.8.5l1.9 3c.4.6.3 1.4-.2 1.9l-1.4 1.3a12.4 12.4 0 0 0 5.4 5.4l1.3-1.4c.5-.5 1.3-.6 1.9-.2l3 1.9c.6.4.8 1.2.5 1.8l-.9 1.9c-.5 1-1.6 1.6-2.7 1.4C10 19.6 4.4 14 3.3 6.8c-.2-1.1.4-2.2 1.4-2.7Z"/></svg>':''}</span><div class="pn"><b>${esc(callNameDisp(c[0]))}</b><small>${t('mobile')}</small></div><span class="pd">${callWhen(c[1])}</span><span class="inf">${G.info}</span></div>`).join('')}</div>
  ${tabbar([['star',t('favorites')],['clock',t('recents')],['contacts',t('contacts')],['keypad',t('keypad')],['voicemail',t('voicemail')]],1)}`}};
 
-/* --- 카카오톡 --- */
+/* --- KKT --- */
 const isGroup=n=>/4조|공지|과제방/.test(n);
 const MEMBERS={'교양 발표 4조':4,'체육학부 공지':38,'전공 과제방':5};
 function lastDate(n){const d=((chatData[n]||[]).filter(x=>x[1]==='date').slice(-1)[0]||[''])[0];return d==='10월 16일'?'어제':d}
 function dateKey(n){if(n==='이소희')return 9999;const l=lastDate(n);if(l==='어제')return 1016;const m=l.match(/(\d+)월 (\d+)일/);return m?+m[1]*100+ +m[2]:0}
 function previewText(s,grp){const m=mediaLabels[s];if(m)return m.kind==='image'?t('photo'):t('voiceMsg');const b=s.match(/^\[(.+)\]$/);if(b)return /기프티콘/.test(b[1])?t('giftSent'):/파일/.test(b[1])&&!/영상/.test(b[1])?t('fileColon')+fileInfo(b[1])[0]:/영상/.test(b[1])?t('video'):t('photo');return grp?s.replace(/^.+?: /,''):s}
 function avatarFor(name,group){if(/소희/.test(name))return '<img src="media/sohee_kakao_profile.jpg" alt="">';if(group)return `<svg viewBox="0 0 24 24"><circle cx="8.5" cy="9" r="3" fill="#fff"/><circle cx="15.5" cy="9" r="3" fill="#fff"/><path d="M2.5 19c.4-3 2.9-5 6-5s5.6 2 6 5ZM9.5 19c.4-3 2.9-5 6-5s5.6 2 6 5Z" fill="#fff"/></svg>`;return G.sil}
-function otherUnread(){return Object.entries(unread).filter(([k])=>k!==chatId).reduce((a,[,b])=>a+b,0)+(chatId==='이소희'?0:soheeUnread)}
+function otherUnread(){return Object.entries(unread).filter(([k])=>k!==chatId).reduce((a,[,b])=>a+b,0)+(chatId==='이소희'?0:ksooUnread)}
 VIEWS.kakao=()=>{const list=chatNames.slice().sort((a,b)=>dateKey(b)-dateKey(a));
  return{cls:'kk',html:`<div class="kk-h"><b>${t('chats')}</b><span>${G.search}${G.chatPlus}${G.gear}</span></div><div class="scroll">${list.map(n=>{const arr=chatData[n]||[];let last=arr.filter(x=>x[1]!=='date').slice(-1)[0],time=fmtLabel(lastDate(n)),cnt=unread[n]||0;
-  if(n==='이소희'&&todayChat.length){last=todayChat[todayChat.length-1];time=last[2];cnt=soheeUnread}
+  if(n==='이소희'&&todayChat.length){last=todayChat[todayChat.length-1];time=last[2];cnt=ksooUnread}
   return `<button class="crow" onclick="chatId=${esc(JSON.stringify(n))};push('chat')"><div class="av">${avatarFor(n,isGroup(n))}</div><div style="flex:1;min-width:0"><div class="cn">${esc(dn(n))}${MEMBERS[n]?`<small>${MEMBERS[n]}</small>`:''}</div><div class="cp">${last?esc(previewText(last[0],isGroup(n))):''}</div></div><div class="cm"><span class="ct">${time}</span>${cnt?`<span class="kbdg">${cnt}</span>`:''}</div></button>`}).join('')}</div>
  ${tabbar([['person',t('friends')],['chat',t('chats')],['openchat',t('openChat')],['bag',t('shopping')],['dotsH',t('more')]],1)}`}};
-/* 채팅방 */
+/* CHAT ROOM */
 const AUD_DUR={'media/wonbin_whistle.mp3':'0:15','media/sohee_across_the_universe.mp3':'0:13'};
 function fileInfo(n){return({'과제 파일':[t('f_assign'),'1.2MB'],'수정한 과제 파일':[t('f_assign2'),'1.3MB'],'실기 체크 시트 파일':[t('f_check'),'48KB']})[n]||[n+'.pdf','820KB']}
 function bubble(s){const m=mediaLabels[s];
@@ -333,13 +332,13 @@ function chatMsgs(id){const it=chatItems(id),grp=isGroup(id);let o='';
 VIEWS.chat=()=>({cls:'chat',html:`<div class="chat-h"><button class="bk" onclick="back()">${G.chevL}<span>${otherUnread()||''}</span></button><div class="nm">${esc(dn(chatId))}${MEMBERS[chatId]?`<small>${MEMBERS[chatId]}</small>`:''}</div><div class="rt">${G.search}${G.menu}</div></div>
  <div class="msgs" id="msgs" onclick="closeKbd()">${chatMsgs(chatId)}</div>
  <div class="cin safe" id="cin">${G.plusSq}<div class="fld ph" id="fld" onclick="event.stopPropagation();tapInput()">${t('msgInput')}</div>${G.smile}<button class="snd" id="snd" onclick="sendLine()">${G.arrowUp}</button></div><div class="kbd" id="kbd">${kbdHTML()}</div>`,
- init:()=>{if(chatId==='이소희')soheeUnread=0;else unread[chatId]=0;typing=false;pendingText='';scrollChat()}});
+ init:()=>{if(chatId==='이소희')ksooUnread=0;else unread[chatId]=0;typing=false;pendingText='';scrollChat()}});
 function scrollChat(smooth){const b=$('#msgs');if(!b)return;if(smooth)b.scrollTo({top:b.scrollHeight,behavior:'smooth'});else b.scrollTop=b.scrollHeight}
 function refreshChat(pop){const b=$('#msgs');if(!b||view!=='chat')return;b.innerHTML=chatMsgs(chatId);scrollChat();if(pop){const l=b.lastElementChild&&b.lastElementChild.querySelector('.bb');if(l)l.classList.add('pop')}}
 function playChatAudio(el){const src=el.dataset.src;document.querySelectorAll('.bb.aud').forEach(x=>{x.classList.remove('playing');x.querySelector('.pl').innerHTML=G.playF});
  if(PLAYER.dataset.voice===src&&!PLAYER.paused){PLAYER.pause();return}nowSong=-1;PLAYER.src=src;PLAYER.dataset.voice=src;PLAYER.play().then(()=>{el.classList.add('playing');el.querySelector('.pl').innerHTML=G.pauseF}).catch(()=>{});
  PLAYER.onended=()=>{el.classList.remove('playing');el.querySelector('.pl').innerHTML=G.playF;delete PLAYER.dataset.voice}}
-/* 키보드 + 자동 타이핑 */
+/* Keyboard + Auto-Type */
 const KR=[['ㅂ','ㅈ','ㄷ','ㄱ','ㅅ','ㅛ','ㅕ','ㅑ','ㅐ','ㅔ'],['ㅁ','ㄴ','ㅇ','ㄹ','ㅎ','ㅗ','ㅓ','ㅏ','ㅣ'],['ㅋ','ㅌ','ㅊ','ㅍ','ㅠ','ㅜ','ㅡ']];
 const KB_LAT=['qwertyuiop'.split(''),'asdfghjkl'.split(''),'zxcvbnm'.split('')];
 const KB_TH=[['ๆ','ไ','ำ','พ','ะ','ั','ี','ร','น','ย','บ','ล'],['ฟ','ห','ก','ด','เ','้','่','า','ส','ว','ง'],['ผ','ป','แ','อ','ิ','ื','ท','ม','ใ','ฝ']];
@@ -388,10 +387,10 @@ function showTyping(){if(!(view==='chat'&&chatId==='이소희'))return;const b=$
 function hideTyping(){const t=$('#typ');if(t)t.remove()}
 function deliverSohee(text){todayChat.push([text,'them',nowAmpm()]);
  if(view==='chat'&&chatId==='이소희'){refreshChat(true);tone(1318,0,.12,.05)}
- else{soheeUnread++;notify(text);if(view==='kakao')show('kakao');if(view==='home')renderHome()}}
+ else{ksooUnread++;notify(text);if(view==='kakao')show('kakao');if(view==='home')renderHome()}}
 function incomingMsg(text){if(view==='chat'&&chatId==='이소희'){showTyping();setTimeout(()=>{hideTyping();deliverSohee(text)},1500)}else deliverSohee(text)}
 
-/* --- 알림 배너 --- */
+/* --- NOTIFICATION BANNER --- */
 function notify(body){sfx('msg');vib([30,60,30]);
  if(view==='lock'||view==='pin'){lockNotes.unshift({title:'이소희',body,app:'kakao',time:t('now')});renderLock();const c=document.querySelector('.lk-notes .ncard');if(c)c.animate([{transform:'translateY(-30px) scale(.9)',opacity:0},{transform:'none',opacity:1}],{duration:500,easing:'cubic-bezier(.2,1.2,.4,1)'});return}
  OV.querySelectorAll('.banner').forEach(b=>b.remove());const b=document.createElement('div');b.className='banner';b.innerHTML=`<div class="ncard">${ncardHTML({title:'이소희',body,app:'kakao',time:t('now')})}</div>`;OV.appendChild(b);
@@ -427,7 +426,7 @@ VIEWS.photos=()=>{let k=0;return{html:`<div class="nav"><span></span><div class=
  ${photoSections.map(s=>`<div class="ph-sec">${fmtLabel(s[0])}</div><div class="ph-grid">${s[1].map(n=>`<button data-pi="${k}" onclick="openViewer(${k++},this.firstElementChild)"><img src="photos/${n}" loading="lazy" alt=""></button>`).join('')}</div>`).join('')}
  <div class="ph-sec" style="margin-top:12px">${fmtYM(2025,11)}</div><div class="ph-grid"><button data-pi="${STORY_I}" onclick="openViewer(${STORY_I},this.firstElementChild)"><img src="photos/story_last_thumbnail.jpg" alt=""></button></div></div>
  <div class="phtabs"><button>${t('years')}</button><button>${t('months')}</button><button class="on">${t('allPhotos')}</button></div>`,init:pg=>{const sc=pg.querySelector('.scroll');sc.scrollTop=0}}};
-/* 사진 뷰어 */
+/* GALLERY */
 let vList=allPhotos,vIdx=0;
 function fitRect(nw,nh){const W=SCREEN.clientWidth,H=SCREEN.clientHeight,s=Math.min(W/nw,H/nh);const w=nw*s,h=nh*s;return{x:(W-w)/2,y:(H-h)/2,w,h}}
 function placeImg(img){const f=fitRect(img.naturalWidth||1,img.naturalHeight||1);Object.assign(img.style,{left:f.x+'px',top:f.y+'px',width:f.w+'px',height:f.h+'px'});return f}
@@ -477,7 +476,7 @@ VIEWS.reel=()=>({cls:'reel dark',dark:true,html:`<div id="rhost">${reelInner(vid
    else{if(w){w.style.transform='';if(Math.abs(dy)<6){const vd=w.querySelector('video');vd.paused?vd.play():vd.pause()}}}})}});
 function playReel(pg){const v=pg.querySelector('video');if(!v)return;if(nowSong>=0)PLAYER.pause();v.muted=false;v.play().catch(()=>{v.muted=true;v.play().catch(()=>{})})}
 
-/* --- 음악 --- */
+/* --- MUSIC --- */
 const artStyle=i=>ART[i]?`background-image:url(${ART[i]})`:'';
 VIEWS.music=()=>({html:navHTML({title:t('songs'),back:t('libraryMu'),backFn:'closeApp()',right:''})+`<div class="scroll" style="padding-bottom:180px"><h1 class="lt">${t('songs')}</h1>
  <div style="display:flex;gap:12px;margin:4px 16px 14px"><button onclick="playSong(0)" style="flex:1;background:#eeeef0;border-radius:10px;padding:12px;color:#fa2d48;font-weight:600;display:flex;justify-content:center;gap:6px;align-items:center">${G.playF.replace('<svg','<svg width="14" fill="#fa2d48"')}${t('play')}</button><button onclick="playSong(Math.floor(Math.random()*${songs.length}))" style="flex:1;background:#eeeef0;border-radius:10px;padding:12px;color:#fa2d48;font-weight:600">${t('shuffle')}</button></div>
@@ -498,7 +497,7 @@ PLAYER.addEventListener('timeupdate',()=>{const b=$('#npbar');if(b&&PLAYER.durat
 PLAYER.addEventListener('play',updateIsland);PLAYER.addEventListener('pause',updateIsland);
 
 
-/* --- 지도 (가상의 중연대 동네) --- */
+/* --- MAP --- */
 let mapSel=null,mapPos={x:-480,y:-640};
 function mapSVG(){return `<svg width="900" height="1200" viewBox="0 0 900 1200" style="position:absolute;inset:0">
  <rect width="900" height="1200" fill="#f2efe9"/>
@@ -541,7 +540,7 @@ VIEWS.maps=()=>({cls:'mapv',html:`<div class="mapwrap" id="mapwrap"><div class="
   w.addEventListener('pointermove',e=>{if(x0===null)return;const dx=(e.clientX-x0)/SC,dy=(e.clientY-y0)/SC;if(Math.hypot(dx,dy)>4)mv=true;if(mv){w.style.cursor='grabbing';setMapPos(sx+dx,sy+dy)}});
   w.addEventListener('pointerup',()=>{x0=null;w.style.cursor=''})}});
 
-/* --- 날씨 --- */
+/* --- WEATHER --- */
 VIEWS.weather=()=>{const h=new Date().getHours();const hrs=[];for(let i=0;i<12;i++){const hh=(h+i)%24,night=hh>=19||hh<6;const tp=Math.round(15+5*Math.sin((hh-9)/24*2*Math.PI));hrs.push(`<div><span>${i?fmtHour(hh):t('now')}</span>${night?G.moon:(hh%5===0?G.pcloud:G.sun)}<span>${i?tp:18}°</span></div>`)}
  const days=[[G.sun,12,21],[G.pcloud,11,20],[G.cloud,10,18],[G.sun,9,19],[G.sun,10,20],[G.pcloud,11,19],[G.cloud,8,15],[G.sun,7,16],[G.sun,8,17],[G.pcloud,9,18]].map((d,i)=>[i?wdShort(2026,10,17+i):t('today'),...d]);
  return{cls:'wx',dark:true,html:`<div class="scroll"><div class="top"><div class="lc">${t('myLoc')}</div><div class="ct">${t('seoul')}</div><div class="tp">18°</div><div class="ds">${t('mostlySunny')}</div><div style="font-size:18px;font-weight:500">${t('hiLo')}</div></div>
@@ -550,7 +549,7 @@ VIEWS.weather=()=>{const h=new Date().getHours();const hrs=[];for(let i=0;i<12;i
  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 16px"><div class="wcard" style="margin:0"><div class="wh">${t('uv')}</div><b style="font-size:30px">3</b><div>${t('moderate')}</div></div><div class="wcard" style="margin:0"><div class="wh">${t('sunset')}</div><b style="font-size:26px">${fmtTime(17*60+56)}</b><div style="font-size:14px">${t('sunrise')}: ${fmtTime(6*60+39)}</div></div></div></div>
  <div class="tabbar" style="background:rgba(40,90,170,.5);box-shadow:none"><button style="color:#fff">🗺</button><button style="color:#fff;flex:2;flex-direction:row;justify-content:center;gap:6px"><i style="width:7px;height:7px;border-radius:50%;background:#fff;display:block"></i></button><button style="color:#fff">${G.list}</button></div>`}};
 
-/* --- 설정 / 스크린 타임 --- */
+/* --- SETTINGS --- */
 const sIc=(c,i)=>`<span class="st-ic" style="background:${c}">${(G[i]||i).replace('<svg','<svg style="color:#fff" width="18" height="18"')}</span>`;
 const sRow=(c,i,t,r='',fn)=>`<div class="row ${fn?'tap':''}" style="--inset:57px;cursor:${fn?'pointer':'default'}" ${fn?`onclick="${fn}"`:''}>${sIc(c,i)}<span style="flex:1">${t}</span>${r.startsWith('<button')?r:`<span class="muted" style="font-size:17px">${r}</span>${G.chevR}`}</div>`;
 VIEWS.settings=()=>({cls:'grouped',html:navHTML({title:t('app_settings')})+`<div class="scroll"><h1 class="lt">${t('app_settings')}</h1><div class="srch">${G.search}${t('search')}</div>
@@ -568,7 +567,7 @@ VIEWS.screentime=()=>{const apps=[['instagram',t('hm',2,41),100],['kakao',t('hm'
  <div class="gh">${t('notifSec')}</div><div class="group"><div class="row"><span style="flex:1">${t('app_kakao')}</span><span class="muted">${t('perDay',41)}</span></div></div><div style="height:30px"></div></div>`}};
 
 /* ============================================================
-   전화 (엔딩)
+   PHONE CALL
    ============================================================ */
 function startRing(){ringOnce();clearInterval(ringIv);ringIv=setInterval(()=>{ringOnce();vib([400,250,400])},2600);vib([400,250,400])}
 function stopRing(){clearInterval(ringIv);ringIv=null;clearTimeout(ringTo);try{navigator.vibrate&&navigator.vibrate(0)}catch(e){}}
@@ -610,7 +609,7 @@ function rejectOut(msg){stopRingback();clearCallTimers();const t=$('#ctime');if(
 function closeCallUI(){const c=OV.querySelector('.call');if(!c)return;c.animate([{opacity:1},{opacity:0,transform:'scale(1.04)'}],{duration:320,fill:'forwards'}).onfinish=()=>{c.remove();setStatus(viewDark());updateIsland();if(view==='home')renderHome()}}
 
 /* ============================================================
-   루프 / 시작
+   LOOP/START
    ============================================================ */
 let lastMin=-1;
 function tick(){typeof updateCrumb==="function"&&updateCrumb();const now=new Date();$('#sbt').textContent=clock12();const lk=$('#lkt');if(lk)lk.textContent=clock12();

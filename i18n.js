@@ -1,11 +1,12 @@
 'use strict';
 /* ============================================================
-   다국어: 화면 문구 사전 + 날짜/시간 현지화
-   (대사·기록 번역은 data.<언어>.js)
+   
+Multilingual: On-screen Text Dictionary + Date/Time Localization
+   (Dialogue and log translations are in data.<language>.js)
    ============================================================ */
-const LANG=window.LANG||'ko';
-const LOCALE={ko:'ko-KR',en:'en-US',ja:'ja-JP',zh:'zh-CN',vi:'vi-VN',th:'th-TH-u-ca-gregory',id:'id-ID'}[LANG]||'ko-KR';
-const L6=(ko,en,ja,zh,vi,th)=>({ko,en,ja,zh,vi,th});
+const LANG=window.LANG||'en';
+const LOCALE={ko:'ko-KR',en:'en-US',ja:'ja-JP',zh:'zh-CN',th:'th-TH-u-ca-gregory',id:'id-ID'}[LANG]||'ko-KR';
+const L6=(ko,en,ja,zh,th)=>({ko,en,ja,zh,th});
 const UI={
  home:L6('홈','Home','ホーム','主屏幕','Màn hình chính','หน้าโฮม'),
  now:L6('지금','now','今','现在','bây giờ','ตอนนี้'),
