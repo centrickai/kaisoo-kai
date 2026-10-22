@@ -1694,20 +1694,8 @@ const chatData={
  ]
 };
 const chatNames=[
- "Kyungsoo my love 💞",
- "엄마",
- "서연",
- "체육학부 공지",
- "윤찬",
- "지우",
- "교양 발표 4조",
- "도현",
- "유리",
- "박지훈",
- "전공 과제방",
- "지원",
- "김태윤",
- "최민석"
+ "Kyungsoo my love 💞"
+ 
 ];
 const notes=[
  [
