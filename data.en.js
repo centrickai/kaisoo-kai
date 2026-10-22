@@ -2655,7 +2655,7 @@ const calls=[
   "수신"
  ],
  [
-  "Kyungsoo",
+  "Kyungsoo my love 💞",
   "어제 18:31",
   "발신"
  ],
@@ -2670,12 +2670,12 @@ const calls=[
   "부재중"
  ],
  [
-  "Kyungsoo",
+  "Kyungsoo my love 💞",
   "목요일 23:16",
   "수신"
  ],
  [
-  "Kyungsoo (3)",
+  "Kyungsoo my love 💞 (3)",
   "목요일 21:38",
   "발신"
  ],
@@ -2690,7 +2690,7 @@ const calls=[
   "수신"
  ],
  [
-  "Kyungsoo",
+  "Kyungsoo my love 💞",
   "화요일 22:47",
   "수신"
  ],
@@ -2700,7 +2700,7 @@ const calls=[
   "부재중"
  ],
  [
-  "Kyungsoo (2)",
+  "Kyungsoo my love 💞 (2)",
   "월요일 20:52",
   "발신"
  ],
@@ -2715,7 +2715,7 @@ const calls=[
   "발신"
  ],
  [
-  "Kyungsoo",
+  "Kyungsoo my love 💞",
   "토요일 23:41",
   "수신"
  ]
@@ -3167,7 +3167,7 @@ const OTHER_CALLS={
   ]
  ]
 };
-const SOHEE_AFTER=[
+const KYUNGSOO_AFTER=[
  [
   "소희",
   "Hyung…? I just got in bed, lol"

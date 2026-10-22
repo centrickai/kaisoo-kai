@@ -9,13 +9,13 @@ const elapsed=()=>(Date.now()-base)/1000+timeOffset;
 
 /* ---------- STATUS ---------- */
 let view='lock',curDark=true,SC=1,lastRect=null,animTok=0,firstOpen=true,pendingOpen=null;
-let pincode='',noteId=0,selectedDay=new Date().getDate(),calMonth=new Date().getMonth()+1,chatId='Kyungsoo',videoIndex=0,mailId=0,missOnly=false,safSearch=false;
+let pincode='',noteId=0,selectedDay=new Date().getDate(),calMonth=new Date().getMonth()+1,chatId='Kyungsoo my love 💞',videoIndex=0,mailId=0,missOnly=false,safSearch=false;
 let calYear = new Date().getFullYear();
 let unread={서연:2,지우:3,유리:3,지원:3,'체육학부 공지':3}; //kakao unread; same names for all language
 let ksooUnread=0,todayChat=[],incoming=0,replyStage=0,lineIdx=0,typing=false,pendingText='',replyBusy=false;
 let alarmStates=Array(7).fill(true),readMail=new Set(),nowSong=-1,flashOn=false;
 let callState='',phoneDone=false,declined=0,callStart=0,callPrev='',nextCallAt=0,ringIv=null,ringTo=null,capIdx=-1,extraCalls=[];
-let askedCall=false,callName='Kyungsoo',callTimers=[],busySent=false,declineSent=false,rbIv=null;
+let askedCall=false,callName='Kyungsoo my love 💞',callTimers=[],busySent=false,declineSent=false,rbIv=null;
 //let lockNotes=[{title:t('bdayTitle'),body:fmtMD(11,21)+' · '+t('inDays',35),app:'rem',time:t('now')}];
 const birthdayDate = new Date(2027, 0, 12);
 const todayDate = new Date();
@@ -251,7 +251,7 @@ function unlock(){sfx('unlock');view='home';$('#wall').classList.remove('dim');
  LOCK.animate([{opacity:1},{opacity:0}],{duration:300,fill:'forwards'}).onfinish=()=>{LOCK.style.visibility='hidden';$('#pinL').style.display='none';$('#lkc').getAnimations().forEach(a=>a.cancel());$('#lkc').style.pointerEvents=''};
  renderHome();HOME.style.visibility='visible';HOME.animate([{transform:'scale(1.18)',opacity:0},{transform:'none',opacity:1}],{duration:560,easing:'cubic-bezier(.2,.9,.22,1)'});
  [...HOME.querySelectorAll('.app,.widget')].forEach((el,i)=>el.animate([{transform:'scale(.7)',opacity:0},{transform:'none',opacity:1}],{duration:520,delay:30+i*14,easing:'cubic-bezier(.2,1.1,.3,1)',fill:'backwards'}));
- setStatus(true);if(pendingOpen){pendingOpen=null;setTimeout(()=>{chatId='Kyungsoo';openApp('chat',HOME.querySelector('.app[data-app="kakao"] .icon'))},520)}}
+ setStatus(true);if(pendingOpen){pendingOpen=null;setTimeout(()=>{chatId='Kyungsoo my love 💞';openApp('chat',HOME.querySelector('.app[data-app="kakao"] .icon'))},520)}}
 
 /* ============================================================
    HOME SCREEN
@@ -464,13 +464,13 @@ VIEWS.phone=()=>{const all=[...extraCalls,...calls].filter(c=>!missOnly||c[2]===
 const isGroup=n=>/4조|공지|과제방/.test(n);
 const MEMBERS={'교양 발표 4조':4,'체육학부 공지':38,'전공 과제방':5};
 function lastDate(n){const d=((chatData[n]||[]).filter(x=>x[1]==='date').slice(-1)[0]||[''])[0];return d==='10월 16일'?'어제':d}
-function dateKey(n){if(n==='Kyungsoo')return 9999;const l=lastDate(n);if(l==='어제')return 1016;const m=l.match(/(\d+)월 (\d+)일/);return m?+m[1]*100+ +m[2]:0}
+function dateKey(n){if(n==='Kyungsoo my love 💞')return 9999;const l=lastDate(n);if(l==='어제')return 1016;const m=l.match(/(\d+)월 (\d+)일/);return m?+m[1]*100+ +m[2]:0}
 function previewText(s,grp){const m=mediaLabels[s];if(m)return m.kind==='image'?t('photo'):t('voiceMsg');const b=s.match(/^\[(.+)\]$/);if(b)return /기프티콘/.test(b[1])?t('giftSent'):/파일/.test(b[1])&&!/영상/.test(b[1])?t('fileColon')+fileInfo(b[1])[0]:/영상/.test(b[1])?t('video'):t('photo');return grp?s.replace(/^.+?: /,''):s}
 function avatarFor(name,group){if(/소희/.test(name))return '<img src="media/kyungsoo_kakao_profile.jpg" alt="">';if(group)return `<svg viewBox="0 0 24 24"><circle cx="8.5" cy="9" r="3" fill="#fff"/><circle cx="15.5" cy="9" r="3" fill="#fff"/><path d="M2.5 19c.4-3 2.9-5 6-5s5.6 2 6 5ZM9.5 19c.4-3 2.9-5 6-5s5.6 2 6 5Z" fill="#fff"/></svg>`;return G.sil}
-function otherUnread(){return Object.entries(unread).filter(([k])=>k!==chatId).reduce((a,[,b])=>a+b,0)+(chatId==='Kyungsoo'?0:ksooUnread)}
+function otherUnread(){return Object.entries(unread).filter(([k])=>k!==chatId).reduce((a,[,b])=>a+b,0)+(chatId==='Kyungsoo my love 💞'?0:ksooUnread)}
 VIEWS.kakao=()=>{const list=chatNames.slice().sort((a,b)=>dateKey(b)-dateKey(a));
  return{cls:'kk',html:`<div class="kk-h"><b>${t('chats')}</b><span>${G.search}${G.chatPlus}${G.gear}</span></div><div class="scroll">${list.map(n=>{const arr=chatData[n]||[];let last=arr.filter(x=>x[1]!=='date').slice(-1)[0],time=fmtLabel(lastDate(n)),cnt=unread[n]||0;
-  if(n==='Kyungsoo'&&todayChat.length){last=todayChat[todayChat.length-1];time=last[2];cnt=ksooUnread}
+  if(n==='Kyungsoo my love 💞'&&todayChat.length){last=todayChat[todayChat.length-1];time=last[2];cnt=ksooUnread}
   return `<button class="crow" onclick="chatId=${esc(JSON.stringify(n))};push('chat')"><div class="av">${avatarFor(n,isGroup(n))}</div><div style="flex:1;min-width:0"><div class="cn">${esc(dn(n))}${MEMBERS[n]?`<small>${MEMBERS[n]}</small>`:''}</div><div class="cp">${last?esc(previewText(last[0],isGroup(n))):''}</div></div><div class="cm"><span class="ct">${time}</span>${cnt?`<span class="kbdg">${cnt}</span>`:''}</div></button>`}).join('')}</div>
  ${tabbar([['person',t('friends')],['chat',t('chats')],['openchat',t('openChat')],['bag',t('shopping')],['dotsH',t('more')]],1)}`}};
 
@@ -487,9 +487,9 @@ function bubble(s){const m=mediaLabels[s];
   const vid=/영상/.test(n);return `<div class="bb exp">${vid?G.video:G.photo}<span>${vid?t('expVideo'):t('expPhoto')}</span></div>`}
  return `<div class="bb">${esc(s)}</div>`}
 function fullDate(l){return fmtLabel(l,true)}
-function chatItems(id){const arr=id==='Kyungsoo'?[...chatData[id],...(todayChat.length?[['오늘','date'],...todayChat]:[])]:(chatData[id]||[]);const grp=isGroup(id);const items=[];let tm=0;
+function chatItems(id){const arr=id==='Kyungsoo my love 💞'?[...chatData[id],...(todayChat.length?[['오늘','date'],...todayChat]:[])]:(chatData[id]||[]);const grp=isGroup(id);const items=[];let tm=0;
  const TT=CHAT_TIMES[id]||[];arr.forEach((m,i)=>{if(m[1]==='date'){items.push({date:m[0]});return}
-  let text=m[0],sender=id==='Kyungsoo'?'Kyungsoo':id;if(grp&&m[1]==='them'){const mm=text.match(/^(.+?): ([\s\S]*)$/);if(mm){sender=mm[1];text=mm[2]}}
+  let text=m[0],sender=id==='Kyungsoo my love 💞'?'Kyungsoo my love 💞':id;if(grp&&m[1]==='them'){const mm=text.match(/^(.+?): ([\s\S]*)$/);if(mm){sender=mm[1];text=mm[2]}}
   if(TT[i]!=null)tm=TT[i];else tm+=1;items.push({who:m[1],text,sender,time:m[2]||ampm(tm),rd:m[3]==='rd'})});return items}
 function chatMsgs(id){const it=chatItems(id),grp=isGroup(id);let o='';
  it.forEach((x,i)=>{if(x.date){o+=`<div class="dpill"><span>${G.calSm.replace('<svg','<svg width="12" height="12"')}${fullDate(x.date)}</span></div>`;return}
@@ -499,7 +499,7 @@ function chatMsgs(id){const it=chatItems(id),grp=isGroup(id);let o='';
 VIEWS.chat=()=>({cls:'chat',html:`<div class="chat-h"><button class="bk" onclick="back()">${G.chevL}<span>${otherUnread()||''}</span></button><div class="nm">${esc(dn(chatId))}${MEMBERS[chatId]?`<small>${MEMBERS[chatId]}</small>`:''}</div><div class="rt">${G.search}${G.menu}</div></div>
  <div class="msgs" id="msgs" onclick="closeKbd()">${chatMsgs(chatId)}</div>
  <div class="cin safe" id="cin">${G.plusSq}<div class="fld ph" id="fld" onclick="event.stopPropagation();tapInput()">${t('msgInput')}</div>${G.smile}<button class="snd" id="snd" onclick="sendLine()">${G.arrowUp}</button></div><div class="kbd" id="kbd">${kbdHTML()}</div>`,
- init:()=>{if(chatId==='Kyungsoo')ksooUnread=0;else unread[chatId]=0;typing=false;pendingText='';scrollChat()}});
+ init:()=>{if(chatId==='Kyungsoo my love 💞')ksooUnread=0;else unread[chatId]=0;typing=false;pendingText='';scrollChat()}});
 function scrollChat(smooth){const b=$('#msgs');if(!b)return;if(smooth)b.scrollTo({top:b.scrollHeight,behavior:'smooth'});else b.scrollTop=b.scrollHeight}
 function refreshChat(pop){const b=$('#msgs');if(!b||view!=='chat')return;b.innerHTML=chatMsgs(chatId);scrollChat();if(pop){const l=b.lastElementChild&&b.lastElementChild.querySelector('.bb');if(l)l.classList.add('pop')}}
 function playChatAudio(el){const src=el.dataset.src;document.querySelectorAll('.bb.aud').forEach(x=>{x.classList.remove('playing');x.querySelector('.pl').innerHTML=G.playF});
@@ -539,23 +539,23 @@ function keysFor(ch){if(ch===' ')return['space'];
  const base=ch.normalize('NFD')[0];const lo=base.toLowerCase();if(/[a-z]/.test(lo))return base!==lo?['⇧',lo]:[lo];return[]}
 function genSteps(str){const st=[];let done='';for(const ch of str){done+=ch;st.push({k:keysFor(ch),t:done})}return st}
 function setField(txt,cursor){const f=$('#fld');if(!f)return;if(!txt&&!cursor){f.className='fld ph';f.textContent=t('msgInput');return}f.className='fld';f.innerHTML=esc(txt)+(cursor?'<span class="cur"></span>':'')}
-function canType(){return chatId==='Kyungsoo'&&todayChat.filter(x=>x[1]==='them').length>=2&&replyStage<liveReplies.length&&!typing&&!pendingText&&!replyBusy}
+function canType(){return chatId==='Kyungsoo my love 💞'&&todayChat.filter(x=>x[1]==='them').length>=2&&replyStage<liveReplies.length&&!typing&&!pendingText&&!replyBusy}
 function tapInput(){openKbd();if(!canType()){setField(pendingText,true);return}typeLine(liveReplies[replyStage].mine[lineIdx])}
 function typeLine(line){typing=true;const steps=LANG==='ko'?jamoSteps(line):genSteps(line);let i=0;setField('',true);
  (function step(){if(view!=='chat'){typing=false;return}if(i>=steps.length){typing=false;pendingText=line;const s=$('#snd');if(s)s.classList.add('on');return}
   const s=steps[i++];s.k.forEach((k,j)=>setTimeout(()=>pressKey(k),j*45));setField(s.t,true);setTimeout(step,(LANG==='ko'?60:85)+Math.random()*70+(s.k.length>1?s.k.length*45:0)+(s.k[0]==='space'?60:0))})()}
 function sendLine(){if(!pendingText)return;const stage=liveReplies[replyStage];todayChat.push([pendingText,'me',nowAmpm(),'rd']);pendingText='';sfx('send');vib(10);setField('',false);$('#snd').classList.remove('on');refreshChat(true);lineIdx++;
- if(lineIdx<stage.mine.length){setTimeout(()=>{if(view==='chat'&&chatId==='Kyungsoo'&&$('#kbd.open'))typeLine(stage.mine[lineIdx])},500);return}
+ if(lineIdx<stage.mine.length){setTimeout(()=>{if(view==='chat'&&chatId==='Kyungsoo my love 💞'&&$('#kbd.open'))typeLine(stage.mine[lineIdx])},500);return}
  replyStage++;lineIdx=0;replyBusy=true;const them=stage.them.slice();
  setTimeout(()=>{todayChat.forEach(x=>{if(x[3]==='rd')x[3]=''});refreshChat()},900);
  let t=1500;them.forEach((msg,k)=>{const typingDur=700+msg.length*55;setTimeout(()=>showTyping(),t);t+=typingDur;setTimeout(()=>{hideTyping();deliverKyungsoo(msg)},t);t+=350});
  setTimeout(()=>{replyBusy=false},t+50)}
-function showTyping(){if(!(view==='chat'&&chatId==='Kyungsoo'))return;const b=$('#msgs');if(!b||$('#typ'))return;b.insertAdjacentHTML('beforeend',`<div class="ln th first" id="typ"><div class="sav">${avatarFor('Kyungsoo')}</div><div class="col"><div class="who">Kyungsoo</div><div class="wrap"><div class="bb typing pop"><i></i><i></i><i></i></div></div></div></div>`);scrollChat(true)}
+function showTyping(){if(!(view==='chat'&&chatId==='Kyungsoo my love 💞'))return;const b=$('#msgs');if(!b||$('#typ'))return;b.insertAdjacentHTML('beforeend',`<div class="ln th first" id="typ"><div class="sav">${avatarFor('Kyungsoo')}</div><div class="col"><div class="who">Kyungsoo</div><div class="wrap"><div class="bb typing pop"><i></i><i></i><i></i></div></div></div></div>`);scrollChat(true)}
 function hideTyping(){const t=$('#typ');if(t)t.remove()}
 function deliverKyungsoo(text){todayChat.push([text,'them',nowAmpm()]);
- if(view==='chat'&&chatId==='Kyungsoo'){refreshChat(true);tone(1318,0,.12,.05)}
+ if(view==='chat'&&chatId==='Kyungsoo my love 💞'){refreshChat(true);tone(1318,0,.12,.05)}
  else{ksooUnread++;notify(text);if(view==='kakao')show('kakao');if(view==='home')renderHome()}}
-function incomingMsg(text){if(view==='chat'&&chatId==='Kyungsoo'){showTyping();setTimeout(()=>{hideTyping();deliverKyungsoo(text)},1500)}else deliverKyungsoo(text)}
+function incomingMsg(text){if(view==='chat'&&chatId==='Kyungsoo my love 💞'){showTyping();setTimeout(()=>{hideTyping();deliverKyungsoo(text)},1500)}else deliverKyungsoo(text)}
 
 /* --- NOTIFICATION BANNER --- */
 function notify(body){sfx('msg');vib([30,60,30]);
@@ -567,7 +567,7 @@ function notify(body){sfx('msg');vib([30,60,30]);
  b.addEventListener('pointerdown',e=>{y0=e.clientY;mv=false;b.setPointerCapture(e.pointerId)});
  b.addEventListener('pointermove',e=>{if(y0===null)return;dy=(e.clientY-y0)/SC;if(Math.abs(dy)>5)mv=true;b.style.transform=`translateY(${dy<0?dy:dy*.25}px)`});
  b.addEventListener('pointerup',()=>{if(y0===null)return;y0=null;clearTimeout(tm);if(dy<-30){hide();return}b.style.transform='';if(!mv){b.remove();openKyungsoo(b)}})}
-function openKyungsoo(el){if(callState)return;chatId='Kyungsoo';if(view==='home'){openApp('chat',el.querySelector?el:null);return}if(view==='chat'&&chatId==='Kyungsoo')return;if(['lock','pin'].includes(view))return;push('chat')}
+function openKyungsoo(el){if(callState)return;chatId='Kyungsoo';if(view==='home'){openApp('chat',el.querySelector?el:null);return}if(view==='chat'&&chatId==='Kyungsoo my love 💞')return;if(['lock','pin'].includes(view))return;push('chat')}
 
 /* --- Safari --- */
 VIEWS.safari=()=>{if(safSearch)return{cls:'saf',html:`<div style="position:absolute;top:54px;left:0;right:0;padding:6px 14px;display:flex;gap:12px;align-items:center;z-index:3"><div class="srch" style="margin:0;flex:1;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);height:40px">${G.search}<span style="color:#000">|</span><span>${t('searchWeb')}</span></div><button style="color:var(--blue);font-size:17px" onclick="safSearch=false;show('safari')">${t('cancel')}</button></div>
@@ -738,8 +738,8 @@ VIEWS.screentime=()=>{const apps=[['instagram',t('hm',2,41),100],['kakao',t('hm'
    ============================================================ */
 function startRing(){ringOnce();clearInterval(ringIv);ringIv=setInterval(()=>{ringOnce();vib([400,250,400])},2600);vib([400,250,400])}
 function stopRing(){clearInterval(ringIv);ringIv=null;clearTimeout(ringTo);try{navigator.vibrate&&navigator.vibrate(0)}catch(e){}}
-function incomingCall(){callName='Kyungsoo';callDir='in';callPrev=view;callState='ring';if(nowSong>=0||PLAYER.dataset.voice)PLAYER.pause();APP.querySelectorAll('video').forEach(v=>v.pause());OV.querySelectorAll('.banner').forEach(b=>b.remove());renderCall();startRing();ringTo=setTimeout(missCall,30000)}
-function callTop(){const sh=callName==='Kyungsoo';return `<div class="cav">${sh?'<img src="media/kyungsoo_kakao_profile.jpg" alt="">':/^[0-9*-]+$/.test(callName)?`<span style="width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(#a5abb6,#7f858f)">${G.sil.replace('<svg','<svg width="64"')}</span>`:`<span style="width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(#a5abb6,#7f858f);font-size:42px;font-weight:500">${esc(/^[가-힣]{3}$/.test(callName)?callName[1]:[...dn(callName)][0].toUpperCase())}</span>`}</div><div class="cnm">${esc(dn(callName))}</div>`}
+function incomingCall(){callName='Kyungsoo my love 💞';callDir='in';callPrev=view;callState='ring';if(nowSong>=0||PLAYER.dataset.voice)PLAYER.pause();APP.querySelectorAll('video').forEach(v=>v.pause());OV.querySelectorAll('.banner').forEach(b=>b.remove());renderCall();startRing();ringTo=setTimeout(missCall,30000)}
+function callTop(){const sh=callName==='Kyungsoo my love 💞';return `<div class="cav">${sh?'<img src="media/kyungsoo_kakao_profile.jpg" alt="">':/^[0-9*-]+$/.test(callName)?`<span style="width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(#a5abb6,#7f858f)">${G.sil.replace('<svg','<svg width="64"')}</span>`:`<span style="width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(#a5abb6,#7f858f);font-size:42px;font-weight:500">${esc(/^[가-힣]{3}$/.test(callName)?callName[1]:[...dn(callName)][0].toUpperCase())}</span>`}</div><div class="cnm">${esc(dn(callName))}</div>`}
 function renderCall(){let c=OV.querySelector('.call');if(!c){c=document.createElement('div');c.className='call';OV.appendChild(c);c.animate([{opacity:0,transform:'scale(1.05)'},{opacity:1,transform:'none'}],{duration:380,easing:'cubic-bezier(.2,.9,.25,1)'})}
  setStatus(true);const locked=['lock','pin'].includes(callPrev);c.classList.toggle('act',callState!=='ring');
  if(callState==='ring'){c.innerHTML=callTop()+`<div class="csub">${t('mobile')}</div>`+(locked?`<div class="ring-top"><div class="cb"><span class="cc" style="width:50px;height:50px">${G.bellF}</span>${t('remind')}</div><div class="cb"><span class="cc" style="width:50px;height:50px">${G.msgF}</span>${t('message2')}</div></div><div class="slider" id="slider"><div class="kn">${G.handset}</div><span>${t('slideAnswer')}</span></div>`:
@@ -752,8 +752,8 @@ function wireSlider(){const s=$('#slider'),k=s.querySelector('.kn'),lab=s.queryS
  k.addEventListener('pointerdown',e=>{x0=e.clientX;k.setPointerCapture(e.pointerId)});k.addEventListener('pointermove',e=>{if(x0===null)return;dx=Math.max(0,Math.min(max,(e.clientX-x0)/SC));k.style.transform=`translateX(${dx}px)`;lab.style.opacity=1-dx/max});
  k.addEventListener('pointerup',()=>{if(x0===null)return;x0=null;if(dx>max*.75){answerCall()}else{k.animate([{transform:`translateX(${dx}px)`},{transform:'none'}],{duration:300,easing:'cubic-bezier(.2,1.3,.4,1)'});k.style.transform='';lab.style.opacity=1}})}
 function answerCall(){if(callDir==='in'){curScript=speech;isEnding=true}stopRing();stopRingback();vib(20);callState='active';callStart=Date.now();capIdx=-1;renderCall()}
-function declineCall(){stopRing();callState='';declined++;extraCalls.unshift(['Kyungsoo','오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'부재중']);afterDecline();closeCallUI()}
-function missCall(){if(callState!=='ring')return;stopRing();callState='';declined++;extraCalls.unshift(['Kyungsoo','오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'부재중']);afterDecline();closeCallUI();if(['lock','pin'].includes(view)){lockNotes.unshift({title:t('missedCall'),body:'Kyungsoo',app:'phone',time:t('now')});renderLock()}}
+function declineCall(){stopRing();callState='';declined++;extraCalls.unshift(['Kyungsoo my love 💞','오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'부재중']);afterDecline();closeCallUI()}
+function missCall(){if(callState!=='ring')return;stopRing();callState='';declined++;extraCalls.unshift(['Kyungsoo my love 💞','오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'부재중']);afterDecline();closeCallUI();if(['lock','pin'].includes(view)){lockNotes.unshift({title:t('missedCall'),body:'Kyungsoo',app:'phone',time:t('now')});renderLock()}}
 function endCall(){if(callState==='dialing'){clearCallTimers();stopRingback();callState='';extraCalls.unshift([callName,'오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'발신']);closeCallUI();if(view==='phone')show('phone');return}
  if(callState!=='active')return;callState='ended';vib(15);const t=$('#ctime');if(t)t.textContent=t_('callEnded');const c=OV.querySelector('.call');c&&c.querySelectorAll('.cb').forEach(b=>b.style.opacity=.4);
  extraCalls.unshift([callName,'오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),callDir==='out'?'발신':'수신']);if(isEnding)phoneDone=true;isEnding=false;setTimeout(()=>{callState='';closeCallUI();if(view==='phone')show('phone')},1100)}
@@ -766,9 +766,9 @@ function startRingback(){const r=()=>{tone(440,0,1,.05);tone(480,0,1,.05)};r();c
 function stopRingback(){clearInterval(rbIv);rbIv=null}
 function dial(name){if(callState)return;callName=name;callDir='out';callPrev=view;callState='dialing';if(nowSong>=0||PLAYER.dataset.voice)PLAYER.pause();renderCall();startRingback();vib(10);
  const ready=askedCall||elapsed()>=CALL_ASK_AT;const pick=(sc,ms,end)=>{callTimers.push(setTimeout(()=>{if(callState!=='dialing')return;curScript=sc;isEnding=!!end;answerCall()},ms))};
- if(name==='Kyungsoo'&&!phoneDone&&ready)pick(speech,4200,true);
- else if(name==='Kyungsoo'&&phoneDone)pick(SOHEE_AFTER,6000);
- else if(name==='Kyungsoo'){callTimers.push(setTimeout(()=>{if(callState!=='dialing')return;rejectOut(t('callEnded'));if(!busySent){busySent=true;CALL_BUSY.forEach((m,k)=>setTimeout(()=>incomingMsg(m),2500+k*2600))}},3500))}
+ if(name==='Kyungsoo my love 💞'&&!phoneDone&&ready)pick(speech,4200,true);
+ else if(name==='Kyungsoo my love 💞'&&phoneDone)pick(KYUNGSOO_AFTER,6000);
+ else if(name==='Kyungsoo my love 💞'){callTimers.push(setTimeout(()=>{if(callState!=='dialing')return;rejectOut(t('callEnded'));if(!busySent){busySent=true;CALL_BUSY.forEach((m,k)=>setTimeout(()=>incomingMsg(m),2500+k*2600))}},3500))}
  else if(OTHER_CALLS[name])pick(OTHER_CALLS[name],/^0/.test(name)?1800:3000+Math.random()*3000);
  else{callTimers.push(setTimeout(()=>{if(callState==='dialing')rejectOut(t('noAnswer'))},9000))}}
 function rejectOut(msg){stopRingback();clearCallTimers();const t=$('#ctime');if(t)t.textContent=msg;tone(480,0,.25,.05);tone(480,.35,.25,.05);tone(480,.7,.25,.05);extraCalls.unshift([callName,'오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'발신']);callState='ended';
