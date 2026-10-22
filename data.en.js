@@ -9,126 +9,861 @@ const chatData={
   ["hyungggg", "me"],
   ["are you awake", "me"],
   ["kyungsooooo", "me"],
-  ["what", "them"],
+  ["i'm awake.", "them"],
   ["hehe hi baby", "me"],
-  ["you called me 20 minutes ago", "them"],
-  ["and?", "me"],
-  ["and you said you were going to sleep", "them"],
-  ["i lied", "me"],
-  ["clearly", "them"],
-  ["can't sleep ㅠㅠ", "me"],
-  ["did you drink coffee again?", "them"],
+  ["hey. thought you were going to sleep", "them"],
+  ["yes", "me"],
+  ["what happened?", "them"],
+  ["i was", "me"],
+  ["but i can't ㅠㅠ", "me"],
+  ["did you drink coffee this evening?", "them"],
   ["no", "me"],
-  ["jongin", "them"],
+  ["jongin ㅋㅋ", "them"],
   ["just one", "me"],
-  ["at what time", "them"],
+  ["What time?", "them"],
   ["...8", "me"],
-  ["kim jongin.", "them"],
-  ["IN MY DEFENSE IT WAS REALLY GOOD", "me"],
-  ["go close your eyes", "them"],
-  ["i tried", "me"],
+  ["at eight in the evening?", "them"],
+  ["it was really good though", "me"],
+  ["i can tell ㅋㅋ", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["i know", "me"],
+  ["i regret it now", "me"],
+  ["try putting your phone down for a while", "them"],
+  ["i did", "me"],
+  ["for like ten minutes", "me"],
   ["it's too quiet", "me"],
-  ["turn on some music", "them"],
-  ["that's actually why i texted you", "me"],
-  ["?", "them"],
+  ["want me to stay on the phone with you?", "them"],
+  ["actually", "me"],
+  ["that's why i texted you", "me"],
+  ["tell me", "them"],
   ["can you sing for me 🥺", "me"],
-  ["right now?", "them"],
-  ["pleaseeeee", "me"],
-  ["you have an entire playlist of my songs", "them"],
-  ["but i want the live version", "me"],
-  ["you've heard me sing live hundreds of times", "them"],
-  ["not the same", "me"],
-  ["how is it different", "them"],
-  ["because this one's just for me", "me"],
-  ["...", "them"],
-  ["please baby", "me"],
+  ["right now? ㅋㅋ", "them"],
   ["just a little", "me"],
-  ["you're making it very difficult to say no", "them"],
-  ["SO THAT'S A YES????", "me"],
-  ["what do you want to hear?", "them"],
+  ["please", "me"],
+  ["you could play the album, you know ㅋㅋ", "them"],
+  ["i know", "me"],
+  ["but i want to hear you", "me"],
+  ["you heard me sing earlier", "them"],
+  ["not like this", "me"],
+  ["what's different this time?", "them"],
+  ["because you'd be singing just for me", "me"],
+  ["and i can pretend you're here", "me"],
+  ["...", "them"],
+  ["hyung", "me"],
+  ["pleaseee", "me"],
+  ["alright. what should i sing?", "them"],
+  ["REALLY?", "me"],
+  ["yes, really ㅋㅋ which song?", "them"],
+  ["hehe", "me"],
   ["my love", "me"],
-  ["you always ask for that one", "them"],
+  ["that one again? ㅋㅋ", "them"],
   ["because it's my favorite", "me"],
-  ["you said that about every song on my album", "them"],
-  ["THEY'RE ALL MY FAVORITES", "me"],
-  ["but my love is special", "me"],
-  ["why?", "them"],
-  ["because when you sing it i feel like you're right here with me", "me"],
-  ["i see", "them"],
-  ["give me a minute", "them"],
+  ["you said that about the last one too", "them"],
+  ["they're all my favorites", "me"],
+  ["but this one is different", "me"],
+  ["how is it different?", "them"],
+  ["i don't know", "me"],
+  ["i just really like hearing you sing it", "me"],
+  ["especially when it's quiet", "me"],
+  ["it makes me feel like you're next to me", "me"],
+  ["ah, i get it", "them"],
+  ["give me a minute. i'll record it", "them"],
   ["I LOVE YOU", "me"],
-  ["i haven't even recorded it yet", "them"],
-  ["I LOVE YOU IN ADVANCE", "me"],
+  ["i haven't even recorded it yet ㅋㅋ", "them"],
+  ["i know ㅋㅋㅋ", "me"],
+  ["love you anyway", "me"],
+
   ["11:58 PM", "date"],
   ["[My Love]", "them"],
   ["...", "me"],
   ["hyung", "me"],
-  ["DO KYUNGSOO", "me"],
-  ["what 😭", "them"],
-  ["YOU CAN'T JUST SEND THAT AND EXPECT ME TO SLEEP", "me"],
-  ["you literally asked me to sing you to sleep", "them"],
-  ["I KNOW BUT", "me"],
-  ["YOUR VOICE 😭😭😭", "me"],
-  ["baby you sound so good", "me"],
-  ["AND YOU SANG IT SO SOFTLY", "me"],
-  ["I'M GOING TO CRY", "me"],
-  ["don't cry. you're supposed to be sleeping", "them"],
-  ["i'm listening again", "me"],
-  ["jongin-ah", "them"],
   ["wait", "me"],
+  ["i'm listening again", "me"],
+  ["did the recording sound okay?", "them"],
+  ["YES", "me"],
+  ["baby", "me"],
+  ["you sound so good", "me"],
+  ["why did you sing it so softly ㅠㅠ", "me"],
+  ["it's late. i didn't want to wake anyone", "them"],
+  ["oh", "me"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["i thought you did it for me", "me"],
+  ["i did sing it for you", "them"],
+  ["...", "me"],
+  ["hyung", "me"],
+  ["you're making it worse", "me"],
+  ["how is that worse? ㅋㅋ", "them"],
+  ["i was supposed to fall asleep", "me"],
+  ["now i just miss you more", "me"],
+  ["you asked me to sing ㅋㅋ", "them"],
+  ["i knowww", "me"],
+  ["i'm not complaining", "me"],
+  ["i really love it", "me"],
+  ["i'm glad you liked it", "them"],
+  ["now try to get some sleep", "them"],
+  ["wait", "me"],
+  ["one thing", "me"],
+  ["tell me", "them"],
   ["did you smile at the end?", "me"],
-  ["what?", "them"],
-  ["I HEARD YOU SMILE", "me"],
-  ["how do you hear someone smile?", "them"],
-  ["I KNOW YOUR VOICE", "me"],
-  ["...yes, i smiled", "them"],
-  ["WHY", "me"],
+  ["the song?", "them"],
+  ["the recording", "me"],
+  ["right before you stopped", "me"],
+  ["your voice sounded different", "me"],
+  ["i think so", "them"],
+  ["i smiled near the end", "them"],
+  ["I KNEW IT", "me"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["why", "me"],
   ["because i was thinking about you", "them"],
-  ["hyung 😭", "me"],
-  ["you're actually trying to kill me", "me"],
-  ["i thought you wanted to sleep", "them"],
-  ["i want to marry you", "me"],
-  ["we're having two very different conversations", "them"],
-  ["NO I'M SERIOUS", "me"],
-  ["SING THAT AT OUR WEDDING", "me"],
-  ["you want me to perform at my own wedding?", "them"],
-  ["PLEASE", "me"],
-  ["you'd probably cry before i finished the first verse", "them"],
-  ["i'm already crying and we're not even getting married", "me"],
-  ["go to sleep, you ridiculous man", "them"],
-  ["one more question", "me"],
-  ["what now", "them"],
-  ["can i keep this recording forever?", "me"],
-  ["of course", "them"],
-  ["even when we're old?", "me"],
-  ["even when we're old", "them"],
-  ["i'm going to play it when i'm 80", "me"],
-  ["you'll probably still be asking me to sing it", "them"],
-  ["and you'll still sing for me right?", "me"],
-  ["if you still want to hear me", "them"],
-  ["always.", "me"],
-  ["then always.", "them"],
-  ["i love you, soo", "me"],
-  ["i love you too, jongin-ah", "them"],
-  ["now sleep. you have an early schedule tomorrow", "them"],
-  ["okay baby", "me"],
-  ["goodnight ♡", "me"],
-  ["goodnight, my love ♡", "them"],
-  ["12:14 AM", "date"],
-  ["jongin?", "them"],
-  ["did you fall asleep?", "them"],
-  ["sweet dreams, baby. i'll sing it for you in person when i see you.", "them"],
-  ["10월 23일", "date"],
-  ["GOOD MORNING MY FAVORITE SINGER", "me"],
-  ["i fell asleep listening to you 🥹", "me"],
-  ["did you sleep well?", "them"],
-  ["best sleep of my life", "me"],
-  ["good. eat breakfast before you leave.", "them"],
-  ["yes sir 🫡", "me"],
-  ["also", "me"],
-  ["can you sing for me again tonight", "me"],
-  ["kim jongin 😭", "them"],
+  ["hyung ㅠㅠ", "me"],
+  ["what am i supposed to do with that", "me"],
+  ["you could try sleeping now ㅋㅋ", "them"],
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["you're so annoying", "me"],
+  ["you asked ㅋㅋ", "them"],
+  ["i know", "me"],
+  ["i'm just happy", "me"],
+  ["then i'm happy too", "them"],
 
+  ["12:07 AM", "date"],
+  ["can i save the recording?", "me"],
+  ["of course you can", "them"],
+  ["like forever?", "me"],
+  ["yes ㅋㅋ", "them"],
+  ["even when we're old", "me"],
+  ["keep it as long as you want", "them"],
+  ["i'm going to listen to it when i'm 80", "me"],
+  ["you'll probably be tired of it by then", "them"],
+  ["more than that", "me"],
+  ["ㅋㅋㅋ", "me"],
+  ["you'll still sing for me when we're old right", "me"],
+  ["if you still want to hear it, sure", "them"],
+  ["of course i will", "me"],
+  ["even if you get tired of singing it", "me"],
+  ["then i'll sing it. even if my voice sounds different", "them"],
+  ["promise?", "me"],
+  ["promise", "them"],
+  ["...", "me"],
+  ["i love you so much", "me"],
+  ["i love you too", "them"],
+  ["you know", "me"],
+  ["if we get married someday", "me"],
+  ["you should sing it at our wedding", "me"],
+  ["at our own wedding? ㅋㅋ", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["yes", "me"],
+  ["just for me", "me"],
+  ["you'd cry before i finished the first verse", "them"],
+  ["probably", "me"],
+  ["i'd cry even if you didn't sing", "me"],
+  ["i know ㅋㅋ", "them"],
+  ["i'd look really handsome though", "me"],
+  ["you would", "them"],
+  ["you'd look handsome too", "me"],
+  ["i'm glad you liked it", "them"],
+  ["hehe", "me"],
+  ["i want to see you", "me"],
+  ["i know. i'm looking forward to it", "them"],
+  ["i know", "me"],
+  ["just saying", "me"],
+  ["i want to see you too", "them"],
+  ["oh", "me"],
+  ["okay", "me"],
+  ["now i'm smiling at my phone", "me"],
+  ["ㅋㅋ", "them"],
+
+  ["12:16 AM", "date"],
+  ["are you in bed?", "them"],
+  ["yes", "me"],
+  ["lights off?", "them"],
+  ["yes", "me"],
+  ["then close your eyes and rest", "them"],
+  ["okay", "me"],
+  ["i'm going to play the recording one more time", "me"],
+  ["just once? ㅋㅋ", "them"],
+  ["maybe twice", "me"],
+  ["ㅋㅋ", "them"],
+  ["goodnight, jongin", "them"],
+  ["goodnight baby ♡", "me"],
+  ["love you", "me"],
+  ["i love you too", "them"],
+  ["sleep well ♡", "them"],
+
+  ["12:29 AM", "date"],
+  ["Jongin?", "them"],
+  ["looks like you fell asleep", "them"],
+  ["i'll sing the rest for you when i see you", "them"],
+  ["goodnight, baby ♡", "them"],
+
+  ["10월 9일", "date"],
+  ["GOOD MORNING MY FAVORITE SINGER", "me"],
+  ["i fell asleep listening to you ㅠㅠ", "me"],
+  ["i don't even remember when", "me"],
+  ["Good morning.", "them"],
+  ["sleep well?", "them"],
+  ["so well", "me"],
+  ["i woke up and my earphones were still in", "me"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["your ears must hurt ㅋㅋ", "them"],
+  ["it wasn't", "me"],
+  ["but worth it", "me"],
+  ["at least you got some sleep", "them"],
+  ["have you had breakfast?", "them"],
+  ["not yet", "me"],
+  ["i just woke up", "me"],
+  ["eat something before you go", "them"],
+  ["okayyy", "me"],
+  ["did you sleep well too?", "me"],
+  ["i did. thanks for asking", "them"],
+  ["good ♡", "me"],
+  ["hyung", "me"],
+  ["can i ask something", "me"],
+  ["tell me", "them"],
+  ["can you sing for me again tonight", "me"],
+  ["ㅋㅋㅋㅋ", "them"],
+  ["it's still morning ㅋㅋ", "them"],
+  ["i'm planning ahead", "me"],
+  ["you really liked it that much?", "them"],
+  ["soooo", "me"],
+  ["if i get home early, i will", "them"],
+  ["hehe okay", "me"],
+  ["love you baby", "me"],
+  ["Love you too.", "them"],
+  ["now go have breakfast ㅋㅋ", "them"],
+  
+  ["2:14 PM", "date"],
+  ["hyung", "me"],
+  ["what are you doing", "me"],
+  ["having lunch. you?", "them"],
+  ["oh", "me"],
+  ["what are you eating", "me"],
+  ["rice and soup", "them"],
+  ["wow really", "me"],
+  ["my boyfriend is so funny", "me"],
+  ["what did you think i was eating? ㅋㅋ", "them"],
+  ["i just wanted to talk to you ☹️", "me"],
+  ["you can just say you miss me", "them"],
+  ["i wanted to talk to you", "me"],
+  ["happy?", "me"],
+  ["yes, actually", "them"],
+  ["you're so annoying", "me"],
+  ["and you still like talking to me", "them"],
+  ["unfortunately", "me"],
+
+  ["9월 15일", "date"],
+  ["Did you eat?", "them"],
+  ["yes mom", "me"],
+  ["i'm just asking ㅋㅋ", "them"],
+  ["you act older than her", "me"],
+  ["you skipped lunch yesterday", "them"],
+  ["that's because you love me", "me"],
+  ["that's right", "them"],
+  ["YOU KEEP SAYING UNFORTUNATELY", "me"],
+  ["BREAK UP WITH ME THEN", "me"],
+  ["no. come here later instead", "them"],
+  ["ㅋㅋㅋㅋㅋㅋㅋㅋ", "me"],
+
+  ["9월 27일", "date"],
+  ["what are you doing later", "me"],
+  ["i should be home by six. why?", "them"],
+  ["nothing", "me"],
+  ["just asking", "me"],
+  ["jongin ㅋㅋ", "them"],
+  ["what", "me"],
+  ["do you want to come over?", "them"],
+  ["no", "me"],
+  ["who said that", "me"],
+  ["i was asking for a friend", "me"],
+  ["tell your friend to come by around seven", "them"],
+  ["he says you're very handsome", "me"],
+  ["and he misses you a lot", "me"],
+  ["tell him i miss him too", "them"],
+  ["he also says he wants a hug", "me"],
+  ["he can have one when he gets here", "them"],
+  ["hyung can i have a hug later", "me"],
+  ["yes, jongin ㅋㅋ", "them"],
+  ["okay i love you", "me"],
+  ["i know ㅋㅋ", "them"],
+  ["that's not what you're supposed to say", "me"],
+  ["love you too. finish eating first", "them"],
+  ["okay ❤️", "me"],
+
+  ["2:31 PM", "date"],
+  ["hyung", "me"],
+  ["important question", "me"],
+  ["extremely important actually", "me"],
+  ["what is it? ㅋㅋ", "them"],
+  ["why do you assume i did something", "me"],
+  ["you said it was extremely important", "them"],
+  ["wow", "me"],
+  ["anyway", "me"],
+  ["if i were a cat would you still love me", "me"],
+  ["a cat? ㅋㅋ", "them"],
+  ["yes please take this seriously", "me"],
+  ["would you let me sleep at night?", "them"],
+  ["I WOULD BE A VERY GOOD CAT", "me"],
+  ["I WOULD SLEEP ON YOUR LAP", "me"],
+  ["you already fall asleep on me", "them"],
+  ["so you admit you like it", "me"],
+  ["i didn't say i disliked it", "them"],
+  ["screenshotting this conversation for evidence", "me"],
+  ["you're impossible ㅋㅋ", "them"],
+  ["never", "me"],
+
+  ["2:38 PM", "date"],
+  ["hyung do you remember that restaurant we went to last month", "me"],
+  ["the one where we spent twenty minutes finding parking?", "them"],
+  ["YES", "me"],
+  ["the food was good though", "me"],
+  ["the food was good. the parking wasn't ㅋㅋ", "them"],
+  ["i found another parking lot nearby", "me"],
+  ["we can go again", "me"],
+  ["you looked for parking just so we could go again?", "them"],
+  ["maybe", "me"],
+  ["when?", "them"],
+  ["yesterday", "me"],
+  ["don't make it weird", "me"],
+  ["i think that's sweet", "them"],
+  ["stop saying things like that when i'm trying to be cool", "me"],
+  ["you are cool. sometimes ㅋㅋ", "them"],
+  ["breaking up again", "me"],
+  ["let's go at seven. i'll meet you there", "them"],
+  ["love you bye", "me"],
+  ["love you too. see you later", "them"],
+
+  ["10월 23일", "date"],
+
+  ["jonginnie~~", "them"],
+  ["are you awake?", "them"],
+  ["jongin-ah", "them"],
+  ["my jonginnie", "them"],
+  ["ㅋㅋㅋㅋ", "them"],
+  ["are you still sleeping?", "them"],
+
+  ["hyunggg", "me"],
+  ["i'm awake now", "me"],
+  ["why are there so many messages ㅋㅋㅋ", "me"],
+
+  ["because you weren't answering", "them"],
+  ["good morning, jonginnie", "them"],
+
+  ["good morning baby ♡", "me"],
+  ["did you miss me that much?", "me"],
+
+  ["yes", "them"],
+
+  ["oh", "me"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["you're being cute today", "me"],
+
+  ["only today?", "them"],
+
+  ["every day", "me"],
+  ["especially today", "me"],
+
+  ["good answer ㅋㅋ", "them"],
+
+  ["what are you doing?", "me"],
+
+  ["lying in bed", "them"],
+  ["i just woke up too", "them"],
+  ["it's too quiet here", "them"],
+
+  ["put some music on", "me"],
+
+  ["i don't want music", "them"],
+
+  ["then what do you want", "me"],
+
+  ["you", "them"],
+
+  ["...", "me"],
+  ["hyung ㅠㅠ", "me"],
+  ["you're making me want to come home", "me"],
+
+  ["then come home", "them"],
+
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["i have a concert tomorrow", "me"],
+
+  ["i know", "them"],
+  ["i'm joking", "them"],
+  ["a little", "them"],
+
+  ["a little???", "me"],
+
+  ["i miss you, jonginnie", "them"],
+  ["that's all", "them"],
+
+  ["i miss you too", "me"],
+  ["so much", "me"],
+
+  ["i know ♡", "them"],
+
+  ["9:42 AM", "date"],
+
+  ["jonginnie", "them"],
+
+  ["yes baby", "me"],
+
+  ["send me a picture", "them"],
+
+  ["of what", "me"],
+
+  ["your face", "them"],
+
+  ["you saw my face yesterday ㅋㅋㅋ", "me"],
+
+  ["that was yesterday", "them"],
+
+  ["ㅋㅋㅋㅋ", "me"],
+  ["okay wait", "me"],
+
+  ["[Photo]", "me"],
+
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["why do you look so sleepy", "them"],
+
+  ["BECAUSE I JUST WOKE UP", "me"],
+
+  ["you're cute", "them"],
+
+  ["hehe", "me"],
+  ["thank you baby", "me"],
+
+  ["hyung", "me"],
+  ["your turn", "me"],
+
+  ["my turn?", "them"],
+
+  ["send me a selfie too", "me"],
+  ["i want to see you", "me"],
+
+  ["ㅋㅋㅋ okay", "them"],
+  ["wait a second", "them"],
+
+  ["[Photo: Kyungsoo's selfie]", "them"],
+
+  ["oh", "me"],
+  ["hyung", "me"],
+  ["you're so handsome", "me"],
+
+  ["thank you, jonginnie ㅎㅎ", "them"],
+
+  ["i want to kiss you", "me"],
+
+  ["me too", "them"],
+
+  ["...", "me"],
+  ["you're really not helping", "me"],
+
+  ["ㅋㅋㅋㅋ", "them"],
+  ["you started it", "them"],
+
+  ["11:18 AM", "date"],
+
+  ["jonginnie~~", "them"],
+
+  ["hyungggg", "me"],
+
+  ["are you busy?", "them"],
+
+  ["not yet", "me"],
+  ["we're leaving for rehearsal in an hour", "me"],
+  ["why?", "me"],
+
+  ["can i call you?", "them"],
+
+  ["of course", "me"],
+  ["you don't have to ask", "me"],
+
+  ["i know", "them"],
+  ["i just wanted to make sure", "them"],
+
+  ["call me baby", "me"],
+
+  ["[KakaoTalk Voice Call — 38 minutes]", "date"],
+
+  ["you hung up", "them"],
+
+  ["HYUNG", "me"],
+  ["YOU SAID YOU WERE GOING TO SHOWER", "me"],
+
+  ["i changed my mind", "them"],
+
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["you were the one who said bye", "me"],
+
+  ["i know", "them"],
+  ["i miss you again", "them"],
+
+  ["we literally just talked for 38 minutes", "me"],
+
+  ["and?", "them"],
+
+  ["nothing", "me"],
+  ["i love you ㅋㅋㅋ", "me"],
+
+  ["love you too, jonginnie", "them"],
+
+  ["6:27 PM", "date"],
+
+  ["how was rehearsal?", "them"],
+
+  ["good!!", "me"],
+  ["a little tiring", "me"],
+  ["but everything went well", "me"],
+
+  ["did you eat?", "them"],
+
+  ["yes", "me"],
+  ["don't worry", "me"],
+
+  ["i wasn't worried", "them"],
+  ["i just wanted to know", "them"],
+
+  ["ㅋㅋㅋ okay", "me"],
+  ["what did you do today?", "me"],
+
+  ["not much", "them"],
+  ["went out for lunch", "them"],
+  ["came home", "them"],
+  ["thought about you", "them"],
+
+  ["oh?", "me"],
+  ["that last part sounds interesting", "me"],
+
+  ["ㅋㅋㅋㅋ", "them"],
+  ["i was thinking about how nice it would be if you were here", "them"],
+  ["we could have dinner together", "them"],
+  ["or just stay home", "them"],
+
+  ["hyung", "me"],
+  ["you're going to make me cry ㅠㅠ", "me"],
+
+  ["don't cry ㅋㅋ", "them"],
+  ["i'm just telling you", "them"],
+
+  ["i want that too", "me"],
+  ["i miss doing nothing with you", "me"],
+
+  ["me too", "them"],
+  ["it's not as fun doing nothing alone", "them"],
+
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["you're so cute", "me"],
+
+  ["come back safely, okay?", "them"],
+  ["i'll be waiting", "them"],
+
+  ["i will ♡", "me"],
+
+  ["11:56 PM", "date"],
+
+  ["jonginnie", "them"],
+
+  ["baby", "me"],
+
+  ["are you going to sleep soon?", "them"],
+
+  ["probably", "me"],
+  ["why?", "me"],
+
+  ["nothing", "them"],
+
+  ["hyung", "me"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["tell me", "me"],
+
+  ["i wanted to call you again", "them"],
+  ["but you should rest", "them"],
+
+  ["call me", "me"],
+
+  ["you have a concert tomorrow", "them"],
+
+  ["and i have a boyfriend who misses me", "me"],
+  ["i think i can spare ten minutes", "me"],
+
+  ["just ten?", "them"],
+
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["how many do you want", "me"],
+
+  ["twenty", "them"],
+
+  ["thirty", "me"],
+
+  ["deal", "them"],
+
+  ["[KakaoTalk Voice Call — 1 hour, 12 minutes]", "date"],
+
+  ["hyung", "me"],
+  ["that was not thirty minutes", "me"],
+
+  ["ㅋㅋㅋㅋ", "them"],
+  ["sorry, jonginnie", "them"],
+
+  ["you're not sorry", "me"],
+
+  ["not really", "them"],
+
+  ["i knew it", "me"],
+
+  ["did i keep you up too late?", "them"],
+
+  ["no baby", "me"],
+  ["i liked talking to you", "me"],
+
+  ["me too", "them"],
+
+  ["sleep well, jonginnie", "them"],
+  ["i love you", "them"],
+
+  ["i love you more", "me"],
+
+  ["don't start ㅋㅋ", "them"],
+
+  ["I LOVE YOU MORE", "me"],
+
+  ["okay, okay", "them"],
+  ["you win", "them"],
+
+  ["hehe", "me"],
+  ["goodnight my love ♡", "me"],
+
+  ["goodnight, jonginnie ♡", "them"],
+
+  ["12:41 AM", "date"],
+
+  ["jongin-ah", "them"],
+  ["one more thing", "them"],
+
+  ["what is it baby", "me"],
+
+  ["i'm proud of you", "them"],
+  ["i know you've been working really hard", "them"],
+  ["i hope you know how well you're doing", "them"],
+
+  ["hyung ㅠㅠ", "me"],
+  ["why are you making me emotional before bed", "me"],
+
+  ["ㅋㅋㅋㅋ", "them"],
+  ["because i love you", "them"],
+
+  ["i love you too", "me"],
+  ["thank you", "me"],
+  ["really", "me"],
+
+  ["i'll see you soon, jonginnie", "them"],
+
+  ["can't wait ♡", "me"],
+
+  ["now sleep", "them"],
+
+  ["yes sir", "me"],
+
+  ["ㅋㅋㅋ goodnight baby", "them"],
+
+
+  ["10월 23일", "date"],
+  ["10:38 PM", "date"],
+
+  ["hyung", "me"],
+  ["are you awake?", "me"],
+
+  ["yes, jonginnie", "them"],
+  ["what are you doing?", "them"],
+
+  ["at the gym with chanyeol hyung", "me"],
+  ["we're almost done", "me"],
+
+  ["you're still working out?", "them"],
+  ["we have rehearsal tomorrow ㅋㅋ", "them"],
+
+  ["just a little more", "me"],
+  ["look", "me"],
+
+  ["[Photo: Gym mirror selfie]", "me"],
+
+  ["...", "them"],
+
+  ["hyung?", "me"],
+
+  ["jonginnie", "them"],
+
+  ["yes? ㅋㅋㅋ", "me"],
+
+  ["are you trying to distract me?", "them"],
+
+  ["HAHAHAHA", "me"],
+  ["what do you mean", "me"],
+  ["i'm just showing you my progress", "me"],
+
+  ["i can see that", "them"],
+
+  ["and?", "me"],
+
+  ["and you look really good", "them"],
+
+  ["hehe thank you baby", "me"],
+
+  ["very good, actually", "them"],
+
+  ["oh?", "me"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["hyunggg", "me"],
+
+  ["what?", "them"],
+  ["can't i compliment my boyfriend?", "them"],
+
+  ["you can", "me"],
+  ["please continue", "me"],
+
+  ["ㅋㅋㅋㅋ", "them"],
+  ["don't get too excited", "them"],
+
+  ["too late", "me"],
+
+  ["10:44 PM", "date"],
+
+  ["jonginnie~~", "them"],
+
+  ["yes baby", "me"],
+
+  ["is chanyeol still there?", "them"],
+
+  ["yeah", "me"],
+  ["why?", "me"],
+
+  ["nothing", "them"],
+
+  ["hyung", "me"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["what are you thinking", "me"],
+
+  ["i was going to ask you something", "them"],
+
+  ["ask me", "me"],
+
+  ["when are you coming upstairs?", "them"],
+
+  ["soon", "me"],
+  ["why do you miss me already?", "me"],
+
+  ["yes", "them"],
+
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["we literally had dinner together", "me"],
+
+  ["i know", "them"],
+  ["and now i want to see you again", "them"],
+
+  ["hyung ㅠㅠ", "me"],
+  ["you're so cute", "me"],
+
+  ["come see me when you're done", "them"],
+
+  ["your room?", "me"],
+
+  ["where else? ㅋㅋ", "them"],
+
+  ["hehe okay", "me"],
+  ["give me twenty minutes", "me"],
+
+  ["make it ten", "them"],
+
+  ["HYUNG", "me"],
+  ["I STILL HAVE TO SHOWER", "me"],
+
+  ["then fifteen", "them"],
+
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["you're negotiating now?", "me"],
+
+  ["i miss you, jonginnie", "them"],
+  ["can you blame me?", "them"],
+
+  ["no baby", "me"],
+  ["i can't", "me"],
+
+  ["10:57 PM", "date"],
+
+  ["hyung", "me"],
+  ["chanyeol hyung saw me smiling at my phone", "me"],
+
+  ["ㅋㅋㅋㅋ", "them"],
+  ["what did he say?", "them"],
+
+  ["he asked if i was talking to you", "me"],
+
+  ["and?", "them"],
+
+  ["i said yes", "me"],
+  ["he told me to stop flirting and finish my workout", "me"],
+
+  ["he's right", "them"],
+
+  ["WOW", "me"],
+  ["you were the one flirting with me", "me"],
+
+  ["was i?", "them"],
+
+  ["HYUNG", "me"],
+
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["okay, maybe a little", "them"],
+
+  ["a little???", "me"],
+
+  ["jonginnie", "them"],
+
+  ["yes", "me"],
+
+  ["come upstairs", "them"],
+  ["i want a kiss", "them"],
+
+  ["...", "me"],
+
+  ["jongin?", "them"],
+
+  ["i'm coming", "me"],
+
+  ["ㅋㅋㅋㅋ", "them"],
+  ["finish your shower first", "them"],
+
+  ["you can't just say things like that", "me"],
+
+  ["why not?", "them"],
+  ["you're my boyfriend", "them"],
+
+  ["i know ㅠㅠ", "me"],
+  ["i love you", "me"],
+
+  ["love you too, jonginnie ♡", "them"],
+
+  ["11:19 PM", "date"],
+
+  ["i'm outside", "me"],
+
+  ["come in", "them"],
+
+  ["is the door open?", "me"],
+
+  ["yes", "them"],
+
+  ["hyung", "me"],
+
+  ["hm?", "them"],
+
+  ["how many kisses do i get", "me"],
+
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["come here and find out", "them"]
+
+
+  
+ 
  ],
  "엄마": [
   [
