@@ -476,7 +476,7 @@ VIEWS.kakao=()=>{const list=chatNames.slice().sort((a,b)=>dateKey(b)-dateKey(a))
 
 
  /* CHAT ROOM */
-const AUD_DUR={'media/wonbin_whistle.mp3':'0:15','media/kyungsoo_across_the_universe.mp3':'0:13'};
+const AUD_DUR={'media/my_love.mp3':'0:25','media/kyungsoo_across_the_universe.mp3':'0:13'};
 function fileInfo(n){return({'과제 파일':[t('f_assign'),'1.2MB'],'수정한 과제 파일':[t('f_assign2'),'1.3MB'],'실기 체크 시트 파일':[t('f_check'),'48KB']})[n]||[n+'.pdf','820KB']}
 function bubble(s){const m=mediaLabels[s];
  if(m&&m.kind==='image')return `<div class="bb img" onclick="event.stopPropagation();openViewerSrc('${m.src}',this.firstElementChild)"><img src="${m.src}" alt=""></div>`;
