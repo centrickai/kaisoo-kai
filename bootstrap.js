@@ -1,5 +1,5 @@
 
-/* 언어: 주소의 ?lang= → 지난번 선택 → 브라우저 언어 순. 잠금화면의 🌐 버튼으로 바꿈 */
+/* Language: ?lang= in the URL → Previous selection → Browser language, in that order. Change it using the 🌐 button on the lock screen */
 (function(){
  window.LANGS=[['ko','한국어'],['en','English'],['ja','日本語'],['zh','简体中文'],['vi','Tiếng Việt'],['th','ภาษาไทย'],['id','Bahasa Indonesia']];
  const ok=l=>LANGS.some(x=>x[0]===l);let sel=null;
