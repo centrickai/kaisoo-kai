@@ -5,15 +5,15 @@ Multilingual: On-screen Text Dictionary + Date/Time Localization
    (Dialogue and log translations are in data.<language>.js)
    ============================================================ */
 const LANG=window.LANG||'en';
-const LOCALE={ko:'ko-KR',en:'en-US',ja:'ja-JP',zh:'zh-CN',th:'th-TH-u-ca-gregory',id:'id-ID'}[LANG]||'ko-KR';
-const L6=(ko,en,ja,zh,th)=>({ko,en,ja,zh,th});
+const LOCALE={ko:'ko-KR',en:'en-US',ja:'ja-JP',zh:'zh-CN',th:'th-TH-u-ca-gregory'}[LANG]||'ko-KR';
+const L6=(ko,en,ja,zh,vi,th)=>({ko,en,ja,zh,vi,th});
 const UI={
  home:L6('홈','Home','ホーム','主屏幕','Màn hình chính','หน้าโฮม'),
  now:L6('지금','now','今','现在','bây giờ','ตอนนี้'),
- bdayTitle:L6('이소희 생일 🎂',"이소희's Birthday 🎂",'이소희の誕生日 🎂','이소희的生日 🎂','Sinh nhật 이소희 🎂','วันเกิด 이소희 🎂'),
- bdayEvent:L6('이소희 생일',"이소희's Birthday",'이소희の誕生日','이소희的生日','Sinh nhật 이소희','วันเกิด 이소희'),
+ bdayTitle:L6('Kyungsoo 생일 🎂',"Kyungsoo's Birthday 🎂",'Kyungsooの誕生日 🎂','Kyungsoo的生日 🎂','Sinh nhật Kyungsoo 🎂','วันเกิด Kyungsoo 🎂'),
+ bdayEvent:L6('Kyungsoo 생일',"Kyungsoo's Birthday",'Kyungsooの誕生日','Kyungsoo的生日','Sinh nhật Kyungsoo','วันเกิด Kyungsoo'),
  inDays:L6('{0}일 후','in {0} days','{0}日後','{0}天后','còn {0} ngày','อีก {0} วัน'),
- swipeUp:L6('위로 쓸어올려 열기','Swipe up to open','上にスワイプして開く','向上轻扫以打开','Vuốt lên để mở','ปัดขึ้นเพื่อเปิด'),
+ swipeUp:L6('위로 쓸어올려 열기','Swipe up to open','上にスワイプして開く','向上轻扫以打开','ốt lVuên để mở','ปัดขึ้นเพื่อเปิด'),
  enterPass:L6('암호 입력','Enter Passcode','パスコードを入力','输入密码','Nhập mật mã','ป้อนรหัส'),
  emergency:L6('긴급 구조','Emergency','緊急','紧急情况','Khẩn cấp','ฉุกเฉิน'),
  cancel:L6('취소','Cancel','キャンセル','取消','Hủy','ยกเลิก'),
@@ -214,9 +214,9 @@ const UI={
  callEnded:L6('통화 종료','Call Ended','通話終了','通话结束','Cuộc gọi đã kết thúc','วางสายแล้ว'),
  noAnswer:L6('응답 없음','No Answer','応答なし','无人接听','Không trả lời','ไม่มีผู้รับสาย'),
  missedCall:L6('부재중 전화','Missed Call','不在着信','未接来电','Cuộc gọi nhỡ','สายที่ไม่ได้รับ'),
-};
+}
 /* Bahasa Indonesia */
-const UI_ID={home:'Beranda',now:'sekarang',bdayTitle:'Ulang Tahun 이소희 🎂',bdayEvent:'Ulang Tahun 이소희',inDays:'{0} hari lagi',swipeUp:'Gesek ke atas untuk membuka',enterPass:'Masukkan Kode Sandi',emergency:'Darurat',cancel:'Batal',delete:'Hapus',
+const UI_ID={home:'Beranda',now:'sekarang',bdayTitle:'Ulang Tahun Kyungsoo 🎂',bdayEvent:'Ulang Tahun Kyungsoo',inDays:'{0} hari lagi',swipeUp:'Gesek ke atas untuk membuka',enterPass:'Masukkan Kode Sandi',emergency:'Darurat',cancel:'Batal',delete:'Hapus',
 app_maps:'Peta',app_instagram:'Instagram',app_photos:'Foto',app_mail:'Mail',app_calendar:'Kalender',app_clock:'Jam',app_notes:'Catatan',app_weather:'Cuaca',app_settings:'Pengaturan',app_phone:'Telepon',app_safari:'Safari',app_kakao:'KakaoTalk',app_music:'Musik',
 allDay:'Sepanjang hari',seoul:'Seoul',mostlySunny:'Sebagian Besar Cerah',hiLo:'T:21° R:12°',search:'Cari',folders:'Folder',pinned:'Disematkan',notesSec:'Catatan',nNotes:'{0} Catatan',yesterday:'Kemarin',noEvents:'Tidak Ada Acara',today:'Hari Ini',calendars:'Kalender',inbox:'Kotak Masuk',edit:'Edit',
 alarm:'Alarm',alarmLabel:'Alarm',sleepWake:'🛏 Tidur | Bangun',noAlarm:'Tidak Ada Alarm',setUp:'Atur',other:'Lainnya',worldClock:'Jam Dunia',stopwatch:'Stopwatch',timer:'Timer',all:'Semua',missed:'Tak Terjawab',recents:'Terbaru',mobile:'seluler',favorites:'Favorit',contacts:'Kontak',keypad:'Papan Tombol',voicemail:'Pesan Suara',
@@ -235,6 +235,7 @@ myLoc:'LOKASI SAYA',wxSummary:'Diperkirakan sebagian besar cerah sepanjang sore.
 acct:'Akun, iCloud, Media & Pembelian',airplane:'Mode Pesawat',on:'Nyala',cellular:'Seluler',battery:'Baterai',general:'Umum',access:'Aksesibilitas',camera:'Kamera',wallpaper:'Wallpaper',notif:'Notifikasi',sound:'Suara & Haptik',focus:'Fokus',screenTime:'Durasi Layar',faceid:'Face ID & Kode Sandi',privacy:'Privasi & Keamanan',
 wonbinsIphone:'iPhone 원빈',dailyAvg:'Rata-Rata Harian',hm:'{0} j {1} m',mOnly:'{0} m',upPct:'naik {0}% dari minggu lalu',mostUsed:'PALING SERING DIGUNAKAN',pickups:'PENGAMBILAN',firstPickup:'Pengambilan Pertama',avgPickups:'Rata-Rata Harian',pickN:'{0}',firstUsed:'Pertama Digunakan Setelah Diambil',notifSec:'NOTIFIKASI',perDay:'rata-rata {0} per hari',
 remind:'Ingatkan Saya',message2:'Pesan',slideAnswer:'geser untuk menjawab',decline:'Tolak',accept:'Terima',speaker:'speaker',mute:'bisukan',addCall:'tambah',endCall:'akhiri',calling:'memanggil…',liveCap:'Teks Langsung',callEnded:'Panggilan Berakhir',noAnswer:'Tidak Dijawab',missedCall:'Panggilan Tak Terjawab'};
+
 for(const k in UI_ID)if(UI[k])UI[k].id=UI_ID[k];
 function t(k,...a){const e=UI[k];let s=e?(e[LANG]??e.ko):k;a.forEach((v,i)=>{s=s.split('{'+i+'}').join(v)});return s}
 const dn=n=>(typeof DISPLAY!=='undefined'&&DISPLAY[n])||n;
@@ -253,7 +254,8 @@ const fmtNum=(y,m,d)=>_f({year:'numeric',month:'numeric',day:'numeric'}).format(
 const wdLong=(y,m,d)=>_f({weekday:'long'}).format(_d(y,m,d));
 const wdShort=(y,m,d)=>_f({weekday:'short'}).format(_d(y,m,d));
 const wdNarrow=()=>[0,1,2,3,4,5,6].map(i=>_f({weekday:'narrow'}).format(_d(2026,10,4+i)));
-const fmtLockDate=()=>_f({month:'long',day:'numeric',weekday:'long'}).format(_d(2026,10,17));
+const fmtLockDate=()=>_f({month:'long',day:'numeric',weekday:'long'}).format(new Date());
+//const fmtLockDate=()=>_f({month:'long',day:'numeric',weekday:'long'}).format(_d(2026,10,17));
 const fmtHour=h=>_f({hour:'numeric'}).format(_d(2026,10,17,h,0));
 function alarmParts(h,mi){const ps=_f({hour:'numeric',minute:'2-digit'}).formatToParts(_d(2026,10,17,h,mi));const di=ps.findIndex(p=>p.type==='dayPeriod');const dp=di>=0?ps[di].value:'';const tm=ps.filter(p=>p.type!=='dayPeriod').map(p=>p.value).join('').trim();const hi=ps.findIndex(p=>p.type==='hour');return{dp,tm,before:di>=0&&di<hi}}
 function parseLabel(l){let m=l.match(/^(\d{4})년 (\d+)월 (\d+)일$/);if(m)return{y:+m[1],m:+m[2],d:+m[3]};m=l.match(/^(\d{4})년 (\d+)월$/);if(m)return{y:+m[1],m:+m[2]};m=l.match(/^(\d+)월 (\d+)일$/);if(m)return{y:2026,m:+m[1],d:+m[2]};return null}
