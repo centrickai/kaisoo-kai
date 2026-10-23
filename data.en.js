@@ -4508,1571 +4508,2083 @@ const chatData={
 
  
  ],
- "엄마": [
-  [
-   "9월 3일",
-   "date"
-  ],
-  [
-   "Son, did you have breakfast?",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "What did you eat",
-   "them"
-  ],
-  [
-   "eggs",
-   "me"
-  ],
-  [
-   "You call that a meal?",
-   "them"
-  ],
-  [
-   "i'll eat lunch",
-   "me"
-  ],
-  [
-   "You always say that",
-   "them"
-  ],
-  [
-   "ok lol",
-   "me"
-  ],
-  [
-   "9월 11일",
-   "date"
-  ],
-  [
-   "Is the delivery address you told me last time right?",
-   "them"
-  ],
-  [
-   "yeah that one",
-   "me"
-  ],
-  [
-   "You don't have to reply if you're in class",
-   "them"
-  ],
-  [
-   "Check it when you get home tonight",
-   "them"
-  ],
-  [
-   "k",
-   "me"
-  ],
-  [
-   "9월 17일",
-   "date"
-  ],
-  [
-   "Grandma says she misses you",
-   "them"
-  ],
-  [
-   "i'll call her this weekend",
-   "me"
-  ],
-  [
-   "How's school these days",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "And your place is okay?",
-   "them"
-  ],
-  [
-   "yeah it's fine",
-   "me"
-  ],
-  [
-   "Good then",
-   "them"
-  ],
-  [
-   "10월 8일",
-   "date"
-  ],
-  [
-   "Are you coming home this weekend",
-   "them"
-  ],
-  [
-   "can't, i have assignments",
-   "me"
-  ],
-  [
-   "Okay come next time",
-   "them"
-  ],
-  [
-   "It's cold, wear a jacket",
-   "them"
-  ],
-  [
-   "okay",
-   "me"
-  ],
-  [
-   "10월 14일",
-   "date"
-  ],
-  [
-   "I sent socks and side dishes",
-   "them"
-  ],
-  [
-   "socks too?",
-   "me"
-  ],
-  [
-   "You said yours were all worn out",
-   "them"
-  ],
-  [
-   "lol thanks",
-   "me"
-  ],
-  [
-   "Make sure you eat properly",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "10월 16일",
-   "date"
-  ],
-  [
-   "It says the package arrived today",
-   "them"
-  ],
-  [
-   "yeah it came",
-   "me"
-  ],
-  [
-   "Put the side dishes in the fridge",
-   "them"
-  ],
-  [
-   "did",
-   "me"
-  ],
-  [
-   "Did you have dinner",
-   "them"
-  ],
-  [
-   "in a bit",
-   "me"
-  ],
-  [
-   "Make sure you eat",
-   "them"
-  ],
-  [
-   "yeah you too mom",
-   "me"
-  ]
- ],
- "윤찬": [
-  [
-   "8월 19일",
-   "date"
-  ],
-  [
-   "yo what should we do first for the presentation",
-   "them"
-  ],
-  [
-   "start with last class's announcement",
-   "me"
-  ],
-  [
-   "i'll make a drive folder",
-   "them"
-  ],
-  [
-   "ok",
-   "me"
-  ],
-  [
-   "you said you're in phys ed right",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "you're the only phys ed guy in our group",
-   "them"
-  ],
-  [
-   "guess so",
-   "me"
-  ],
-  [
-   "but you weren't in this section the first week, were you?",
-   "them"
-  ],
-  [
-   "switched",
-   "me"
-  ],
-  [
-   "why, this time slot is so awkward",
-   "them"
-  ],
-  [
-   "just cuz",
-   "me"
-  ],
-  [
-   "9월 4일",
-   "date"
-  ],
-  [
-   "you transferred this year right?",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "where'd you come from again",
-   "them"
-  ],
-  [
-   "another school",
-   "me"
-  ],
-  [
-   "lol not telling?",
-   "them"
-  ],
-  [
-   "nothing special",
-   "me"
-  ],
-  [
-   "settling in ok?",
-   "them"
-  ],
-  [
-   "it's manageable",
-   "me"
-  ],
-  [
-   "9월 17일",
-   "date"
-  ],
-  [
-   "let's swap the presentation order",
-   "them"
-  ],
-  [
-   "why",
-   "me"
-  ],
-  [
-   "my major class overlaps that day",
-   "them"
-  ],
-  [
-   "ask the prof first",
-   "me"
-  ],
-  [
-   "ok i'll reach out",
-   "them"
-  ],
-  [
-   "can you put the materials together?",
-   "them"
-  ],
-  [
-   "if you upload them i will",
-   "me"
-  ],
-  [
-   "thanks man",
-   "them"
-  ],
-  [
-   "10월 9일",
-   "date"
-  ],
-  [
-   "did you see the stats for the table changed",
-   "them"
-  ],
-  [
-   "saw it",
-   "me"
-  ],
-  [
-   "think we just need to redo the table",
-   "them"
-  ],
-  [
-   "i'll do it",
-   "me"
-  ],
-  [
-   "wow that was fast",
-   "them"
-  ],
-  [
-   "it's quick",
-   "me"
-  ],
-  [
-   "10월 16일",
-   "date"
-  ],
-  [
-   "yo",
-   "them"
-  ],
-  [
-   "were you at Motungi today",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "saw you standing by the window taking pics of the menu lol",
-   "them"
-  ],
-  [
-   "you saw me?",
-   "me"
-  ],
-  [
-   "yeah i was waiting on takeout",
-   "them"
-  ],
-  [
-   "lol",
-   "me"
-  ],
-  [
-   "picking something out for someone?",
-   "them"
-  ],
-  [
-   "nah just because",
-   "me"
-  ],
-  [
-   "ok lol",
-   "them"
-  ],
-  [
-   "i'll upload the files tomorrow",
-   "them"
-  ],
-  [
-   "ok",
-   "me"
-  ],
-  [
-   "but are you following 소희 around?",
-   "them"
-  ]
- ],
- "도현": [
-  [
-   "2025년 9월",
-   "date"
-  ],
-  [
-   "why weren't you in class today",
-   "them"
-  ],
-  [
-   "not feeling great",
-   "me"
-  ],
-  [
-   "i'll grab the handouts for you then",
-   "them"
-  ],
-  [
-   "ok",
-   "me"
-  ],
-  [
-   "gym's still under construction",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "was gonna hit the convenience store after",
-   "them"
-  ],
-  [
-   "next time",
-   "me"
-  ],
-  [
-   "2025년 12월",
-   "date"
-  ],
-  [
-   "you haven't been coming to school lately huh",
-   "them"
-  ],
-  [
-   "prepping to transfer",
-   "me"
-  ],
-  [
-   "you're actually going somewhere else?",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "Jungyeon Univ?",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "why there all of a sudden",
-   "them"
-  ],
-  [
-   "just wanna try",
-   "me"
-  ],
-  [
-   "you don't have to tell me lol",
-   "them"
-  ],
-  [
-   "is the practical exam prep going ok?",
-   "them"
-  ],
-  [
-   "k",
-   "me"
-  ],
-  [
-   "2026년 2월",
-   "date"
-  ],
-  [
-   "heard you got into Jungyeon",
-   "them"
-  ],
-  [
-   "y",
-   "me"
-  ],
-  [
-   "congrats man",
-   "them"
-  ],
-  [
-   "thanks",
-   "me"
-  ],
-  [
-   "the guys from school want you to come out",
-   "them"
-  ],
-  [
-   "i'll come later",
-   "me"
-  ],
-  [
-   "you're basically from a different school now",
-   "them"
-  ],
-  [
-   "lol",
-   "me"
-  ],
-  [
-   "2026년 9월",
-   "date"
-  ],
-  [
-   "how's the new school",
-   "them"
-  ],
-  [
-   "fine",
-   "me"
-  ],
-  [
-   "you seem busier than when you were here",
-   "them"
-  ],
-  [
-   "classes are a lot",
-   "me"
-  ],
-  [
-   "when are we hanging out this semester",
-   "them"
-  ],
-  [
-   "when i have time",
-   "me"
-  ],
-  [
-   "10월 5일",
-   "date"
-  ],
-  [
-   "we're getting together wednesday night, you coming?",
-   "them"
-  ],
-  [
-   "got class till late that day",
-   "me"
-  ],
-  [
-   "you have class at night? lol",
-   "them"
-  ],
-  [
-   "practicals",
-   "me"
-  ],
-  [
-   "ever since you transferred we never see you lol",
-   "them"
-  ],
-  [
-   "sorry",
-   "me"
-  ],
-  [
-   "10월 16일",
-   "date"
-  ],
-  [
-   "yo everyone from the old school came except you",
-   "them"
-  ],
-  [
-   "see you next time",
-   "me"
-  ],
-  [
-   "you've really gone quiet since transferring lol",
-   "them"
-  ]
- ],
- "김태윤": [
-  [
-   "9월 1일",
-   "date"
-  ],
-  [
-   "Hyung where's the practical tomorrow?",
-   "them"
-  ],
-  [
-   "the gym",
-   "me"
-  ],
-  [
-   "The TA said to bring shoes",
-   "them"
-  ],
-  [
-   "got it",
-   "me"
-  ],
-  [
-   "Thank you",
-   "them"
-  ],
-  [
-   "9월 8일",
-   "date"
-  ],
-  [
-   "Hyung did all your credits from your old school get recognized?",
-   "them"
-  ],
-  [
-   "one's still under review",
-   "me"
-  ],
-  [
-   "Wow the review takes forever",
-   "them"
-  ],
-  [
-   "right",
-   "me"
-  ],
-  [
-   "I should go to the admin office too for next semester",
-   "them"
-  ],
-  [
-   "go early, it gets crowded",
-   "me"
-  ],
-  [
-   "Yep",
-   "them"
-  ],
-  [
-   "9월 23일",
-   "date"
-  ],
-  [
-   "Did you get the practical checklist?",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "Could you send it to me too",
-   "them"
-  ],
-  [
-   "hold on",
-   "me"
-  ],
-  [
-   "[실기 체크 시트 파일]",
-   "me"
-  ],
-  [
-   "Got it, thank you",
-   "them"
-  ],
-  [
-   "10월 8일",
-   "date"
-  ],
-  [
-   "Hyung did they take attendance today?",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "Ugh I'm late, I'm screwed",
-   "them"
-  ],
-  [
-   "prof's still here",
-   "me"
-  ],
-  [
-   "I'll run lol",
-   "them"
-  ],
-  [
-   "Hyung wanna get spicy tteokbokki after?",
-   "them"
-  ],
-  [
-   "Oh wait you can't do spicy, right",
-   "them"
-  ],
-  [
-   "yeah i can't",
-   "me"
-  ],
-  [
-   "Then let's get something else next time",
-   "them"
-  ],
-  [
-   "10월 15일",
-   "date"
-  ],
-  [
-   "They said tomorrow's class got changed",
-   "them"
-  ],
-  [
-   "what time",
-   "me"
-  ],
-  [
-   "10 o'clock",
-   "them"
-  ],
-  [
-   "ok",
-   "me"
-  ],
-  [
-   "Should I bring my practical uniform too",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ]
- ],
- "박지훈": [
-  [
-   "9월 5일",
-   "date"
-  ],
-  [
-   "Hyung do you have last week's practical video?",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "Can I get it real quick",
-   "them"
-  ],
-  [
-   "ok",
-   "me"
-  ],
-  [
-   "[실기 영상 파일]",
-   "me"
-  ],
-  [
-   "Wow thank you",
-   "them"
-  ],
-  [
-   "nice angle",
-   "me"
-  ],
-  [
-   "9월 18일",
-   "date"
-  ],
-  [
-   "Did the prof say how long the report should be?",
-   "them"
-  ],
-  [
-   "three pages",
-   "me"
-  ],
-  [
-   "Oh so not counting photos?",
-   "them"
-  ],
-  [
-   "said photos included",
-   "me"
-  ],
-  [
-   "Ahh thanks",
-   "them"
-  ],
-  [
-   "9월 25일",
-   "date"
-  ],
-  [
-   "Wanna grab food after class?",
-   "them"
-  ],
-  [
-   "not today",
-   "me"
-  ],
-  [
-   "Hyung you're always busy",
-   "them"
-  ],
-  [
-   "lol next time",
-   "me"
-  ],
-  [
-   "Yep",
-   "them"
-  ],
-  [
-   "10월 7일",
-   "date"
-  ],
-  [
-   "What did you name your assignment file",
-   "them"
-  ],
-  [
-   "studentID_name",
-   "me"
-  ],
-  [
-   "Got it",
-   "them"
-  ],
-  [
-   "Oh and the submission box is open, right?",
-   "them"
-  ],
-  [
-   "k",
-   "me"
-  ],
-  [
-   "Hyung PC bang tonight?",
-   "them"
-  ],
-  [
-   "tired, gonna sleep tonight",
-   "me"
-  ],
-  [
-   "You're always sleeping lol",
-   "them"
-  ],
-  [
-   "10월 14일",
-   "date"
-  ],
-  [
-   "Hyung I heard Friday practical attendance is changing",
-   "them"
-  ],
-  [
-   "saw the notice",
-   "me"
-  ],
-  [
-   "Phew lol thanks",
-   "them"
-  ]
- ],
- "최민석": [
-  [
-   "9월 2일",
-   "date"
-  ],
-  [
-   "you still have the transfer student orientation materials?",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "can you send me a screenshot",
-   "them"
-  ],
-  [
-   "[오티 자료 캡처]",
-   "me"
-  ],
-  [
-   "thx",
-   "them"
-  ],
-  [
-   "k",
-   "me"
-  ],
-  [
-   "9월 16일",
-   "date"
-  ],
-  [
-   "they said the gym showers are under construction today",
-   "them"
-  ],
-  [
-   "again?",
-   "me"
-  ],
-  [
-   "yeah only one side is usable",
-   "them"
-  ],
-  [
-   "noted",
-   "me"
-  ],
-  [
-   "9월 29일",
-   "date"
-  ],
-  [
-   "how far did we get in sports psych",
-   "them"
-  ],
-  [
-   "week 6",
-   "me"
-  ],
-  [
-   "is there a quiz",
-   "them"
-  ],
-  [
-   "prof said next week",
-   "me"
-  ],
-  [
-   "thanks",
-   "them"
-  ],
-  [
-   "10월 12일",
-   "date"
-  ],
-  [
-   "is there a makeup class today?",
-   "them"
-  ],
-  [
-   "no",
-   "me"
-  ],
-  [
-   "where was that posted",
-   "them"
-  ],
-  [
-   "department lounge",
-   "me"
-  ],
-  [
-   "oh found it",
-   "them"
-  ],
-  [
-   "10월 16일",
-   "date"
-  ],
-  [
-   "you uploading the team report this weekend?",
-   "them"
-  ],
-  [
-   "around sunday",
-   "me"
-  ],
-  [
-   "ok i'll check then",
-   "them"
-  ]
- ],
- "교양 발표 4조": [
-  [
-   "8월 13일",
-   "date"
-  ],
-  [
-   "윤찬: I made the group chat. Please check, everyone",
-   "them"
-  ],
-  [
-   "소희: Checked!",
-   "them"
-  ],
-  [
-   "noted",
-   "me"
-  ],
-  [
-   "서연: Checked too",
-   "them"
-  ],
-  [
-   "윤찬: I'll upload materials to the shared folder",
-   "them"
-  ],
-  [
-   "8월 20일",
-   "date"
-  ],
-  [
-   "윤찬: I uploaded two topic options",
-   "them"
-  ],
-  [
-   "소희: I like topic 2",
-   "them"
-  ],
-  [
-   "서연: Me too, topic 2",
-   "them"
-  ],
-  [
-   "topic 2 sounds fine",
-   "me"
-  ],
-  [
-   "윤찬: Then I'll go with topic 2",
-   "them"
-  ],
-  [
-   "9월 4일",
-   "date"
-  ],
-  [
-   "소희: I found a few articles",
-   "them"
-  ],
-  [
-   "윤찬: Please share the links",
-   "them"
-  ],
-  [
-   "소희: Uploaded!",
-   "them"
-  ],
-  [
-   "i'll make the tables",
-   "me"
-  ],
-  [
-   "윤찬: Thank you",
-   "them"
-  ],
-  [
-   "9월 22일",
-   "date"
-  ],
-  [
-   "윤찬: Today's meeting is at 6, right?",
-   "them"
-  ],
-  [
-   "소희: Yes!",
-   "them"
-  ],
-  [
-   "i can make it",
-   "me"
-  ],
-  [
-   "서연: I think I'll be 10 minutes late",
-   "them"
-  ],
-  [
-   "윤찬: No problem",
-   "them"
-  ],
-  [
-   "10월 10일",
-   "date"
-  ],
-  [
-   "윤찬: The presentation order changed",
-   "them"
-  ],
-  [
-   "소희: Then I'll revise the presentation part",
-   "them"
-  ],
-  [
-   "does the script need edits too?",
-   "me"
-  ],
-  [
-   "윤찬: The script is fine as is",
-   "them"
-  ],
-  [
-   "noted",
-   "me"
-  ],
-  [
-   "10월 16일",
-   "date"
-  ],
-  [
-   "소희: I edited the file and uploaded it!",
-   "them"
-  ],
-  [
-   "윤찬: Got it",
-   "them"
-  ],
-  [
-   "서연: We just need to check the last table",
-   "them"
-  ],
-  [
-   "i'll look at it",
-   "me"
-  ],
-  [
-   "윤찬: Thank you~",
-   "them"
-  ]
- ],
- "체육학부 공지": [
-  [
-   "9월 3일",
-   "date"
-  ],
-  [
-   "조교: Friday's practical class location has changed",
-   "them"
-  ],
-  [
-   "김태윤: Got it",
-   "them"
-  ],
-  [
-   "박지훈: Yep",
-   "them"
-  ],
-  [
-   "조교: Please come to the 2nd floor of the gym",
-   "them"
-  ],
-  [
-   "9월 17일",
-   "date"
-  ],
-  [
-   "조교: Transfer students who haven't submitted credit recognition documents, please contact the admin office",
-   "them"
-  ],
-  [
-   "최민석: Is it only for transfer students?",
-   "them"
-  ],
-  [
-   "조교: Yes, only those it applies to",
-   "them"
-  ],
-  [
-   "noted",
-   "me"
-  ],
-  [
-   "9월 30일",
-   "date"
-  ],
-  [
-   "김태윤: Next week is in the gym, right?",
-   "them"
-  ],
-  [
-   "조교: Yes, same schedule",
-   "them"
-  ],
-  [
-   "박지훈: Got it",
-   "them"
-  ],
-  [
-   "10월 12일",
-   "date"
-  ],
-  [
-   "조교: Uploading the midterm evaluation checklist",
-   "them"
-  ],
-  [
-   "김태윤: Thank you",
-   "them"
-  ],
-  [
-   "조교: Monday starts with warm-ups",
-   "them"
-  ],
-  [
-   "10월 16일",
-   "date"
-  ],
-  [
-   "조교: Monday's measurements have been moved to 9 AM",
-   "them"
-  ],
-  [
-   "김태윤: Got it",
-   "them"
-  ],
-  [
-   "박지훈: Yep",
-   "them"
-  ]
- ],
- "전공 과제방": [
-  [
-   "9월 6일",
-   "date"
-  ],
-  [
-   "조장: Let's assign roles for this assignment",
-   "them"
-  ],
-  [
-   "민석: I'll do the research",
-   "them"
-  ],
-  [
-   "I'll organize the materials too",
-   "me"
-  ],
-  [
-   "조장: 원빈, please take the statistics tables",
-   "them"
-  ],
-  [
-   "noted",
-   "me"
-  ],
-  [
-   "9월 15일",
-   "date"
-  ],
-  [
-   "조장: Sharing the citation format",
-   "them"
-  ],
-  [
-   "민석: It's APA, right?",
-   "them"
-  ],
-  [
-   "조장: Yes, correct",
-   "them"
-  ],
-  [
-   "i'll mark it in the file",
-   "me"
-  ],
-  [
-   "9월 28일",
-   "date"
-  ],
-  [
-   "조장: Please upload drafts by Friday",
-   "them"
-  ],
-  [
-   "민석: I'll upload mine today",
-   "them"
-  ],
-  [
-   "mine's uploaded too",
-   "me"
-  ],
-  [
-   "조장: I'll take a look",
-   "them"
-  ],
-  [
-   "10월 12일",
-   "date"
-  ],
-  [
-   "조장: Please unify the file names",
-   "them"
-  ],
-  [
-   "민석: StudentID_Name?",
-   "them"
-  ],
-  [
-   "조장: Yes",
-   "them"
-  ],
-  [
-   "fixed",
-   "me"
-  ],
-  [
-   "10월 16일",
-   "date"
-  ],
-  [
-   "조장: Final materials updated",
-   "them"
-  ],
-  [
-   "민석: Everyone please check",
-   "them"
-  ],
-  [
-   "noted",
-   "me"
-  ]
- ],
- "서연": [
-  [
-   "9월 10일",
-   "date"
-  ],
-  [
-   "Hi! It's 서연 from Team 4 hehe first time messaging you directly",
-   "them"
-  ],
-  [
-   "oh hi",
-   "me"
-  ],
-  [
-   "Do you happen to have the materials from last class?",
-   "them"
-  ],
-  [
-   "posted them in the group chat",
-   "me"
-  ],
-  [
-   "Oh found it, thank you!",
-   "them"
-  ],
-  [
-   "9월 21일",
-   "date"
-  ],
-  [
-   "Did you leave right after we finished the assignment that day?",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "Oh I was going to ask if you wanted to get coffee",
-   "them"
-  ],
-  [
-   "oh i see",
-   "me"
-  ],
-  [
-   "10월 12일",
-   "date"
-  ],
-  [
-   "Are you coming to class next week too? hehe",
-   "them"
-  ],
-  [
-   "If you're free after, let's grab a coffee",
-   "them"
-  ],
-  [
-   "Are you free today? hehe",
-   "them"
-  ]
- ],
- "지우": [
-  [
-   "9월 12일",
-   "date"
-  ],
-  [
-   "Hyung I saw you at the gym the other day lol",
-   "them"
-  ],
-  [
-   "oh yeah?",
-   "me"
-  ],
-  [
-   "Guess you work out at that time too",
-   "them"
-  ],
-  [
-   "had class",
-   "me"
-  ],
-  [
-   "9월 30일",
-   "date"
-  ],
-  [
-   "Hyung I didn't see you at the gym",
-   "them"
-  ],
-  [
-   "didn't go that day",
-   "me"
-  ],
-  [
-   "Ah that explains it lol",
-   "them"
-  ],
-  [
-   "10월 12일",
-   "date"
-  ],
-  [
-   "I don't have class next week",
-   "them"
-  ],
-  [
-   "If you're free let's grab food hehe",
-   "them"
-  ],
-  [
-   "When are you gonna hang out with me lol",
-   "them"
-  ]
- ],
- "유리": [
-  [
-   "9월 24일",
-   "date"
-  ],
-  [
-   "Hi! It's 유리, I mentioned a concert last time",
-   "them"
-  ],
-  [
-   "oh i remember",
-   "me"
-  ],
-  [
-   "Are you interested in music performances by any chance?",
-   "them"
-  ],
-  [
-   "sometimes",
-   "me"
-  ],
-  [
-   "Oh then I'll send you info next time",
-   "them"
-  ],
-  [
-   "10월 3일",
-   "date"
-  ],
-  [
-   "Can I let you know if there are extra tickets?",
-   "them"
-  ],
-  [
-   "yeah",
-   "me"
-  ],
-  [
-   "Thanks hehe",
-   "them"
-  ],
-  [
-   "10월 12일",
-   "date"
-  ],
-  [
-   "I got an extra ticket for the Applied Music concert on the 30th",
-   "them"
-  ],
-  [
-   "Would you want to go together?",
-   "them"
-  ],
-  [
-   "The one I told you about T_T",
-   "them"
-  ]
- ],
- "지원": [
-  [
-   "9월 26일",
-   "date"
-  ],
-  [
-   "Hi! It's 지원, we're in the same gen-ed class",
-   "them"
-  ],
-  [
-   "oh hi",
-   "me"
-  ],
-  [
-   "What's the exam range?",
-   "them"
-  ],
-  [
-   "up to week 6",
-   "me"
-  ],
-  [
-   "Thank you!",
-   "them"
-  ],
-  [
-   "10월 2일",
-   "date"
-  ],
-  [
-   "I submitted my assignment thanks to you hehe",
-   "them"
-  ],
-  [
-   "that's a relief",
-   "me"
-  ],
-  [
-   "I'll treat you to a meal sometime",
-   "them"
-  ],
-  [
-   "fine",
-   "me"
-  ],
-  [
-   "10월 12일",
-   "date"
-  ],
-  [
-   "What are you doing after class today?",
-   "them"
-  ],
-  [
-   "If you're free, want to get dinner together?",
-   "them"
-  ],
-  [
-   "Did you not see my message? lol",
-   "them"
-  ]
- ]
+"Mom": [
+  ["9월 12일", "date"],
+  ["jongin-ah, are you awake?", "them"],
+  ["yes mom ㅎㅎ", "me"],
+  ["did you eat breakfast?", "them"],
+  ["not yet", "me"],
+  ["it's already lunchtime", "them"],
+  ["i know ㅠㅠ", "me"],
+  ["i'll eat in a bit", "me"],
+  ["make sure you eat something proper", "them"],
+  ["okay mom", "me"],
+  ["don't just drink coffee", "them"],
+  ["ㅎㅎ okay", "me"],
+  ["love you", "me"],
+  ["love you too, my son ❤️", "them"],
+
+  ["9월 18일", "date"],
+  ["mom", "me"],
+  ["do we still have the old photo albums?", "me"],
+  ["of course", "them"],
+  ["which one are you looking for?", "them"],
+  ["the ones from when i was little", "me"],
+  ["i wanted to look through them ㅎㅎ", "me"],
+  ["i found some pictures of you with your sisters", "them"],
+  ["really?", "me"],
+  ["send me some when you have time", "me"],
+  ["you were such a cute little boy", "them"],
+  ["ㅎㅎ mom", "me"],
+  ["you still are, of course", "them"],
+  ["ㅋㅋㅋ thank you", "me"],
+
+  ["9월 25일", "date"],
+  ["jongin-ah", "them"],
+  ["your sister came over today", "them"],
+  ["oh really?", "me"],
+  ["how is she?", "me"],
+  ["she's doing well", "them"],
+  ["we had dinner together", "them"],
+  ["what did you eat?", "me"],
+  ["samgyeopsal", "them"],
+  ["ahh sounds good ㅠㅠ", "me"],
+  ["come over this weekend if you're free", "them"],
+  ["i'll make some for you too", "them"],
+  ["really? ㅎㅎ", "me"],
+  ["i'll check my schedule", "me"],
+  ["i miss your cooking", "me"],
+  ["then come home soon ❤️", "them"],
+
+  ["10월 2일", "date"],
+  ["mom did you see the pictures i sent?", "me"],
+  ["yes, i saw them", "them"],
+  ["you look handsome", "them"],
+  ["ㅎㅎ thank you", "me"],
+  ["but you look a little tired", "them"],
+  ["have you been sleeping enough?", "them"],
+  ["i've been busy lately", "me"],
+  ["but i'm okay", "me"],
+  ["don't push yourself too hard", "them"],
+  ["i know mom", "me"],
+  ["i'll rest properly tonight", "me"],
+  ["good", "them"],
+  ["take care of yourself", "them"],
+  ["i will ❤️", "me"],
+
+  ["10월 8일", "date"],
+  ["mom", "me"],
+  ["i've been craving your doenjang jjigae", "me"],
+  ["ㅎㅎ really?", "them"],
+  ["yeah ㅠㅠ", "me"],
+  ["i was thinking about it earlier", "me"],
+  ["come home and i'll make it for you", "them"],
+  ["with extra tofu?", "me"],
+  ["of course", "them"],
+  ["ㅎㅎ thank you mom", "me"],
+  ["i'll come when i have time", "me"],
+  ["bring kyungsoo too", "them"],
+  ["i will ㅎㅎ", "me"],
+  ["he'll be happy", "me"],
+
+  ["10월 13일", "date"],
+  ["jongin-ah", "them"],
+  ["i watched your performance", "them"],
+  ["really?", "me"],
+  ["how was it? ㅎㅎ", "me"],
+  ["you did so well", "them"],
+  ["you looked happy on stage", "them"],
+  ["i was happy", "me"],
+  ["i was a little nervous though", "me"],
+  ["i couldn't tell", "them"],
+  ["you worked really hard", "them"],
+  ["i'm proud of you", "them"],
+  ["ah mom ㅠㅠ", "me"],
+  ["thank you", "me"],
+  ["that means a lot", "me"],
+  ["i love you ❤️", "me"],
+
+  ["10월 17일", "date"],
+  ["mom", "me"],
+  ["have you seen my black hoodie?", "me"],
+  ["which one?", "them"],
+  ["the one i wore last time i visited", "me"],
+  ["i don't think you left it here", "them"],
+  ["did you check your laundry?", "them"],
+  ["wait ㅎㅎ", "me"],
+  ["oh i found it", "me"],
+  ["it was in the closet", "me"],
+  ["ㅋㅋㅋ", "them"],
+  ["you should organize your clothes", "them"],
+  ["i know ㅠㅠ", "me"],
+  ["thank you mom", "me"],
+
+  ["10월 20일", "date"],
+  ["jongin, are you coming home this week?", "them"],
+  ["i think so ㅎㅎ", "me"],
+  ["maybe saturday?", "me"],
+  ["let me know when you're sure", "them"],
+  ["i'll prepare something for you", "them"],
+  ["you don't have to cook so much", "me"],
+  ["i want to", "them"],
+  ["it's been a while since we ate together", "them"],
+  ["i know ㅠㅠ", "me"],
+  ["i miss you", "me"],
+  ["i miss you too", "them"],
+  ["come home safely", "them"],
+  ["i will mom ❤️", "me"],
+
+  ["10월 23일", "date"],
+  ["good morning mom", "me"],
+  ["good morning jongin", "them"],
+  ["did you sleep well?", "them"],
+  ["yes ㅎㅎ", "me"],
+  ["i had a dream about home", "me"],
+  ["really? what happened?", "them"],
+  ["you were making breakfast", "me"],
+  ["and i was eating with everyone", "me"],
+  ["ㅎㅎ you must miss home", "them"],
+  ["i do", "me"],
+  ["i'll visit soon", "me"],
+  ["make sure you eat breakfast today too", "them"],
+  ["i'm making eggs now", "me"],
+  ["good ㅎㅎ", "them"],
+  ["love you mom", "me"],
+  ["love you too ❤️", "them"],
+
+  ["10월 24일", "date"],
+  ["jongin-ah", "them"],
+  ["did kyungsoo like the kimchi?", "them"],
+  ["he really liked it ㅎㅎ", "me"],
+  ["he made fried rice with it this morning", "me"],
+  ["and he wants to make kimchi stew later", "me"],
+  ["ㅎㅎ i'm glad", "them"],
+  ["i should've packed more", "them"],
+  ["he said he'll come thank you himself", "me"],
+  ["there's no need", "them"],
+  ["tell him he's always welcome", "them"],
+  ["i will", "me"],
+  ["thank you mom ❤️", "me"],
+
+  ["10월 26일", "date"],
+  ["mom are you busy?", "me"],
+  ["no, what is it?", "them"],
+  ["i wanted to ask you something", "me"],
+  ["i'm thinking of getting kyungsoo a present", "me"],
+  ["oh? is there a special occasion?", "them"],
+  ["not really ㅎㅎ", "me"],
+  ["i just saw something that reminded me of him", "me"],
+  ["what is it?", "them"],
+  ["a sweater", "me"],
+  ["i think he'd look good in it", "me"],
+  ["then you should get it for him", "them"],
+  ["he'll be happy you thought of him", "them"],
+  ["you think so?", "me"],
+  ["of course", "them"],
+  ["ㅎㅎ okay", "me"],
+  ["thank you mom", "me"],
+
+  ["10월 28일", "date"],
+  ["jongin", "them"],
+  ["your sister sent me a picture from dinner", "them"],
+  ["which one? ㅎㅎ", "me"],
+  ["the one where you're looking at kyungsoo", "them"],
+  ["ah ㅋㅋㅋ", "me"],
+  ["i remember", "me"],
+  ["you looked very happy", "them"],
+  ["i was ㅎㅎ", "me"],
+  ["he was telling me something funny", "me"],
+  ["you two seem to be doing well", "them"],
+  ["we are", "me"],
+  ["i'm glad", "them"],
+  ["take good care of each other", "them"],
+  ["we will mom ❤️", "me"],
+
+  ["10월 30일", "date"],
+  ["mom", "me"],
+  ["do you have a pancake recipe?", "me"],
+  ["pancakes?", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["i want to make breakfast for kyungsoo", "me"],
+  ["that's sweet", "them"],
+  ["i'll send you the recipe i use", "them"],
+  ["thank youuu", "me"],
+  ["don't make the heat too high", "them"],
+  ["okay ㅎㅎ", "me"],
+  ["i'll show you how they turn out", "me"],
+  ["i'll look forward to it", "them"],
+
+  ["11월 1일", "date"],
+  ["how were the pancakes?", "them"],
+  ["they turned out pretty well ㅎㅎ", "me"],
+  ["kyungsoo liked them", "me"],
+  ["that's good", "them"],
+  ["i made a bit of a mess though", "me"],
+  ["there was flour everywhere ㅋㅋㅋ", "me"],
+  ["did you clean up afterward?", "them"],
+  ["of course", "me"],
+  ["kyungsoo helped me", "me"],
+  ["ㅎㅎ good", "them"],
+  ["next time it'll be easier", "them"],
+  ["i hope so ㅋㅋㅋ", "me"],
+
+  ["11월 3일", "date"],
+  ["jongin-ah", "them"],
+  ["have you eaten?", "them"],
+  ["yes mom", "me"],
+  ["what did you have?", "them"],
+  ["ramyeon ㅎㅎ", "me"],
+  ["again?", "them"],
+  ["just today ㅠㅠ", "me"],
+  ["kyungsoo's working late", "me"],
+  ["so i ate something quick", "me"],
+  ["make sure you eat properly tomorrow", "them"],
+  ["i will", "me"],
+  ["don't stay up too late waiting for him", "them"],
+  ["i'll try ㅎㅎ", "me"],
+  ["i just want to see him when he gets home", "me"],
+  ["i understand", "them"],
+  ["take care of yourself too", "them"],
+
+  ["11월 6일", "date"],
+  ["mom", "me"],
+  ["can i ask you something?", "me"],
+  ["of course", "them"],
+  ["i think i upset kyungsoo a little", "me"],
+  ["what happened?", "them"],
+  ["i forgot something he asked me to do", "me"],
+  ["and he ended up doing it himself", "me"],
+  ["i already apologized", "me"],
+  ["but i still feel bad", "me"],
+  ["everyone makes mistakes, jongin", "them"],
+  ["what matters is that you understand why he was upset", "them"],
+  ["and that you try not to repeat it", "them"],
+  ["yeah", "me"],
+  ["you're right", "me"],
+  ["give him a little time too", "them"],
+  ["okay mom", "me"],
+  ["thank you for listening", "me"],
+  ["always ❤️", "them"],
+
+  ["11월 7일", "date"],
+  ["mom", "me"],
+  ["we talked yesterday ㅎㅎ", "me"],
+  ["you and kyungsoo?", "them"],
+  ["yeah", "me"],
+  ["everything's okay now", "me"],
+  ["he was just really tired", "me"],
+  ["and i was worrying too much", "me"],
+  ["i'm glad you talked about it", "them"],
+  ["me too", "me"],
+  ["i feel better now", "me"],
+  ["that's good", "them"],
+  ["have a nice day, both of you", "them"],
+  ["thank you mom ❤️", "me"],
+
+  ["11월 10일", "date"],
+  ["jongin-ah", "them"],
+  ["are you and kyungsoo free this weekend?", "them"],
+  ["i think so", "me"],
+  ["why?", "me"],
+  ["your sisters are coming over", "them"],
+  ["we thought we could all eat together", "them"],
+  ["oh that sounds nice ㅎㅎ", "me"],
+  ["i'll ask kyungsoo", "me"],
+  ["your sisters found some old videos of you", "them"],
+  ["ah really? ㅠㅠ", "me"],
+  ["please don't show him the embarrassing ones", "me"],
+  ["ㅎㅎ they're just childhood videos", "them"],
+  ["that's what worries me ㅋㅋㅋ", "me"],
+  ["come home and we'll watch them together", "them"],
+
+  ["11월 13일", "date"],
+  ["mom", "me"],
+  ["kyungsoo keeps talking about those videos ㅋㅋㅋ", "me"],
+  ["ㅎㅎ did he like them?", "them"],
+  ["a little too much", "me"],
+  ["he said i was really cute", "me"],
+  ["you were", "them"],
+  ["you still are", "them"],
+  ["ㅎㅎ thank you mom", "me"],
+  ["it was nice seeing everyone yesterday", "me"],
+  ["i had a good time", "me"],
+  ["we did too", "them"],
+  ["come again soon ❤️", "them"],
+
+  ["11월 16일", "date"],
+  ["jongin-ah", "them"],
+  ["how's work going?", "them"],
+  ["it's been pretty busy", "me"],
+  ["i'm a little tired ㅠㅠ", "me"],
+  ["are you getting enough rest?", "them"],
+  ["i'm trying", "me"],
+  ["kyungsoo told me to sleep earlier yesterday", "me"],
+  ["he's right", "them"],
+  ["you need to rest", "them"],
+  ["i know ㅎㅎ", "me"],
+  ["i'll take it easy tonight", "me"],
+  ["good", "them"],
+  ["tell kyungsoo i said hello", "them"],
+  ["i will ❤️", "me"],
+
+  ["11월 19일", "date"],
+  ["mom", "me"],
+  ["i was thinking about something earlier", "me"],
+  ["what is it?", "them"],
+  ["the future, i guess", "me"],
+  ["with kyungsoo", "me"],
+  ["ㅎㅎ what about it?", "them"],
+  ["just what our life might look like someday", "me"],
+  ["a quiet home", "me"],
+  ["our dogs running around", "me"],
+  ["having dinner together after work", "me"],
+  ["nothing really special", "me"],
+  ["that sounds special enough to me", "them"],
+  ["ㅎㅎ", "me"],
+  ["i think i'd be happy with that", "me"],
+  ["then i hope you get to have it", "them"],
+  ["you both deserve a happy life", "them"],
+  ["thank you mom ㅠㅠ", "me"],
+  ["love you", "me"],
+  ["love you too, jongin ❤️", "them"],
+
+  ["11월 22일", "date"],
+  ["jongin", "them"],
+  ["i found some of your old drawings today", "them"],
+  ["really? ㅎㅎ", "me"],
+  ["what kind?", "me"],
+  ["the ones you made when you were little", "them"],
+  ["there's one of our whole family", "them"],
+  ["ahh i want to see it", "me"],
+  ["i'll keep them for you", "them"],
+  ["thank you mom", "me"],
+  ["i want to show kyungsoo too", "me"],
+  ["i think he'd like them", "me"],
+  ["i'm sure he would", "them"],
+  ["you used to draw so much", "them"],
+  ["ㅎㅎ i remember", "me"],
+
+  ["11월 25일", "date"],
+  ["mom", "me"],
+  ["kyungsoo wants to learn how you make kimchi", "me"],
+  ["really?", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["he said yours tastes really good", "me"],
+  ["that's nice of him", "them"],
+  ["tell him to come over", "them"],
+  ["i'll teach him", "them"],
+  ["can i help too?", "me"],
+  ["of course", "them"],
+  ["we can all make it together", "them"],
+  ["that sounds nice ㅎㅎ", "me"],
+  ["i'll ask when he's free", "me"],
+
+  ["11월 29일", "date"],
+  ["did you both get home safely?", "them"],
+  ["yes mom ㅎㅎ", "me"],
+  ["thank you for today", "me"],
+  ["kyungsoo had a really good time", "me"],
+  ["he's already talking about making kimchi again", "me"],
+  ["ㅎㅎ i'm glad he enjoyed it", "them"],
+  ["he learns quickly", "them"],
+  ["he really does", "me"],
+  ["thank you for teaching us", "me"],
+  ["come over again whenever you want", "them"],
+  ["we will ❤️", "me"],
+  ["love you mom", "me"],
+  ["love you too", "them"]
+],
+
+ "우리 셋 🐻": [
+  ["9월 13일", "date"],
+  ["큰누나: jongin", "them"],
+  ["큰누나: are you alive", "them"],
+  ["작은누나: he's probably sleeping", "them"],
+  ["작은누나: or eating", "them"],
+  ["작은누나: or sleeping while eating", "them"],
+  ["i'm literally working", "me"],
+  ["큰누나: oh look who's here", "them"],
+  ["작은누나: our celebrity brother has graced us with his presence", "them"],
+  ["can you both be normal for once", "me"],
+  ["작은누나: no ❤️", "them"],
+  ["큰누나: mom wants us all home next weekend", "them"],
+  ["큰누나: bring kyungsoo too", "them"],
+  ["why did you say his name before mine", "me"],
+  ["작은누나: because we like him", "them"],
+  ["AND ME???", "me"],
+  ["작은누나: you're okay", "them"],
+  ["큰누나: ㅋㅋㅋㅋㅋㅋ", "them"],
+
+  ["9월 21일", "date"],
+  ["작은누나: JONGIN", "them"],
+  ["작은누나: ANSWER ME", "them"],
+  ["what 😭", "me"],
+  ["작은누나: did you take my hoodie", "them"],
+  ["which one", "me"],
+  ["작은누나: THE GRAY ONE", "them"],
+  ["oh", "me"],
+  ["작은누나: OH????", "them"],
+  ["i might have it", "me"],
+  ["작은누나: KIM JONGIN", "them"],
+  ["큰누나: why are you two fighting at 8 in the morning", "them"],
+  ["because she's yelling at me", "me"],
+  ["작은누나: BECAUSE HE STOLE MY HOODIE", "them"],
+  ["큰누나: jongin give it back", "them"],
+  ["but it's comfortable ㅠㅠ", "me"],
+  ["작은누나: BUY YOUR OWN", "them"],
+  ["i have money now", "me"],
+  ["작은누나: THEN USE IT", "them"],
+
+  ["9월 28일", "date"],
+  ["큰누나: mom said you and kyungsoo might visit", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["작은누나: YESSSS", "them"],
+  ["작은누나: tell kyungsoo oppa i miss him", "them"],
+  ["what about me", "me"],
+  ["작은누나: you're coming too?", "them"],
+  ["...", "me"],
+  ["i hate this family", "me"],
+  ["큰누나: no you don't", "them"],
+  ["작은누나: bring snacks", "them"],
+  ["WHY", "me"],
+  ["작은누나: admission fee", "them"],
+  ["큰누나: ㅋㅋㅋㅋㅋㅋ", "them"],
+
+  ["10월 4일", "date"],
+  ["작은누나: EVERYONE", "them"],
+  ["작은누나: i have a picture", "them"],
+  ["no", "me"],
+  ["작은누나: i haven't even said what it is", "them"],
+  ["i know it's bad", "me"],
+  ["큰누나: send itㅋㅋㅋ", "them"],
+  ["작은누나: it's jongin staring at kyungsoo during dinner", "them"],
+  ["DELETE IT", "me"],
+  ["작은누나: everyone else is eating", "them"],
+  ["작은누나: and he's just 👁️👄👁️", "them"],
+  ["I WAS LISTENING TO HIM", "me"],
+  ["큰누나: with your entire soul apparently", "them"],
+  ["작은누나: ㅋㅋㅋㅋㅋㅋㅋㅋ", "them"],
+  ["i'm leaving this group", "me"],
+  ["큰누나: you said that last week", "them"],
+  ["작은누나: and the week before", "them"],
+
+  ["10월 7일", "date"],
+  ["큰누나: jongin-ah", "them"],
+  ["큰누나: are you eating properly?", "them"],
+  ["yes", "me"],
+  ["작은누나: liar", "them"],
+  ["HOW WOULD YOU KNOW", "me"],
+  ["작은누나: kyungsoo told me", "them"],
+  ["WHAT", "me"],
+  ["WHY ARE YOU TWO TALKING", "me"],
+  ["큰누나: because they're friends?", "them"],
+  ["작은누나: he said you had coffee for breakfast yesterday", "them"],
+  ["IT WAS A BIG COFFEE", "me"],
+  ["큰누나: jongin", "them"],
+  ["작은누나: jongin", "them"],
+  ["okay i'll eat 😭", "me"],
+  ["작은누나: good boy", "them"],
+  ["STOP CALLING ME THAT", "me"],
+
+  ["10월 11일", "date"],
+  ["작은누나: question", "them"],
+  ["큰누나: what", "them"],
+  ["작은누나: who was mom's favorite child growing up", "them"],
+  ["me obviously", "me"],
+  ["작은누나: LMAOOOO", "them"],
+  ["큰누나: definitely not you", "them"],
+  ["excuse me", "me"],
+  ["i was adorable", "me"],
+  ["작은누나: you cried when we wouldn't let you play with us", "them"],
+  ["I WAS FIVE", "me"],
+  ["큰누나: you also told mom we were being mean", "them"],
+  ["BECAUSE YOU WERE", "me"],
+  ["작은누나: ㅋㅋㅋㅋㅋㅋ", "them"],
+  ["큰누나: you were our cute little brother", "them"],
+  ["aw 🥺", "me"],
+  ["작은누나: emphasis on little", "them"],
+  ["NEVER MIND", "me"],
+
+  ["10월 18일", "date"],
+  ["큰누나: how was your week?", "them"],
+  ["busy ㅠㅠ", "me"],
+  ["작은누나: did you get to see kyungsoo?", "them"],
+  ["yeah", "me"],
+  ["we had a date yesterday ㅎㅎ", "me"],
+  ["작은누나: OHHHH", "them"],
+  ["작은누나: WHERE", "them"],
+  ["just coffee and a walk", "me"],
+  ["큰누나: that sounds nice", "them"],
+  ["작은누나: did you hold hands", "them"],
+  ["WHY ARE YOU ASKING", "me"],
+  ["작은누나: because i'm curious", "them"],
+  ["큰누나: leave him aloneㅋㅋㅋ", "them"],
+  ["작은누나: did you kiss", "them"],
+  ["I'M BLOCKING YOU", "me"],
+  ["작은누나: THAT'S A YES", "them"],
+
+  ["10월 23일", "date"],
+  ["큰누나: mom says we're having dinner together next month", "them"],
+  ["when?", "me"],
+  ["큰누나: she'll confirm", "them"],
+  ["작은누나: i'm bringing the childhood albums", "them"],
+  ["NO", "me"],
+  ["작은누나: especially the ballet pictures", "them"],
+  ["I WILL ACTUALLY CRY", "me"],
+  ["큰누나: kyungsoo hasn't seen those yet right?", "them"],
+  ["don't you dare", "me"],
+  ["작은누나: he's going to love them", "them"],
+  ["큰누나: he probably will ㅎㅎ", "them"],
+  ["you two are evil", "me"],
+  ["작은누나: we love you too ❤️", "them"],
+
+  ["10월 29일", "date"],
+  ["작은누나: jongin", "them"],
+  ["작은누나: serious question", "them"],
+  ["what", "me"],
+  ["작은누나: does kyungsoo know you used to sleep with that stuffed bear", "them"],
+  ["...", "me"],
+  ["don't", "me"],
+  ["큰누나: the brown one?", "them"],
+  ["작은누나: YES", "them"],
+  ["작은누나: the one he carried everywhere", "them"],
+  ["I WAS A CHILD", "me"],
+  ["큰누나: it was cute though", "them"],
+  ["작은누나: i think we still have it", "them"],
+  ["PLEASE DON'T SHOW HIM", "me"],
+  ["작은누나: i'm sending him a picture", "them"],
+  ["NOOOOO", "me"],
+
+  ["11월 5일", "date"],
+  ["큰누나: jongin", "them"],
+  ["큰누나: mom said you've been really busy", "them"],
+  ["yeah", "me"],
+  ["a lot going on lately", "me"],
+  ["작은누나: are you okay though?", "them"],
+  ["i'm okay ㅎㅎ", "me"],
+  ["just tired", "me"],
+  ["큰누나: make sure you're resting", "them"],
+  ["작은누나: and don't skip meals", "them"],
+  ["yes yes", "me"],
+  ["작은누나: we're serious", "them"],
+  ["i know", "me"],
+  ["thank you ❤️", "me"],
+  ["큰누나: we love you", "them"],
+  ["작은누나: even though you're annoying", "them"],
+  ["there it is", "me"],
+
+  ["11월 11일", "date"],
+  ["작은누나: GUYS", "them"],
+  ["작은누나: I FOUND IT", "them"],
+  ["what did you find", "me"],
+  ["작은누나: the video of jongin dancing in the living room", "them"],
+  ["큰누나: OH MY GOD", "them"],
+  ["작은누나: HE WAS SO SMALL", "them"],
+  ["please", "me"],
+  ["작은누나: i'm showing kyungsoo", "them"],
+  ["WHY DO YOU KEEP SHOWING HIM THINGS", "me"],
+  ["큰누나: because he appreciates our family history", "them"],
+  ["THAT IS NOT FAMILY HISTORY", "me"],
+  ["작은누나: it's cultural heritage", "them"],
+  ["ㅋㅋㅋㅋㅋㅋㅋ", "me"],
+  ["i hate you both", "me"],
+
+  ["11월 13일", "date"],
+  ["큰누나: thanks for coming yesterday", "them"],
+  ["of course ㅎㅎ", "me"],
+  ["작은누나: kyungsoo is so sweet", "them"],
+  ["작은누나: he helped mom with everything", "them"],
+  ["i helped too 😭", "me"],
+  ["작은누나: yes you did", "them"],
+  ["작은누나: you helped us finish the food", "them"],
+  ["WOW", "me"],
+  ["큰누나: ㅋㅋㅋㅋㅋ", "them"],
+  ["작은누나: seriously though", "them"],
+  ["작은누나: you two look really happy", "them"],
+  ["...", "me"],
+  ["we are ㅎㅎ", "me"],
+  ["큰누나: good ❤️", "them"],
+
+  ["11월 19일", "date"],
+  ["큰누나: jongin-ah", "them"],
+  ["큰누나: can i ask you something?", "them"],
+  ["sure", "me"],
+  ["큰누나: are you happy?", "them"],
+  ["that's randomㅋㅋㅋ", "me"],
+  ["큰누나: just asking", "them"],
+  ["yeah", "me"],
+  ["i really am", "me"],
+  ["작은누나: is it because of kyungsoo 👀", "them"],
+  ["partly ㅎㅎ", "me"],
+  ["작은누나: AWWWW", "them"],
+  ["큰누나: i'm glad", "them"],
+  ["큰누나: you've worked hard for a long time", "them"],
+  ["큰누나: you deserve good things", "them"],
+  ["stop i'm gonna cry", "me"],
+  ["작은누나: don't cry", "them"],
+  ["작은누나: your face gets ugly", "them"],
+  ["I TAKE IT BACK", "me"],
+  ["큰누나: ㅋㅋㅋㅋㅋㅋ", "them"],
+
+  ["11월 25일", "date"],
+  ["작은누나: mom says kyungsoo is coming over to learn how to make kimchi", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["큰누나: that's cute", "them"],
+  ["작은누나: what are you doing?", "them"],
+  ["helping obviously", "me"],
+  ["작은누나: helping with what", "them"],
+  ["everything", "me"],
+  ["큰누나: mom said you're washing vegetables", "them"],
+  ["THAT'S IMPORTANT", "me"],
+  ["작은누나: ㅋㅋㅋㅋㅋㅋ", "them"],
+  ["작은누나: assistant chef jongin", "them"],
+  ["i'm leaving", "me"],
+
+  ["11월 29일", "date"],
+  ["큰누나: did you get home safely?", "them"],
+  ["yes ㅎㅎ", "me"],
+  ["작은누나: tell kyungsoo we said bye", "them"],
+  ["he says bye too", "me"],
+  ["큰누나: come over again soon", "them"],
+  ["we will ❤️", "me"],
+  ["작은누나: bring dessert next time", "them"],
+  ["WHY DO I ALWAYS HAVE TO BRING SOMETHING", "me"],
+  ["작은누나: because you're rich", "them"],
+  ["i'm not rich 😭", "me"],
+  ["큰누나: ㅋㅋㅋㅋㅋ", "them"],
+  ["작은누나: love you little brother", "them"],
+  ["love you both too", "me"],
+  ["작은누나: ew", "them"],
+  ["...", "me"],
+  ["12월 1일", "date"],
+  ["i miss the babies ㅠㅠ", "me"],
+  ["작은누나: which babies", "them"],
+  ["RAEON AND RAHEE", "me"],
+  ["and the little one 😭", "me"],
+  ["큰누나: ㅋㅋㅋㅋㅋ", "them"],
+  ["큰누나: you saw them last week", "them"],
+  ["THAT WAS LAST WEEK", "me"],
+  ["작은누나: it's been four days jongin", "them"],
+  ["four very long days", "me"],
+  ["큰누나: you're so dramatic", "them"],
+  ["send me pictures please 🥺", "me"],
+  ["작은누나: say please properly", "them"],
+  ["PLEASE NOONA I LOVE YOU", "me"],
+  ["작은누나: ㅋㅋㅋㅋㅋㅋ", "them"],
+
+  ["12월 2일", "date"],
+  ["큰누나: raeon asked about you today", "them"],
+  ["WHAT", "me"],
+  ["WHAT DID HE SAY", "me"],
+  ["큰누나: he asked when uncle jongin is coming", "them"],
+  ["😭😭😭😭", "me"],
+  ["i'm coming right now", "me"],
+  ["작은누나: you have work", "them"],
+  ["i'll quit", "me"],
+  ["큰누나: KIM JONGIN", "them"],
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["tell him uncle misses him too", "me"],
+  ["큰누나: i will ❤️", "them"],
+  ["and rahee", "me"],
+  ["and the baby", "me"],
+  ["tell all three", "me"],
+  ["작은누나: YES WE KNOW", "them"],
+
+  ["12월 4일", "date"],
+  ["작은누나: rahee has something to tell you", "them"],
+  ["WHAT WHAT", "me"],
+  ["작은누나: she said you're not allowed to visit without snacks", "them"],
+  ["ㅋㅋㅋㅋㅋㅋㅋ", "me"],
+  ["SHE'S JUST LIKE YOU", "me"],
+  ["작은누나: that's my girl ❤️", "them"],
+  ["큰누나: ㅋㅋㅋㅋ", "them"],
+  ["what does she want", "me"],
+  ["작은누나: strawberry snacks", "them"],
+  ["anything else?", "me"],
+  ["작은누나: she said a toy", "them"],
+  ["done", "me"],
+  ["작은누나: you're spoiling her", "them"],
+  ["THAT'S MY JOB", "me"],
+
+  ["12월 6일", "date"],
+  ["큰누나: the baby smiled so much today", "them"],
+  ["PICTURE", "me"],
+  ["큰누나: jonginㅋㅋㅋ", "them"],
+  ["PLEASE", "me"],
+  ["작은누나: he doesn't even say hello anymore", "them"],
+  ["hello beautiful sisters", "me"],
+  ["now send the picture", "me"],
+  ["큰누나: ㅋㅋㅋㅋㅋㅋ", "them"],
+  ["큰누나: she's getting so big", "them"],
+  ["don't say that ㅠㅠ", "me"],
+  ["i'm missing everything", "me"],
+  ["큰누나: you're not missing everything", "them"],
+  ["큰누나: there'll be plenty more moments", "them"],
+  ["i know", "me"],
+  ["i just wish i could see them more", "me"],
+  ["작은누나: they miss you too ❤️", "them"],
+
+  ["12월 8일", "date"],
+  ["작은누나: guess what raeon said", "them"],
+  ["what", "me"],
+  ["작은누나: he wants kyungsoo uncle to visit", "them"],
+  ["EXCUSE ME", "me"],
+  ["작은누나: ㅋㅋㅋㅋㅋㅋ", "them"],
+  ["what about ME", "me"],
+  ["큰누나: he asked about you yesterday", "them"],
+  ["that's not the point", "me"],
+  ["작은누나: he said kyungsoo uncle makes better food", "them"],
+  ["I CAN COOK", "me"],
+  ["큰누나: sure you can", "them"],
+  ["작은누나: toast doesn't count", "them"],
+  ["😭😭😭", "me"],
+  ["i'm telling kyungsoo", "me"],
+  ["작은누나: tell him to bring food", "them"],
+
+  ["12월 10일", "date"],
+  ["mom sent me a video of rahee dancing", "me"],
+  ["큰누나: ㅋㅋㅋㅋ did you watch it?", "them"],
+  ["LIKE TEN TIMES", "me"],
+  ["she's so cute ㅠㅠ", "me"],
+  ["작은누나: she keeps copying your dance moves", "them"],
+  ["WAIT REALLY", "me"],
+  ["작은누나: yesㅋㅋㅋ", "them"],
+  ["큰누나: she said she wants to dance like uncle jongin", "them"],
+  ["i'm actually going to cry", "me"],
+  ["작은누나: don't cry at work", "them"],
+  ["TOO LATE", "me"],
+  ["큰누나: ㅋㅋㅋㅋㅋㅋ", "them"],
+  ["tell her i'll teach her when i visit", "me"],
+  ["작은누나: she said okay ❤️", "them"],
+
+  ["12월 12일", "date"],
+  ["큰누나: jongin-ah", "them"],
+  ["큰누나: are you free next weekend?", "them"],
+  ["WHY", "me"],
+  ["큰누나: we're planning a family lunch", "them"],
+  ["WITH THE BABIES???", "me"],
+  ["작은누나: no we're leaving them at home", "them"],
+  ["WHAT", "me"],
+  ["작은누나: I'M JOKING", "them"],
+  ["😭😭😭", "me"],
+  ["don't do that", "me"],
+  ["큰누나: ㅋㅋㅋㅋ", "them"],
+  ["큰누나: yes, all three will be there", "them"],
+  ["i'm coming", "me"],
+  ["작은누나: bring kyungsoo too", "them"],
+  ["he's already invited ㅎㅎ", "me"],
+  ["큰누나: perfect ❤️", "them"],
+
+  ["12월 15일", "date"],
+  ["작은누나: jongin", "them"],
+  ["작은누나: raeon wants to video call you", "them"],
+  ["RIGHT NOW???", "me"],
+  ["작은누나: yes", "them"],
+  ["WAIT", "me"],
+  ["give me two minutes", "me"],
+  ["큰누나: why", "them"],
+  ["i look terrible", "me"],
+  ["작은누나: HE'S A CHILD", "them"],
+  ["I STILL WANT TO LOOK GOOD", "me"],
+  ["작은누나: ㅋㅋㅋㅋㅋㅋ", "them"],
+  ["큰누나: hurry up", "them"],
+  ["OKAY CALL ME", "me"],
+
+  ["12월 18일", "date"],
+  ["i bought presents for the kids", "me"],
+  ["작은누나: oh no", "them"],
+  ["큰누나: jongin", "them"],
+  ["큰누나: how many?", "them"],
+  ["...", "me"],
+  ["작은누나: JONGIN", "them"],
+  ["three each", "me"],
+  ["큰누나: THREE EACH???", "them"],
+  ["THEY'RE SMALL", "me"],
+  ["작은누나: THAT'S NINE PRESENTS", "them"],
+  ["i can count 😭", "me"],
+  ["큰누나: you're going to spoil them", "them"],
+  ["they deserve it 🥺", "me"],
+  ["작은누나: you're impossible", "them"],
+  ["love you too ❤️", "me"],
+
+  ["12월 20일", "date"],
+  ["큰누나: thank you for coming today ❤️", "them"],
+  ["i had so much fun ㅠㅠ", "me"],
+  ["작은누나: raeon is still talking about you", "them"],
+  ["REALLY", "me"],
+  ["작은누나: he wants to know when you're coming back", "them"],
+  ["tomorrow", "me"],
+  ["큰누나: jonginㅋㅋㅋㅋ", "them"],
+  ["what", "me"],
+  ["i miss them already", "me"],
+  ["작은누나: YOU LEFT TWO HOURS AGO", "them"],
+  ["and???", "me"],
+  ["큰누나: ㅋㅋㅋㅋㅋ", "them"],
+  ["큰누나: the baby fell asleep holding the little bear you brought", "them"],
+  ["...", "me"],
+  ["don't tell me that", "me"],
+  ["i'm gonna cry again", "me"],
+  ["작은누나: our emotional little brother ❤️", "them"],
+
+  ["12월 23일", "date"],
+  ["작은누나: rahee asked about kyungsoo again", "them"],
+  ["what did she say ㅎㅎ", "me"],
+  ["작은누나: she asked if he can come over and cook", "them"],
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["she really likes him", "me"],
+  ["큰누나: they all do", "them"],
+  ["큰누나: he was so patient with them last weekend", "them"],
+  ["yeah", "me"],
+  ["he's really good with them", "me"],
+  ["작은누나: you were watching him the whole time", "them"],
+  ["I WAS NOT", "me"],
+  ["작은누나: ㅋㅋㅋㅋㅋ", "them"],
+  ["큰누나: you looked happy", "them"],
+  ["...", "me"],
+  ["i was ㅎㅎ", "me"],
+  ["작은누나: EW YOU'RE IN LOVE", "them"],
+  ["SHUT UP 😭", "me"]
+],
+
+
+"찬열이 형": [
+  ["9월 11일", "date"],
+  ["jongin-ah", "them"],
+  ["what are you doing", "them"],
+  ["just got home", "me"],
+  ["why hyung", "me"],
+  ["come online", "them"],
+  ["right now?", "me"],
+  ["yeah", "them"],
+  ["we need one more person", "them"],
+  ["what game", "me"],
+  ["the one we played last time", "them"],
+  ["hyung i was terrible at that ㅋㅋㅋ", "me"],
+  ["exactly", "them"],
+  ["what do you mean exactly", "me"],
+  ["it was funny", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["give me ten minutes", "me"],
+  ["don't fall asleep", "them"],
+  ["i won't ㅠㅠ", "me"],
+
+  ["9월 15일", "date"],
+  ["are you coming to the gym tomorrow?", "them"],
+  ["what time?", "me"],
+  ["around 10", "them"],
+  ["in the morning?", "me"],
+  ["no jongin", "them"],
+  ["10 at night obviously", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["i was just asking", "me"],
+  ["you coming or not", "them"],
+  ["i'll come", "me"],
+  ["don't be late", "them"],
+  ["you're always late though", "me"],
+  ["that's different", "them"],
+  ["how is it different ㅋㅋㅋ", "me"],
+  ["because i'm older", "them"],
+  ["ah okay hyung ㅎㅎ", "me"],
+
+  ["9월 19일", "date"],
+  ["jongin", "them"],
+  ["listen to this", "them"],
+  ["i was working on something last night", "them"],
+  ["send it", "me"],
+  ["what do you think", "them"],
+  ["wait", "me"],
+  ["listening", "me"],
+  ["ohhh", "me"],
+  ["i like the guitar in the beginning", "me"],
+  ["right??", "them"],
+  ["i was thinking the same thing", "them"],
+  ["the second part sounds really good too", "me"],
+  ["but maybe the transition could be smoother?", "me"],
+  ["yeah i was thinking about changing that", "them"],
+  ["send me the new version when you're done", "me"],
+  ["of course", "them"],
+  ["thanks jongin-ah", "them"],
+  ["anytime hyung ㅎㅎ", "me"],
+
+  ["9월 23일", "date"],
+  ["where are you", "them"],
+  ["home", "me"],
+  ["why", "me"],
+  ["come eat", "them"],
+  ["with who?", "me"],
+  ["me and sehun", "them"],
+  ["suho hyung might come too", "them"],
+  ["where are you guys?", "me"],
+  ["i'll send the location", "them"],
+  ["okay ㅎㅎ", "me"],
+  ["is kyungsoo coming?", "me"],
+  ["haven't asked him", "them"],
+  ["ask him", "me"],
+  ["why don't you ask him yourself ㅋㅋㅋ", "them"],
+  ["i will", "me"],
+  ["just asking ㅠㅠ", "me"],
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["hurry up", "them"],
+
+  ["9월 29일", "date"],
+  ["jongin-ah", "them"],
+  ["i just watched your practice video", "them"],
+  ["which one?", "me"],
+  ["the one you sent yesterday", "them"],
+  ["ahh", "me"],
+  ["what do you think?", "me"],
+  ["the footwork looks really good", "them"],
+  ["but how are you moving that fast", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["lots of practice", "me"],
+  ["show me next time", "them"],
+  ["you want to learn it?", "me"],
+  ["yeah", "them"],
+  ["i'll teach you ㅎㅎ", "me"],
+  ["don't laugh if i mess up", "them"],
+  ["i can't promise that ㅋㅋㅋ", "me"],
+
+  ["10월 3일", "date"],
+  ["jongin", "them"],
+  ["are you with kyungsoo?", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["why?", "me"],
+  ["tell him to check his phone", "them"],
+  ["he's cooking right now", "me"],
+  ["what's he making", "them"],
+  ["dinner", "me"],
+  ["wow thanks", "them"],
+  ["very helpful", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["chicken", "me"],
+  ["and some side dishes", "me"],
+  ["i'm coming over", "them"],
+  ["hyung ㅋㅋㅋㅋ", "me"],
+  ["i'm serious", "them"],
+  ["ask kyungsoo first", "me"],
+  ["fine", "them"],
+  ["tell him i said hi", "them"],
+  ["i will ㅎㅎ", "me"],
+
+  ["10월 6일", "date"],
+  ["you still awake?", "them"],
+  ["yeah", "me"],
+  ["can't sleep?", "them"],
+  ["not really", "me"],
+  ["what about you?", "me"],
+  ["working on music", "them"],
+  ["again?", "me"],
+  ["yeah ㅋㅋㅋ", "them"],
+  ["you should sleep hyung", "me"],
+  ["look who's talking", "them"],
+  ["ㅎㅎ", "me"],
+  ["i'm going to bed soon", "me"],
+  ["is kyungsoo asleep?", "them"],
+  ["yeah", "me"],
+  ["then go sleep too", "them"],
+  ["okay okay", "me"],
+  ["goodnight hyung", "me"],
+  ["night jongin", "them"],
+
+  ["10월 10일", "date"],
+  ["i have a question", "them"],
+  ["what is it", "me"],
+  ["do you think i could learn that choreography", "them"],
+  ["which one?", "me"],
+  ["the one you were practicing", "them"],
+  ["of course", "me"],
+  ["really?", "them"],
+  ["yeah", "me"],
+  ["but you'll have to practice a lot ㅋㅋㅋ", "me"],
+  ["i can do that", "them"],
+  ["okay then", "me"],
+  ["i'll teach you when we meet", "me"],
+  ["you better be patient", "them"],
+  ["hyung i'm always patient", "me"],
+  ["ㅋㅋㅋㅋㅋㅋ", "them"],
+  ["why are you laughing", "me"],
+  ["nothing", "them"],
+
+  ["10월 14일", "date"],
+  ["jongin-ah", "them"],
+  ["did you see the pictures from yesterday?", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["suho hyung sent them", "me"],
+  ["why do i look so tall next to everyone", "them"],
+  ["because you are tall hyung", "me"],
+  ["ㅋㅋㅋㅋ", "them"],
+  ["sehun said the same thing", "them"],
+  ["the picture of you and sehun is funny", "me"],
+  ["which one", "them"],
+  ["where you're both making the same face", "me"],
+  ["send it", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["i'm saving that", "me"],
+  ["don't", "them"],
+  ["too late ㅎㅎ", "me"],
+
+  ["10월 18일", "date"],
+  ["how was your date", "them"],
+  ["what date", "me"],
+  ["with kyungsoo", "them"],
+  ["how do you know about that ㅋㅋㅋ", "me"],
+  ["sehun told me", "them"],
+  ["ahh", "me"],
+  ["it was nice ㅎㅎ", "me"],
+  ["where did you go", "them"],
+  ["just walked around", "me"],
+  ["got coffee", "me"],
+  ["then watched a movie at home", "me"],
+  ["sounds nice", "them"],
+  ["yeah", "me"],
+  ["we haven't had much time together lately", "me"],
+  ["good that you got a day together then", "them"],
+  ["ㅎㅎ thanks hyung", "me"],
+  ["anyway", "them"],
+  ["are you free tomorrow", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["what do you need", "me"],
+
+  ["10월 22일", "date"],
+  ["jongin", "them"],
+  ["you busy?", "them"],
+  ["a little", "me"],
+  ["why?", "me"],
+  ["need your opinion on something", "them"],
+  ["music?", "me"],
+  ["yeah", "them"],
+  ["send it over", "me"],
+  ["listen when you have time", "them"],
+  ["no rush", "them"],
+  ["okay ㅎㅎ", "me"],
+  ["i'll listen tonight", "me"],
+  ["thanks", "them"],
+  ["and don't forget to eat", "them"],
+  ["why does everyone keep telling me that ㅋㅋㅋ", "me"],
+  ["because you forget", "them"],
+  ["fair enough ㅠㅠ", "me"],
+
+  ["10월 27일", "date"],
+  ["hyung", "me"],
+  ["what", "them"],
+  ["are you still at the studio?", "me"],
+  ["yeah", "them"],
+  ["why", "them"],
+  ["i'm nearby", "me"],
+  ["want coffee?", "me"],
+  ["yes", "them"],
+  ["iced americano", "them"],
+  ["you didn't even hesitate ㅋㅋㅋ", "me"],
+  ["you offered", "them"],
+  ["okay ㅎㅎ", "me"],
+  ["i'll be there in fifteen", "me"],
+  ["bring something to eat too", "them"],
+  ["hyung", "me"],
+  ["please", "them"],
+  ["ㅋㅋㅋㅋ okay", "me"],
+
+  ["11월 2일", "date"],
+  ["jongin-ah", "them"],
+  ["come online", "them"],
+  ["hyung i'm with kyungsoo", "me"],
+  ["tell him to join too", "them"],
+  ["he doesn't play that game", "me"],
+  ["teach him", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["he's reading right now", "me"],
+  ["leave him alone", "me"],
+  ["fine", "them"],
+  ["what about you", "them"],
+  ["maybe later", "me"],
+  ["you always say that", "them"],
+  ["and i always come eventually ㅎㅎ", "me"],
+  ["true", "them"],
+  ["message me when you're free", "them"],
+
+  ["11월 5일", "date"],
+  ["you okay?", "them"],
+  ["yeah hyung", "me"],
+  ["why?", "me"],
+  ["you seemed tired yesterday", "them"],
+  ["ahh", "me"],
+  ["just a lot of work lately", "me"],
+  ["i'm okay though", "me"],
+  ["make sure you rest", "them"],
+  ["you too hyung", "me"],
+  ["you've been working a lot", "me"],
+  ["yeah ㅋㅋㅋ", "them"],
+  ["we both need a break", "them"],
+  ["let's eat together sometime", "me"],
+  ["sounds good", "them"],
+  ["my treat", "them"],
+  ["really? ㅎㅎ", "me"],
+  ["don't get too excited", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+
+  ["11월 9일", "date"],
+  ["jongin", "them"],
+  ["i have an idea", "them"],
+  ["oh no", "me"],
+  ["what do you mean oh no", "them"],
+  ["ㅋㅋㅋㅋ tell me", "me"],
+  ["we should record something together", "them"],
+  ["like what?", "me"],
+  ["maybe something with guitar", "them"],
+  ["and you could dance to it", "them"],
+  ["ohhh", "me"],
+  ["that actually sounds fun", "me"],
+  ["right?", "them"],
+  ["i have a few ideas", "them"],
+  ["send them to me", "me"],
+  ["we can try something when we're both free", "me"],
+  ["deal", "them"],
+
+  ["11월 13일", "date"],
+  ["jongin-ah", "them"],
+  ["i heard your sisters showed kyungsoo your old videos", "them"],
+  ["who told you ㅠㅠ", "me"],
+  ["suho hyung", "them"],
+  ["how does he know everything", "me"],
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["send me the videos", "them"],
+  ["no hyung", "me"],
+  ["come on", "them"],
+  ["i've seen you dance for years", "them"],
+  ["this is different ㅋㅋㅋ", "me"],
+  ["i was little", "me"],
+  ["that's why i want to see them", "them"],
+  ["ㅠㅠ", "me"],
+  ["ask my sisters", "me"],
+  ["don't actually ask them", "me"],
+  ["too late", "them"],
+
+  ["11월 17일", "date"],
+  ["you free for the gym tomorrow?", "them"],
+  ["what time?", "me"],
+  ["afternoon", "them"],
+  ["i think so", "me"],
+  ["i'll check", "me"],
+  ["bring sehun too if he's free", "them"],
+  ["okay ㅎㅎ", "me"],
+  ["and don't disappear halfway through", "them"],
+  ["when have i done that", "me"],
+  ["last time", "them"],
+  ["i had to go home ㅠㅠ", "me"],
+  ["kyungsoo called you", "them"],
+  ["yeah", "me"],
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["what's funny", "me"],
+  ["nothing jongin-ah", "them"],
+  ["sure hyung ㅋㅋㅋ", "me"],
+
+  ["11월 21일", "date"],
+  ["hyung", "me"],
+  ["are you awake?", "me"],
+  ["yeah", "them"],
+  ["what's up", "them"],
+  ["i listened to the new version", "me"],
+  ["the one you sent yesterday", "me"],
+  ["and?", "them"],
+  ["i really like it", "me"],
+  ["the ending sounds much better now", "me"],
+  ["really?", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["it feels more complete", "me"],
+  ["good", "them"],
+  ["i spent forever on that part", "them"],
+  ["i can tell", "me"],
+  ["you worked hard hyung", "me"],
+  ["thanks jongin", "them"],
+  ["means a lot", "them"],
+
+  ["11월 25일", "date"],
+  ["jongin", "them"],
+  ["where's kyungsoo", "them"],
+  ["with me ㅎㅎ", "me"],
+  ["why?", "me"],
+  ["he hasn't replied to my message", "them"],
+  ["he's making kimchi with my mom", "me"],
+  ["what", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["yeah", "me"],
+  ["we're at my parents' house", "me"],
+  ["and you're making kimchi too?", "them"],
+  ["i'm helping", "me"],
+  ["doing what", "them"],
+  ["washing vegetables", "me"],
+  ["ㅋㅋㅋㅋㅋㅋㅋ", "them"],
+  ["that's important hyung", "me"],
+  ["of course it is", "them"],
+  ["tell kyungsoo to save me some", "them"],
+  ["i'll ask ㅎㅎ", "me"],
+
+  ["11월 27일", "date"],
+  ["happy birthday hyung 🎉", "me"],
+  ["thank you jongin-ah!!", "them"],
+  ["hope you have a really good day", "me"],
+  ["you've worked hard this year", "me"],
+  ["eat something nice and rest a little ㅎㅎ", "me"],
+  ["look at you being all sweet", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["i'm always sweet", "me"],
+  ["sure you are", "them"],
+  ["are you coming later?", "them"],
+  ["of course", "me"],
+  ["i'll bring your present", "me"],
+  ["oh?", "them"],
+  ["what is it", "them"],
+  ["you'll see ㅎㅎ", "me"],
+  ["don't be late", "them"],
+  ["i won't hyung", "me"],
+
+  ["11월 30일", "date"],
+  ["jongin-ah", "them"],
+  ["thanks for coming the other day", "them"],
+  ["of course hyung ㅎㅎ", "me"],
+  ["did you like your present?", "me"],
+  ["yeah", "them"],
+  ["i've already used it", "them"],
+  ["really?", "me"],
+  ["that's good", "me"],
+  ["we should hang out more often", "them"],
+  ["just us", "them"],
+  ["without everyone else making noise ㅋㅋㅋ", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["i'd like that", "me"],
+  ["it's been a while", "me"],
+  ["let's go eat next week", "them"],
+  ["sounds good hyung", "me"],
+  ["my treat this time", "me"],
+  ["i'm remembering that", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"]
+],
+
+"세훈이 🐣": [
+  ["9월 10일", "date"],
+  ["ya", "them"],
+  ["what", "me"],
+  ["where are you", "them"],
+  ["home", "me"],
+  ["why", "me"],
+  ["bored", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["what do you want me to do about that", "me"],
+  ["come out", "them"],
+  ["right now?", "me"],
+  ["yeah", "them"],
+  ["sehun it's almost midnight", "me"],
+  ["and", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["where", "me"],
+  ["usual place", "them"],
+  ["okay give me 20", "me"],
+  ["15", "them"],
+  ["25", "me"],
+  ["20", "them"],
+  ["deal ㅋㅋㅋ", "me"],
+
+  ["9월 14일", "date"],
+  ["send me that picture", "them"],
+  ["which one", "me"],
+  ["from yesterday", "them"],
+  ["the one with vivi", "them"],
+  ["ahh ㅎㅎ", "me"],
+  ["wait", "me"],
+  ["he looks so cute", "me"],
+  ["obviously", "them"],
+  ["he's my son", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["monggu misses him", "me"],
+  ["vivi doesn't", "them"],
+  ["yah ㅋㅋㅋㅋ", "me"],
+  ["don't be mean", "me"],
+  ["i'm kidding", "them"],
+  ["bring monggu next time", "them"],
+  ["okay ㅎㅎ", "me"],
+
+  ["9월 18일", "date"],
+  ["did you eat", "them"],
+  ["not yet", "me"],
+  ["you?", "me"],
+  ["no", "them"],
+  ["let's eat", "them"],
+  ["what do you want", "me"],
+  ["meat", "them"],
+  ["you always want meat ㅋㅋㅋ", "me"],
+  ["because it's good", "them"],
+  ["can't argue with that", "me"],
+  ["where should we go", "me"],
+  ["i'll pick you up", "them"],
+  ["okay ㅎㅎ", "me"],
+  ["don't take forever", "them"],
+  ["i'm literally getting dressed", "me"],
+  ["hurry", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+
+  ["9월 22일", "date"],
+  ["jongin", "them"],
+  ["what", "me"],
+  ["you left your jacket in my car", "them"],
+  ["again? ㅠㅠ", "me"],
+  ["yes again", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["keep it for now", "me"],
+  ["no", "them"],
+  ["come get it", "them"],
+  ["why ㅋㅋㅋ", "me"],
+  ["it's taking up space", "them"],
+  ["it's one jacket", "me"],
+  ["a big jacket", "them"],
+  ["fine i'll get it tomorrow", "me"],
+  ["bring coffee", "them"],
+  ["you're unbelievable", "me"],
+
+  ["9월 27일", "date"],
+  ["are you coming to practice", "them"],
+  ["yeah", "me"],
+  ["running a little late", "me"],
+  ["how late", "them"],
+  ["ten minutes", "me"],
+  ["so twenty", "them"],
+  ["ㅋㅋㅋㅋ no", "me"],
+  ["ten", "me"],
+  ["sure", "them"],
+  ["i'm leaving now", "me"],
+  ["bring water", "them"],
+  ["for you?", "me"],
+  ["yes", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["okay", "me"],
+
+  ["10월 1일", "date"],
+  ["ya", "them"],
+  ["did you see the video", "them"],
+  ["which one", "me"],
+  ["from practice", "them"],
+  ["oh yeah ㅎㅎ", "me"],
+  ["you look good", "me"],
+  ["i know", "them"],
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["i'm never complimenting you again", "me"],
+  ["you'll do it tomorrow", "them"],
+  ["probably ㅋㅋㅋ", "me"],
+  ["your part looks good too", "them"],
+  ["oh", "me"],
+  ["thank you ㅎㅎ", "me"],
+  ["don't get emotional", "them"],
+  ["i wasn't going to ㅠㅠ", "me"],
+
+  ["10월 5일", "date"],
+  ["where's kyungsoo hyung", "them"],
+  ["home", "me"],
+  ["why", "me"],
+  ["ask him if he wants to eat with us", "them"],
+  ["you're inviting him too? ㅎㅎ", "me"],
+  ["yeah", "them"],
+  ["why wouldn't i", "them"],
+  ["nothing ㅋㅋㅋ", "me"],
+  ["i'll ask", "me"],
+  ["he said okay", "me"],
+  ["good", "them"],
+  ["tell him to pick the restaurant", "them"],
+  ["you trust him more than me?", "me"],
+  ["with food?", "them"],
+  ["yes", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["fair", "me"],
+
+  ["10월 9일", "date"],
+  ["jongin", "them"],
+  ["you awake", "them"],
+  ["yeah", "me"],
+  ["can't sleep", "me"],
+  ["why", "them"],
+  ["don't know", "me"],
+  ["just thinking too much", "me"],
+  ["about what", "them"],
+  ["work", "me"],
+  ["everything", "me"],
+  ["hm", "them"],
+  ["want to go for a drive", "them"],
+  ["now?", "me"],
+  ["yeah", "them"],
+  ["you don't have to", "me"],
+  ["i know", "them"],
+  ["i'm asking", "them"],
+  ["...", "me"],
+  ["okay", "me"],
+  ["give me a few minutes", "me"],
+  ["i'll be downstairs", "them"],
+
+  ["10월 12일", "date"],
+  ["thanks for the other night", "me"],
+  ["for what", "them"],
+  ["driving around with me", "me"],
+  ["and listening", "me"],
+  ["you barely talked", "them"],
+  ["ㅋㅋㅋ i know", "me"],
+  ["but it helped", "me"],
+  ["good", "them"],
+  ["you okay now", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["feeling better", "me"],
+  ["good", "them"],
+  ["now buy me food", "them"],
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["there it is", "me"],
+  ["i was wondering when you'd ask", "me"],
+
+  ["10월 16일", "date"],
+  ["what are you doing", "them"],
+  ["watching a movie", "me"],
+  ["alone?", "them"],
+  ["with kyungsoo", "me"],
+  ["oh", "them"],
+  ["what movie", "them"],
+  ["he picked it", "me"],
+  ["it's really good actually", "me"],
+  ["is he making you watch something sad again", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["maybe", "me"],
+  ["are you crying", "them"],
+  ["no", "me"],
+  ["liar", "them"],
+  ["i'm not ㅠㅠ", "me"],
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["enjoy your date", "them"],
+  ["thanks ㅎㅎ", "me"],
+
+  ["10월 20일", "date"],
+  ["send me the pictures from yesterday", "them"],
+  ["again?", "me"],
+  ["yes", "them"],
+  ["you took like 200 pictures", "me"],
+  ["and yours were better", "them"],
+  ["oh wow", "me"],
+  ["a compliment", "me"],
+  ["from oh sehun", "me"],
+  ["don't make it weird", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["sending", "me"],
+  ["thanks", "them"],
+  ["you're welcome ㅎㅎ", "me"],
+
+  ["10월 24일", "date"],
+  ["you busy tomorrow", "them"],
+  ["not sure", "me"],
+  ["why", "me"],
+  ["vivi needs a friend", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["you mean you need a friend", "me"],
+  ["no", "them"],
+  ["vivi", "them"],
+  ["sure ㅎㅎ", "me"],
+  ["i'll bring monggu", "me"],
+  ["bring snacks too", "them"],
+  ["for the dogs?", "me"],
+  ["for me", "them"],
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["okay sehun", "me"],
+
+  ["10월 28일", "date"],
+  ["ya", "them"],
+  ["what did you do to kyungsoo hyung", "them"],
+  ["what ㅋㅋㅋ", "me"],
+  ["nothing", "me"],
+  ["why", "me"],
+  ["he's been smiling at his phone", "them"],
+  ["oh", "me"],
+  ["ㅎㅎ", "me"],
+  ["what", "them"],
+  ["nothing", "me"],
+  ["jongin", "them"],
+  ["did you send him something embarrassing", "them"],
+  ["no ㅋㅋㅋ", "me"],
+  ["i just bought him something", "me"],
+  ["oh", "them"],
+  ["that's why", "them"],
+  ["what did you get him", "them"],
+  ["a sweater", "me"],
+  ["he really liked it ㅎㅎ", "me"],
+  ["good", "them"],
+  ["now buy me one", "them"],
+  ["ㅋㅋㅋㅋ no", "me"],
+
+  ["11월 3일", "date"],
+  ["jongin", "them"],
+  ["come play", "them"],
+  ["i'm tired ㅠㅠ", "me"],
+  ["one game", "them"],
+  ["you said that last time", "me"],
+  ["we played for four hours", "me"],
+  ["and", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["i have work tomorrow", "me"],
+  ["so do i", "them"],
+  ["that's not helping", "me"],
+  ["one game", "them"],
+  ["...", "me"],
+  ["fine", "me"],
+  ["ㅋㅋㅋㅋ", "them"],
+  ["knew it", "them"],
+
+  ["11월 8일", "date"],
+  ["you okay", "them"],
+  ["yeah", "me"],
+  ["why", "me"],
+  ["you were quiet yesterday", "them"],
+  ["ahh", "me"],
+  ["just tired", "me"],
+  ["had a lot on my mind", "me"],
+  ["kyungsoo hyung?", "them"],
+  ["we had a little disagreement", "me"],
+  ["but we're okay now", "me"],
+  ["good", "them"],
+  ["don't overthink everything", "them"],
+  ["i know ㅠㅠ", "me"],
+  ["i'm trying", "me"],
+  ["talk to him", "them"],
+  ["not just me", "them"],
+  ["i did ㅎㅎ", "me"],
+  ["we're good", "me"],
+  ["okay", "them"],
+  ["then eat properly", "them"],
+  ["ㅋㅋㅋㅋ why does everyone say that", "me"],
+
+  ["11월 12일", "date"],
+  ["where are you", "them"],
+  ["at my mom's", "me"],
+  ["family dinner ㅎㅎ", "me"],
+  ["nice", "them"],
+  ["kyungsoo hyung there?", "them"],
+  ["yeah", "me"],
+  ["my sisters are showing him old videos of me", "me"],
+  ["ㅋㅋㅋㅋㅋㅋ", "them"],
+  ["send them", "them"],
+  ["no ㅠㅠ", "me"],
+  ["please", "them"],
+  ["sehun", "me"],
+  ["i've known you forever", "them"],
+  ["what could possibly embarrass you", "them"],
+  ["a lot actually", "me"],
+  ["ㅋㅋㅋㅋ", "them"],
+  ["send one", "them"],
+  ["i'll think about it", "me"],
+  ["so that's a yes", "them"],
+  ["no ㅋㅋㅋ", "me"],
+
+  ["11월 16일", "date"],
+  ["ya", "them"],
+  ["gym tomorrow", "them"],
+  ["chanyeol hyung asked too", "me"],
+  ["yeah i know", "them"],
+  ["he told me", "them"],
+  ["what time", "me"],
+  ["2", "them"],
+  ["okay ㅎㅎ", "me"],
+  ["don't disappear halfway", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["why is everyone saying that", "me"],
+  ["because you do", "them"],
+  ["i had somewhere to be", "me"],
+  ["with kyungsoo hyung", "them"],
+  ["...", "me"],
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["see you tomorrow", "me"],
+
+  ["11월 20일", "date"],
+  ["jongin", "them"],
+  ["remember when we used to practice until morning", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["why", "me"],
+  ["found an old video", "them"],
+  ["oh no ㅋㅋㅋ", "me"],
+  ["we looked so young", "them"],
+  ["we were young", "me"],
+  ["you looked like a baby", "them"],
+  ["so did you", "me"],
+  ["no", "them"],
+  ["i looked cool", "them"],
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["sure sehun", "me"],
+  ["send it to me", "me"],
+  ["okay", "them"],
+  ["kind of miss those days", "me"],
+  ["yeah", "them"],
+  ["me too", "them"],
+
+  ["11월 24일", "date"],
+  ["you free tonight", "them"],
+  ["maybe", "me"],
+  ["why", "me"],
+  ["food", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["that's all you ever want", "me"],
+  ["you coming", "them"],
+  ["where", "me"],
+  ["same place", "them"],
+  ["okay", "me"],
+  ["i'll ask kyungsoo if he wants to come", "me"],
+  ["okay", "them"],
+  ["tell him i'm paying", "them"],
+  ["really?", "me"],
+  ["no", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["you're so annoying", "me"],
+
+  ["11월 27일", "date"],
+  ["did you get chanyeol hyung a present", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["you?", "me"],
+  ["yeah", "them"],
+  ["what did you get", "me"],
+  ["not telling", "them"],
+  ["why ㅋㅋㅋ", "me"],
+  ["you'll tell him", "them"],
+  ["i won't", "me"],
+  ["you will", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["okay fine", "me"],
+  ["see you later?", "me"],
+  ["yeah", "them"],
+  ["don't be late", "them"],
+  ["i won't ㅎㅎ", "me"],
+
+  ["11월 29일", "date"],
+  ["ya", "them"],
+  ["what are you doing", "them"],
+  ["just got home", "me"],
+  ["was at my mom's", "me"],
+  ["again?", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["kyungsoo was learning to make kimchi", "me"],
+  ["ㅋㅋㅋㅋ", "them"],
+  ["how was it", "them"],
+  ["really good actually", "me"],
+  ["he's better at it than me", "me"],
+  ["obviously", "them"],
+  ["yah ㅋㅋㅋㅋ", "me"],
+  ["bring some next time", "them"],
+  ["okay", "me"],
+  ["if there's any left", "me"],
+  ["save me some", "them"],
+  ["ㅎㅎ i'll try", "me"]
+],
+
+
+"준면이 형 🐰": [
+  ["9월 12일", "date"],
+  ["jongin-ah", "them"],
+  ["did you get home safely yesterday?", "them"],
+  ["yes hyung ㅎㅎ", "me"],
+  ["i went straight to bed", "me"],
+  ["you looked really tired", "them"],
+  ["you should take it easy today", "them"],
+  ["i will", "me"],
+  ["what about you?", "me"],
+  ["i'm going to the studio later", "them"],
+  ["again? ㅋㅋㅋ", "me"],
+  ["hyung you need to rest too", "me"],
+  ["i rested yesterday", "them"],
+  ["for how long", "me"],
+  ["...", "them"],
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["exactly", "me"],
+
+  ["9월 17일", "date"],
+  ["jongin", "them"],
+  ["can i ask you something?", "them"],
+  ["of course", "me"],
+  ["do you remember that part of the choreography", "them"],
+  ["the one we practiced together before", "them"],
+  ["which one hyung ㅎㅎ", "me"],
+  ["the part i kept getting wrong", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["there were a few", "me"],
+  ["kim jongin", "them"],
+  ["sorry sorry ㅋㅋㅋ", "me"],
+  ["send me the video", "me"],
+  ["i'll take a look", "me"],
+  ["thank you", "them"],
+  ["you're the best", "them"],
+  ["i know ㅎㅎ", "me"],
+
+  ["9월 21일", "date"],
+  ["did you listen to the song i sent?", "them"],
+  ["yes hyung", "me"],
+  ["i listened last night", "me"],
+  ["and?", "them"],
+  ["i really like it", "me"],
+  ["the guitar sounds nice", "me"],
+  ["right?", "them"],
+  ["i was thinking about changing the arrangement", "them"],
+  ["because i wanted the vocals to feel more open", "them"],
+  ["and there's this other thing i was considering", "them"],
+  ["wait let me explain", "them"],
+  ["ㅎㅎ okay", "me"],
+  ["i'm listening", "me"],
+  ["so the first verse...", "them"],
+  ["hyung", "me"],
+  ["yes?", "them"],
+  ["can i call you instead ㅋㅋㅋ", "me"],
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["is it that long", "them"],
+  ["a little ㅎㅎ", "me"],
+  ["call me", "them"],
+
+  ["9월 26일", "date"],
+  ["jongin-ah", "them"],
+  ["are you eating properly?", "them"],
+  ["yes hyung ㅎㅎ", "me"],
+  ["why is everyone asking me that", "me"],
+  ["because you get busy and forget", "them"],
+  ["i ate lunch", "me"],
+  ["what did you eat?", "them"],
+  ["rice and chicken", "me"],
+  ["good", "them"],
+  ["make sure you eat dinner too", "them"],
+  ["okay mom", "me"],
+  ["ㅋㅋㅋㅋ", "them"],
+  ["i'm serious", "them"],
+  ["i know hyung", "me"],
+  ["thank you ㅎㅎ", "me"],
+
+  ["10월 2일", "date"],
+  ["hyung", "me"],
+  ["what are you doing?", "me"],
+  ["reading", "them"],
+  ["ohh", "me"],
+  ["what book?", "me"],
+  ["i'll send you a picture", "them"],
+  ["it's really interesting", "them"],
+  ["you should read it too", "them"],
+  ["ㅎㅎ maybe", "me"],
+  ["you always say maybe", "them"],
+  ["because you always recommend books ㅋㅋㅋ", "me"],
+  ["reading is good for you", "them"],
+  ["i know hyung", "me"],
+  ["i'll borrow it when you're done", "me"],
+  ["really?", "them"],
+  ["yes ㅎㅎ", "me"],
+  ["okay, i'll bring it next time", "them"],
+
+  ["10월 7일", "date"],
+  ["jongin", "them"],
+  ["i saw your practice video", "them"],
+  ["oh really?", "me"],
+  ["what did you think?", "me"],
+  ["the movements are very clean", "them"],
+  ["especially the second part", "them"],
+  ["i think you've gotten even better at controlling the transitions", "them"],
+  ["and the way you use the pauses is really good", "them"],
+  ["it makes the choreography more interesting", "them"],
+  ["but i was also thinking...", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["hyung", "me"],
+  ["what", "them"],
+  ["are you writing an essay ㅎㅎ", "me"],
+  ["i'm giving you feedback", "them"],
+  ["i know ㅋㅋㅋ", "me"],
+  ["thank you", "me"],
+  ["i really appreciate it", "me"],
+  ["you asked for my opinion", "them"],
+  ["i did ㅎㅎ", "me"],
+  ["keep going", "me"],
+
+  ["10월 11일", "date"],
+  ["are you free this weekend?", "them"],
+  ["i think so", "me"],
+  ["why hyung?", "me"],
+  ["let's eat together", "them"],
+  ["just us?", "me"],
+  ["yeah", "them"],
+  ["it's been a while", "them"],
+  ["that sounds nice ㅎㅎ", "me"],
+  ["where do you want to go?", "me"],
+  ["i found a restaurant you might like", "them"],
+  ["ohh", "me"],
+  ["send it", "me"],
+  ["you can bring kyungsoo too if you want", "them"],
+  ["really?", "me"],
+  ["of course", "them"],
+  ["i'll ask him ㅎㅎ", "me"],
+  ["thanks hyung", "me"],
+
+  ["10월 15일", "date"],
+  ["jongin-ah", "them"],
+  ["i was looking at some old pictures today", "them"],
+  ["from our trainee days", "them"],
+  ["really? ㅎㅎ", "me"],
+  ["send me some", "me"],
+  ["we were so young", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["you looked exactly the same hyung", "me"],
+  ["is that a compliment?", "them"],
+  ["of course", "me"],
+  ["you were handsome then", "me"],
+  ["and you're handsome now", "me"],
+  ["ㅎㅎ thank you", "them"],
+  ["what about me?", "me"],
+  ["you were adorable", "them"],
+  ["were? ㅠㅠ", "me"],
+  ["you still are", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["thank you hyung", "me"],
+
+  ["10월 19일", "date"],
+  ["hyung", "me"],
+  ["do you remember when we used to practice until really late?", "me"],
+  ["of course", "them"],
+  ["why?", "them"],
+  ["i was thinking about it earlier", "me"],
+  ["i don't know", "me"],
+  ["it feels like such a long time ago", "me"],
+  ["it does", "them"],
+  ["we've been through a lot together", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["sometimes i miss those days", "me"],
+  ["me too", "them"],
+  ["but i'm glad we're still doing what we love", "them"],
+  ["and that we're still together", "them"],
+  ["...", "me"],
+  ["hyung ㅠㅠ", "me"],
+  ["what ㅋㅋㅋ", "them"],
+  ["you're making me emotional", "me"],
+  ["i'm just telling the truth", "them"],
+  ["i know", "me"],
+  ["love you hyung", "me"],
+  ["love you too jongin-ah", "them"],
+
+  ["10월 23일", "date"],
+  ["happy birthday jongin", "them"],
+  ["...", "me"],
+  ["hyung", "me"],
+  ["it's not my birthday ㅋㅋㅋㅋ", "me"],
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["i know", "them"],
+  ["i just wanted to see if you were awake", "them"],
+  ["you could've just said hello ㅠㅠ", "me"],
+  ["hello jongin", "them"],
+  ["ㅋㅋㅋㅋㅋㅋ", "me"],
+  ["hello hyung", "me"],
+  ["are you busy today?", "them"],
+  ["a little", "me"],
+  ["why?", "me"],
+  ["nothing urgent", "them"],
+  ["just wanted to check in", "them"],
+  ["ahh ㅎㅎ", "me"],
+  ["i'm doing well", "me"],
+  ["hope you are too", "me"],
+
+  ["10월 28일", "date"],
+  ["jongin", "them"],
+  ["how's kyungsoo doing?", "them"],
+  ["he's good ㅎㅎ", "me"],
+  ["why?", "me"],
+  ["haven't seen him in a while", "them"],
+  ["tell him i said hello", "them"],
+  ["i will", "me"],
+  ["we're having dinner right now", "me"],
+  ["what are you eating?", "them"],
+  ["he made pasta", "me"],
+  ["sounds good", "them"],
+  ["he's really good at cooking", "me"],
+  ["i know ㅋㅋㅋ", "them"],
+  ["you're lucky", "them"],
+  ["ㅎㅎ i know", "me"],
+  ["i really am", "me"],
+  ["that's good jongin-ah", "them"],
+  ["i'm happy for you", "them"],
+
+  ["11월 2일", "date"],
+  ["hyung", "me"],
+  ["did you get home?", "me"],
+  ["yes", "them"],
+  ["just arrived", "them"],
+  ["thanks for today", "me"],
+  ["i had a good time ㅎㅎ", "me"],
+  ["me too", "them"],
+  ["we should do that more often", "them"],
+  ["yeah", "me"],
+  ["next time i'll pay", "me"],
+  ["you don't have to", "them"],
+  ["i want to", "me"],
+  ["you always treat me", "me"],
+  ["that's what older brothers do", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["then let your younger brother treat you sometimes", "me"],
+  ["okay okay", "them"],
+  ["next time", "them"],
+
+  ["11월 6일", "date"],
+  ["jongin-ah", "them"],
+  ["can i tell you something?", "them"],
+  ["of course hyung", "me"],
+  ["i've been thinking about our next performance", "them"],
+  ["and how we can make it feel more personal", "them"],
+  ["not just technically good", "them"],
+  ["but something people will remember", "them"],
+  ["i think we should talk about the overall direction", "them"],
+  ["maybe when we meet next week", "them"],
+  ["yeah", "me"],
+  ["i've been thinking about that too", "me"],
+  ["i have some ideas for the choreography", "me"],
+  ["really?", "them"],
+  ["that's great", "them"],
+  ["let's talk about it together", "them"],
+  ["okay ㅎㅎ", "me"],
+  ["i'll show you what i've been working on", "me"],
+
+  ["11월 10일", "date"],
+  ["you seemed a little quiet today", "them"],
+  ["everything okay?", "them"],
+  ["yeah hyung", "me"],
+  ["just tired", "me"],
+  ["had a long day", "me"],
+  ["are you sure?", "them"],
+  ["i'm sure ㅎㅎ", "me"],
+  ["don't worry", "me"],
+  ["you know you can talk to me, right?", "them"],
+  ["i know", "me"],
+  ["thank you hyung", "me"],
+  ["really", "me"],
+  ["you don't have to thank me", "them"],
+  ["get some rest tonight", "them"],
+  ["i will", "me"],
+  ["goodnight hyung ❤️", "me"],
+  ["goodnight jongin-ah", "them"],
+
+  ["11월 14일", "date"],
+  ["jongin", "them"],
+  ["i heard you had family dinner", "them"],
+  ["yeah ㅎㅎ", "me"],
+  ["it was really nice", "me"],
+  ["kyungsoo came too", "me"],
+  ["that's good", "them"],
+  ["how's your mom?", "them"],
+  ["she's doing well", "me"],
+  ["she asked about everyone", "me"],
+  ["tell her i said hello next time", "them"],
+  ["i will ㅎㅎ", "me"],
+  ["my sisters showed kyungsoo my childhood videos", "me"],
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["i want to see them", "them"],
+  ["hyung please ㅠㅠ", "me"],
+  ["i'm sure they're cute", "them"],
+  ["that's what everyone says", "me"],
+  ["ㅋㅋㅋㅋ", "them"],
+
+  ["11월 18일", "date"],
+  ["hyung", "me"],
+  ["i listened to your new song again", "me"],
+  ["really?", "them"],
+  ["yeah", "me"],
+  ["i like it even more now ㅎㅎ", "me"],
+  ["the lyrics are really nice", "me"],
+  ["thank you jongin", "them"],
+  ["i worked hard on those", "them"],
+  ["i can tell", "me"],
+  ["it feels very you", "me"],
+  ["that's the best compliment", "them"],
+  ["i wanted it to feel honest", "them"],
+  ["it does", "me"],
+  ["i'm proud of you hyung", "me"],
+  ["ㅎㅎ thank you", "them"],
+  ["that means a lot coming from you", "them"],
+
+  ["11월 22일", "date"],
+  ["jongin-ah", "them"],
+  ["what are you doing?", "them"],
+  ["lying on the couch", "me"],
+  ["ㅎㅎ why", "me"],
+  ["nothing", "them"],
+  ["just wanted to talk", "them"],
+  ["about what?", "me"],
+  ["i've been thinking about something lately", "them"],
+  ["ohh", "me"],
+  ["what is it?", "me"],
+  ["you know how sometimes you work really hard", "them"],
+  ["but you still feel like there's more you could've done", "them"],
+  ["and then you start wondering if you're doing enough", "them"],
+  ["...", "me"],
+  ["hyung", "me"],
+  ["yes?", "them"],
+  ["do you want to call ㅋㅋㅋ", "me"],
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["am i talking too much again?", "them"],
+  ["a little ㅎㅎ", "me"],
+  ["but i want to hear it", "me"],
+  ["call me", "me"],
+  ["okay", "them"],
+
+  ["11월 25일", "date"],
+  ["jongin", "them"],
+  ["what are you doing today?", "them"],
+  ["making kimchi ㅎㅎ", "me"],
+  ["what?", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["i'm at my mom's", "me"],
+  ["kyungsoo wanted to learn her recipe", "me"],
+  ["so we're helping", "me"],
+  ["that sounds fun", "them"],
+  ["it is ㅎㅎ", "me"],
+  ["although i'm mostly washing things", "me"],
+  ["ㅋㅋㅋㅋㅋ", "them"],
+  ["that's important too", "them"],
+  ["thank you hyung", "me"],
+  ["finally someone understands", "me"],
+  ["send me a picture when you're done", "them"],
+  ["i will", "me"],
+
+  ["11월 27일", "date"],
+  ["did you wish chanyeol a happy birthday?", "them"],
+  ["of course ㅎㅎ", "me"],
+  ["i'm seeing him later", "me"],
+  ["you?", "me"],
+  ["yeah", "them"],
+  ["i'll be there too", "them"],
+  ["oh nice", "me"],
+  ["see you later then", "me"],
+  ["don't be late", "them"],
+  ["ㅋㅋㅋㅋ", "me"],
+  ["why does everyone say that", "me"],
+  ["because we know you", "them"],
+  ["hyung ㅠㅠ", "me"],
+  ["ㅎㅎ see you", "them"],
+
+  ["11월 30일", "date"],
+  ["jongin-ah", "them"],
+  ["are you free sometime next week?", "them"],
+  ["i think so", "me"],
+  ["why?", "me"],
+  ["let's have dinner", "them"],
+  ["just the two of us", "them"],
+  ["it's been a while since we talked properly", "them"],
+  ["ㅎㅎ okay", "me"],
+  ["i'd like that", "me"],
+  ["you can tell me about your music", "me"],
+  ["and i'll tell you about my practice", "me"],
+  ["sounds good", "them"],
+  ["but i have a lot to tell you", "them"],
+  ["ㅋㅋㅋㅋㅋ", "me"],
+  ["i know hyung", "me"],
+  ["i'll clear my whole evening", "me"],
+  ["kim jongin ㅋㅋㅋㅋ", "them"],
+  ["love you hyung", "me"],
+  ["love you too ❤️", "them"]
+],
+
+
+
+
 };
 const chatNames=[
- "Kyungsoo my love 💞"
+ "Kyungsoo my love 💞",
+ "Mom",
+ "찬열이 형",
+ "우리 셋 🐻",
+ "세훈이 🐣",
+ "준면이 형 🐰"
  
 ];
 const notes=[
