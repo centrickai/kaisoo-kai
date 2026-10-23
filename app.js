@@ -13,6 +13,7 @@ let pincode='',noteId=0,selectedDay=new Date().getDate(),calMonth=new Date().get
 let calYear = new Date().getFullYear();
 let unread={서연:2,지우:3,유리:3,지원:3,'체육학부 공지':3}; //kakao unread; same names for all language
 let ksooUnread=0,todayChat=[],incoming=0,replyStage=0,lineIdx=0,typing=false,pendingText='',replyBusy=false;
+let introDelivered=0, introReady=false;
 let alarmStates=Array(7).fill(true),readMail=new Set(),nowSong=-1,flashOn=false;
 let callState='',phoneDone=false,declined=0,callStart=0,callPrev='',nextCallAt=0,ringIv=null,ringTo=null,capIdx=-1,extraCalls=[];
 let askedCall=false,callName='Kyungsoo my love 💞',callTimers=[],busySent=false,declineSent=false,rbIv=null;
@@ -539,7 +540,15 @@ function keysFor(ch){if(ch===' ')return['space'];
  const base=ch.normalize('NFD')[0];const lo=base.toLowerCase();if(/[a-z]/.test(lo))return base!==lo?['⇧',lo]:[lo];return[]}
 function genSteps(str){const st=[];let done='';for(const ch of str){done+=ch;st.push({k:keysFor(ch),t:done})}return st}
 function setField(txt,cursor){const f=$('#fld');if(!f)return;if(!txt&&!cursor){f.className='fld ph';f.textContent=t('msgInput');return}f.className='fld';f.innerHTML=esc(txt)+(cursor?'<span class="cur"></span>':'')}
-function canType(){return chatId==='Kyungsoo my love 💞'&&todayChat.filter(x=>x[1]==='them').length>=2&&replyStage<liveReplies.length&&!typing&&!pendingText&&!replyBusy}
+//function canType(){return chatId==='Kyungsoo my love 💞'&&todayChat.filter(x=>x[1]==='them').length>=2&&replyStage<liveReplies.length&&!typing&&!pendingText&&!replyBusy}
+function canType(){
+  return chatId==='Kyungsoo my love 💞'
+    && introReady
+    && replyStage<liveReplies.length
+    && !typing
+    && !pendingText
+    && !replyBusy;
+}
 function tapInput(){openKbd();if(!canType()){setField(pendingText,true);return}typeLine(liveReplies[replyStage].mine[lineIdx])}
 function typeLine(line){typing=true;const steps=LANG==='ko'?jamoSteps(line):genSteps(line);let i=0;setField('',true);
  (function step(){if(view!=='chat'){typing=false;return}if(i>=steps.length){typing=false;pendingText=line;const s=$('#snd');if(s)s.classList.add('on');return}
@@ -555,7 +564,26 @@ function hideTyping(){const t=$('#typ');if(t)t.remove()}
 function deliverKyungsoo(text){todayChat.push([text,'them',nowAmpm()]);
  if(view==='chat'&&chatId==='Kyungsoo my love 💞'){refreshChat(true);tone(1318,0,.12,.05)}
  else{ksooUnread++;notify(text);if(view==='kakao')show('kakao');if(view==='home')renderHome()}}
-function incomingMsg(text){if(view==='chat'&&chatId==='Kyungsoo my love 💞'){showTyping();setTimeout(()=>{hideTyping();deliverKyungsoo(text)},1500)}else deliverKyungsoo(text)}
+//function incomingMsg(text){if(view==='chat'&&chatId==='Kyungsoo my love 💞'){showTyping();setTimeout(()=>{hideTyping();deliverKyungsoo(text)},1500)}else deliverKyungsoo(text)}
+function incomingMsg(text,onDelivered){
+  const deliver=()=>{
+    hideTyping();
+    deliverKyungsoo(text);
+
+    if(typeof onDelivered==='function'){
+      onDelivered();
+    }
+  };
+
+  if(view==='chat'&&chatId==='Kyungsoo my love 💞'){
+    showTyping();
+    setTimeout(deliver,1500);
+  }else{
+    deliver();
+  }
+}
+
+
 
 /* --- NOTIFICATION BANNER --- */
 function notify(body){sfx('msg');vib([30,60,30]);
@@ -567,7 +595,7 @@ function notify(body){sfx('msg');vib([30,60,30]);
  b.addEventListener('pointerdown',e=>{y0=e.clientY;mv=false;b.setPointerCapture(e.pointerId)});
  b.addEventListener('pointermove',e=>{if(y0===null)return;dy=(e.clientY-y0)/SC;if(Math.abs(dy)>5)mv=true;b.style.transform=`translateY(${dy<0?dy:dy*.25}px)`});
  b.addEventListener('pointerup',()=>{if(y0===null)return;y0=null;clearTimeout(tm);if(dy<-30){hide();return}b.style.transform='';if(!mv){b.remove();openKyungsoo(b)}})}
-function openKyungsoo(el){if(callState)return;chatId='Kyungsoo';if(view==='home'){openApp('chat',el.querySelector?el:null);return}if(view==='chat'&&chatId==='Kyungsoo my love 💞')return;if(['lock','pin'].includes(view))return;push('chat')}
+function openKyungsoo(el){if(callState)return;chatId='Kyungsoo my love 💞';if(view==='home'){openApp('chat',el.querySelector?el:null);return}if(view==='chat'&&chatId==='Kyungsoo my love 💞')return;if(['lock','pin'].includes(view))return;push('chat')}
 
 /* --- Safari --- */
 VIEWS.safari=()=>{if(safSearch)return{cls:'saf',html:`<div style="position:absolute;top:54px;left:0;right:0;padding:6px 14px;display:flex;gap:12px;align-items:center;z-index:3"><div class="srch" style="margin:0;flex:1;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);height:40px">${G.search}<span style="color:#000">|</span><span>${t('searchWeb')}</span></div><button style="color:var(--blue);font-size:17px" onclick="safSearch=false;show('safari')">${t('cancel')}</button></div>
@@ -782,8 +810,29 @@ let lastMin=-1;
 function tick(){typeof updateCrumb==="function"&&updateCrumb();const now=new Date();$('#sbt').textContent=clock12();const lk=$('#lkt');if(lk)lk.textContent=clock12();
  if(now.getMinutes()!==lastMin){lastMin=now.getMinutes();if(view==='home'&&!HOME.getAnimations().length)renderHome()}
  const e=elapsed();
- if(e>=40&&incoming===0){incoming=1;incomingMsg(INCOMING[0])}
- if(e>=43.5&&incoming===1){incoming=2;incomingMsg(INCOMING[1])}
+ if(e>=40&&incoming===0){
+  incoming=1;
+
+  incomingMsg(INCOMING[0],()=>{
+    introDelivered++;
+  });
+}
+
+if(e>=43.5&&incoming===1){
+  incoming=2;
+
+  incomingMsg(INCOMING[1],()=>{
+    introDelivered++;
+
+    setTimeout(()=>{
+      if(introDelivered>=2){
+        introReady=true;
+      }
+    },700);
+  });
+}
+ //if(e>=40&&incoming===0){incoming=1;incomingMsg(INCOMING[0])}
+ //if(e>=43.5&&incoming===1){incoming=2;incomingMsg(INCOMING[1])}
  if(e>=CALL_ASK_AT&&incoming>=2&&!askedCall&&!replyBusy&&!typing){askedCall=true;replyStage=liveReplies.length;lineIdx=0;pendingText='';setTimeout(()=>{liveReplies.push({mine:CALL_ASK_REPLY,them:[]});replyStage=liveReplies.length-1;lineIdx=0},CALL_ASK.length*2600+1700);nextCallAt=Math.max(nextCallAt,e+CALL_ASK.length*2.6+30);CALL_ASK.forEach((m,k)=>setTimeout(()=>incomingMsg(m),k*2600))}
  if(askedCall&&e>=Math.max(nextCallAt,CALL_AT)&&!phoneDone&&!callState)incomingCall();
  if(callState==='active'){const sec=Math.floor((Date.now()-callStart)/1000);const tm=$('#ctime');if(tm)tm.textContent=pad(Math.floor(sec/60))+':'+pad(sec%60);
