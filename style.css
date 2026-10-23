@@ -217,7 +217,7 @@ svg{display:block}
 .ln .who{font-size:12px;color:#4a4a4a;margin:1px 0 4px 2px}
 .ln .wrap{display:flex;align-items:flex-end;gap:5px}
 .ln.th.first .wrap{}
-.bb{padding:8px 11px;border-radius:15px;font-size:15px;line-height:1.36;word-break:break-all;white-space:pre-wrap;position:relative;max-width:100%}
+.bb{padding:8px 11px;border-radius:15px;font-size:15px;line-height:1.36;word-break:normal;overflow-wrap:normal;pre-wrap;position:relative;max-width:100%}
 .th .bb{background:#fff}
 .me .bb{background:#fee500}
 .ln.th.first .bb{border-top-left-radius:4px}
@@ -782,3 +782,13 @@ box-shadow:
   transition: opacity 0.45s ease-out;
 }
 
+/* KakaoTalk chat bubbles: prevent words from splitting */
+#chat .bubble,
+#chat .msg,
+#chat .message,
+.kakao-bubble {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  white-space: pre-wrap;
+  hyphens: none !important;
+}
