@@ -6388,62 +6388,125 @@ const songs=[
 const liveReplies=[
  {
   "mine": [
-   "lmao",
-   "was it good?"
-  ],
-  "them": [
-   "Yes lol it was so good",
-   "How did you know about that place, hyung"
-  ]
- },
- {
-  "mine": [
-   "just cuz",
-   "saw it somewhere lol"
-  ],
-  "them": [
-   "I think you and I have really similar taste",
-   "You should go sometime too"
-  ]
- },
- {
-  "mine": [
-   "yeah",
-   "wanna go with you"
-  ],
-  "them": [
-   "lolololol",
-   "Then let's go together next time"
-  ]
- },
- {
-  "mine": [
-   "sounds good hehe"
-  ],
-  "them": []
- }
+      "WHAT",
+      "what happened hyung"
+    ],
+    "them": [
+      "remember that cheesecake place you kept telling me about?"
+    ]
+  },
+  {
+    "mine": [
+      "WAIT",
+      "DID YOU GO"
+    ],
+    "them": [
+      "ㅋㅋㅋㅋ",
+      "i was nearby so i stopped in",
+      "got the one you recommended"
+    ]
+  },
+  {
+    "mine": [
+      "AND????",
+      "DID YOU LIKE IT"
+    ],
+    "them": [
+      "it was good"
+    ]
+  },
+  {
+    "mine": [
+      "JUST GOOD????"
+    ],
+    "them": [
+      "really good ㅋㅋ"
+    ]
+  },
+  {
+    "mine": [
+      "I TOLD YOU",
+      "I'VE BEEN TELLING YOU FOR WEEKS"
+    ],
+    "them": [
+      "yes yes",
+      "you were right"
+    ]
+  },
+  {
+    "mine": [
+      "say it again"
+    ],
+    "them": [
+      "no"
+    ]
+  },
+  {
+    "mine": [
+      "HYUNG PLEASE"
+    ],
+    "them": [
+      "ㅋㅋㅋㅋㅋㅋ",
+      "you're so annoying"
+    ]
+  },
+  {
+    "mine": [
+      "but you love me"
+    ],
+    "them": [
+      "unfortunately"
+    ]
+  },
+  {
+    "mine": [
+      "UNFORTUNATELY????"
+    ],
+    "them": [
+      "ㅋㅋㅋㅋ",
+      "wait"
+    ]
+  },
+  {
+    "mine": [
+      "what",
+      "HYUNG???"
+    ],
+    "them": []
+  }
 ];
 const CALL_ASK_AT=240;
 const CALL_AT=390;
-const CALL_ASK=[
- "Hyung",
- "Can I call you later?"
+const CALL_ASK = [
+  "jongin-ah",
+  "can i call you for a sec?"
 ];
-const CALL_ASK_REPLY=[
- "of course"
+
+const CALL_ASK_REPLY = [
+  "of course hyung",
+  "call meee"
 ];
-const CALL_BUSY=[
- "Hyung I'm kinda busy right now T_T",
- "I'll text you later!"
+
+const CALL_BUSY = [
+  "jongin-ah sorry ㅠㅠ",
+  "i'm a little busy right now",
+  "i'll call you when i'm done okay?"
 ];
-const CALL_DECLINED=[
- "Hyung are you busy?",
- "Call me when you're free hehe"
+
+const CALL_DECLINED = [
+  "ㅋㅋㅋㅋ are you busy?",
+  "i wanted to tell you something",
+  "call me when you're free"
 ];
 const mediaLabels={
  "[My Love]": {
   "kind": "audio",
   "src": "media/my_love.mp3",
+  "label": "kyungsoo my love's sweet voice"
+ },
+  "[ssk]": {
+  "kind": "audio",
+  "src": "media/ssk.mp3",
   "label": "kyungsoo my love's sweet voice"
  },
 "[kai_blonde1]": {
@@ -7137,8 +7200,8 @@ const MAP_RECENTS=[
  ]
 ];
 const INCOMING=[
- "Hyung I went to Motungi lol",
- "I had the one you recommended"
+ "jongin-ah",
+ "guess what"
 ];
 const DISPLAY={
  "엄마": "Mom",

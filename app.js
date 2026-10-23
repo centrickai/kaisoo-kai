@@ -17,6 +17,7 @@ let introDelivered=0, introReady=false;
 let alarmStates=Array(7).fill(true),readMail=new Set(),nowSong=-1,flashOn=false;
 let callState='',phoneDone=false,declined=0,callStart=0,callPrev='',nextCallAt=0,ringIv=null,ringTo=null,capIdx=-1,extraCalls=[];
 let askedCall=false,callName='Kyungsoo my love 💞',callTimers=[],busySent=false,declineSent=false,rbIv=null;
+let callReplySent=false;
 //let lockNotes=[{title:t('bdayTitle'),body:fmtMD(11,21)+' · '+t('inDays',35),app:'rem',time:t('now')}];
 const birthdayDate = new Date(2027, 0, 12);
 const todayDate = new Date();
@@ -523,7 +524,7 @@ VIEWS.kakao=()=>{const list=chatNames.slice().sort((a,b)=>dateKey(b)-dateKey(a))
 
 
  /* CHAT ROOM */
-const AUD_DUR={'media/my_love.mp3':'0:25','media/kyungsoo_across_the_universe.mp3':'0:13'};
+const AUD_DUR={'media/my_love.mp3':'0:25','media/ssk.mp3':'1:40'};
 function fileInfo(n){return({'과제 파일':[t('f_assign'),'1.2MB'],'수정한 과제 파일':[t('f_assign2'),'1.3MB'],'실기 체크 시트 파일':[t('f_check'),'48KB']})[n]||[n+'.pdf','820KB']}
 function bubble(s){const m=mediaLabels[s];
  if(m&&m.kind==='image')return `<div class="bb img" onclick="event.stopPropagation();openViewerSrc('${m.src}',this.firstElementChild)"><img src="${m.src}" alt=""></div>`;
@@ -600,12 +601,35 @@ function typeLine(line){typing=true;const steps=LANG==='ko'?jamoSteps(line):genS
  (function step(){if(view!=='chat'){typing=false;return}if(i>=steps.length){typing=false;pendingText=line;const s=$('#snd');if(s)s.classList.add('on');return}
   const s=steps[i++];s.k.forEach((k,j)=>setTimeout(()=>pressKey(k),j*45));setField(s.t,true);setTimeout(step,(LANG==='ko'?60:85)+Math.random()*70+(s.k.length>1?s.k.length*45:0)+(s.k[0]==='space'?60:0))})()}
 function sendLine(){if(!pendingText)return;const stage=liveReplies[replyStage];todayChat.push([pendingText,'me',nowAmpm(),'rd']);pendingText='';sfx('send');vib(10);setField('',false);$('#snd').classList.remove('on');refreshChat(true);lineIdx++;
- if(lineIdx<stage.mine.length){setTimeout(()=>{if(view==='chat'&&chatId==='Kyungsoo my love 💞'&&$('#kbd.open'))typeLine(stage.mine[lineIdx])},500);return}
- replyStage++;lineIdx=0;replyBusy=true;const them=stage.them.slice();
+ //if(lineIdx<stage.mine.length){setTimeout(()=>{if(view==='chat'&&chatId==='Kyungsoo my love 💞'&&$('#kbd.open'))typeLine(stage.mine[lineIdx])},500);return}
+ //replyStage++;lineIdx=0;replyBusy=true;const them=stage.them.slice();
+ if(lineIdx<stage.mine.length){
+  setTimeout(()=>{
+    if(
+      view==='chat' &&
+      chatId==='Kyungsoo my love 💞' &&
+      $('#kbd.open')
+    ){
+      typeLine(stage.mine[lineIdx]);
+    }
+  },500);
+  return;
+}
+// Kyungsoo can call only after Jongin sends "call meee"
+if(askedCall && stage.mine===CALL_ASK_REPLY){
+  callReplySent=true;
+  nextCallAt=elapsed()+1.5;
+}
+
+
+replyStage++;
+lineIdx=0;
+replyBusy=true;
+const them=stage.them.slice();
  setTimeout(()=>{todayChat.forEach(x=>{if(x[3]==='rd')x[3]=''});refreshChat()},900);
  let t=1500;them.forEach((msg,k)=>{const typingDur=700+msg.length*55;setTimeout(()=>showTyping(),t);t+=typingDur;setTimeout(()=>{hideTyping();deliverKyungsoo(msg)},t);t+=350});
  setTimeout(()=>{replyBusy=false},t+50)}
-function showTyping(){if(!(view==='chat'&&chatId==='Kyungsoo my love 💞'))return;const b=$('#msgs');if(!b||$('#typ'))return;b.insertAdjacentHTML('beforeend',`<div class="ln th first" id="typ"><div class="sav">${avatarFor('Kyungsoo')}</div><div class="col"><div class="who">Kyungsoo</div><div class="wrap"><div class="bb typing pop"><i></i><i></i><i></i></div></div></div></div>`);scrollChat(true)}
+function showTyping(){if(!(view==='chat'&&chatId==='Kyungsoo my love 💞'))return;const b=$('#msgs');if(!b||$('#typ'))return;b.insertAdjacentHTML('beforeend',`<div class="ln th first" id="typ"><div class="sav">${avatarFor('Kyungsoo my love 💞')}</div><div class="col"><div class="who">Kyungsoo my love 💞</div><div class="wrap"><div class="bb typing pop"><i></i><i></i><i></i></div></div></div></div>`);scrollChat(true)}
 function hideTyping(){const t=$('#typ');if(t)t.remove()}
 function deliverKyungsoo(text){todayChat.push([text,'them',nowAmpm()]);
  if(view==='chat'&&chatId==='Kyungsoo my love 💞'){refreshChat(true);tone(1318,0,.12,.05)}
@@ -878,7 +902,16 @@ function closeCallUI(){const c=OV.querySelector('.call');if(!c)return;c.animate(
    ============================================================ */
 let lastMin=-1;
 function tick(){typeof updateCrumb==="function"&&updateCrumb();const now=new Date();$('#sbt').textContent=clock12();const lk=$('#lkt');if(lk)lk.textContent=clock12();
- if(now.getMinutes()!==lastMin){lastMin=now.getMinutes();if(view==='home'&&!HOME.getAnimations().length)renderHome()}
+ //if(now.getMinutes()!==lastMin){lastMin=now.getMinutes();if(view==='home'&&!HOME.getAnimations().length)renderHome()}
+if(
+  askedCall &&
+  callReplySent &&
+  e>=nextCallAt &&
+  !phoneDone &&
+  !callState
+){
+  incomingCall();
+}
  const e=elapsed();
  if(e>=40&&incoming===0){
   incoming=1;
@@ -903,8 +936,8 @@ if(e>=43.5&&incoming===1){
 }
  //if(e>=40&&incoming===0){incoming=1;incomingMsg(INCOMING[0])}
  //if(e>=43.5&&incoming===1){incoming=2;incomingMsg(INCOMING[1])}
- if(e>=CALL_ASK_AT&&incoming>=2&&!askedCall&&!replyBusy&&!typing){askedCall=true;replyStage=liveReplies.length;lineIdx=0;pendingText='';setTimeout(()=>{liveReplies.push({mine:CALL_ASK_REPLY,them:[]});replyStage=liveReplies.length-1;lineIdx=0},CALL_ASK.length*2600+1700);nextCallAt=Math.max(nextCallAt,e+CALL_ASK.length*2.6+30);CALL_ASK.forEach((m,k)=>setTimeout(()=>incomingMsg(m),k*2600))}
- if(askedCall&&e>=Math.max(nextCallAt,CALL_AT)&&!phoneDone&&!callState)incomingCall();
+ if(e>=CALL_ASK_AT&&incoming>=2&&!askedCall&&!replyBusy&&!typing){askedCall=true;replyStage=liveReplies.length;lineIdx=0;pendingText='';setTimeout(()=>{liveReplies.push({mine:CALL_ASK_REPLY,them:[]});replyStage=liveReplies.length-1;lineIdx=0},CALL_ASK.length*2600+1700);nextCallAt=e+CALL_ASK.length*2.6+8;CALL_ASK.forEach((m,k)=>setTimeout(()=>incomingMsg(m),k*2600))}
+ if(askedCall&&e>=nextCallAt&&!phoneDone&&!callState)incomingCall();
  if(callState==='active'){const sec=Math.floor((Date.now()-callStart)/1000);const tm=$('#ctime');if(tm)tm.textContent=pad(Math.floor(sec/60))+':'+pad(sec%60);
   const S=curScript||speech;const idx=Math.min(S.length-1,Math.floor(sec/3));if(idx!==capIdx){capIdx=idx;const c=$('#cap');if(c){c.animate([{opacity:.2,transform:'translateY(6px)'},{opacity:1,transform:'none'}],{duration:280});c.innerHTML=`<small>${esc(dn(S[idx][0]))}</small>${esc(S[idx][1])}`}}
   if(sec>S.length*3+2)endCall()}}
