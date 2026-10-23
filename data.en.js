@@ -407,7 +407,7 @@ const chatData={
   ["ㅋㅋㅋㅋ", "me"],
   ["okay wait", "me"],
 
-  ["[Photo]", "me"],
+  ["[kai_sleepy]", "me"],
 
   ["ㅋㅋㅋㅋㅋ", "them"],
   ["why do you look so sleepy", "them"],
@@ -6446,12 +6446,12 @@ const mediaLabels={
  "[My Love]": {
   "kind": "audio",
   "src": "media/my_love.mp3",
-  "label": "휘파람 · 음성 메시지"
+  "label": "kyungsoo my love's sweet voice"
  },
- "[우주를 건너 음성 메시지]": {
-  "kind": "audio",
-  "src": "media/sohee_across_the_universe.mp3",
-  "label": "우주를 건너 · 음성 메시지"
+ "[kai_sleepy]": {
+  "kind": "image",
+  "src": "media/kai_sleepy.jpg",
+  "label": "sleppy kai"
  }
 };
 const photoSections=[
