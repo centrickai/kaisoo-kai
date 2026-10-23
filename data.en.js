@@ -430,7 +430,7 @@ const chatData={
   ["ㅋㅋㅋ okay", "them"],
   ["wait a second", "them"],
 
-  ["[Photo: Kyungsoo's selfie]", "them"],
+  ["[soo_selfie1]", "them"],
 
   ["oh", "me"],
   ["hyung", "me"],
@@ -1247,7 +1247,7 @@ const chatData={
   ["just a little more", "me"],
   ["look", "me"],
 
-  ["[Photo: Gym mirror selfie]", "me"],
+  ["[kai_gym]", "me"],
 
   ["...", "them"],
 
@@ -1919,7 +1919,7 @@ const chatData={
 
   ["i know baby", "them"],
 
-  ["[Photo: The selected REVERXE unit photocard selfie]", "them"],
+  ["[kaisoo]", "them"],
 
   ["look", "them"],
   ["at least we still have this one", "them"],
@@ -2188,7 +2188,7 @@ const chatData={
 
   ["i promise", "me"],
 
-  ["[Photo: DOPAMINE photocard selfie — low-angle shot, finger under chin, black shirt]", "them"],
+  ["[soopoint]", "them"],
 
   ["...", "me"],
 
@@ -2247,7 +2247,7 @@ const chatData={
   ["ㅋㅋㅋㅋ", "them"],
   ["wait", "them"],
 
-  ["[Photo: DOPAMINE photocard selfie — black jacket pulled over mouth, close-up eyes]", "them"],
+  ["[soohood]", "them"],
 
   ["oh my god", "me"],
 
@@ -2303,7 +2303,7 @@ const chatData={
 
   ["SEND", "me"],
 
-  ["[Photo: DOPAMINE photocard selfie — holding a bright yellow duck plushie]", "them"],
+  ["[sooduck]", "them"],
 
   ["...", "me"],
 
@@ -2588,7 +2588,7 @@ const chatData={
 
   ["just for you ㅎㅎ", "them"],
 
-  ["[Photo: STATION: IS SUMMER promotional photo — Kyungsoo standing in a green field holding a bouquet of bright yellow flowers, wearing a white overshirt and striped top]", "them"],
+  ["[soo_flower1]", "them"],
 
   ["...", "me"],
 
@@ -2648,7 +2648,7 @@ const chatData={
   ["ㅋㅋㅋㅋ", "them"],
   ["yes", "them"],
 
-  ["[Photo: STATION: IS SUMMER promotional photo — Kyungsoo lying on a picnic blanket in a grassy field, wearing headphones and reading a green book]", "them"],
+  ["[soo_flower2]", "them"],
 
   ["BABYYYY", "me"],
 
@@ -2759,7 +2759,7 @@ const chatData={
 
   ["look", "me"],
 
-  ["[Screenshot: Jongin's phone lock screen — Kyungsoo's yellow-flower promotional photo set as the wallpaper]", "me"],
+  ["[soo_wallpaper]", "me"],
 
   ["...", "them"],
 
@@ -3192,7 +3192,7 @@ const chatData={
 
   ["exactly ♡", "me"],
 
-  ["[Photo: Unreleased Waterbomb backstage selfie — Jongin shirtless, hair slightly damp, smiling at the camera]", "me"],
+  ["[kai_waterbomb2]", "me"],
 
   ["...", "them"],
 
@@ -3241,13 +3241,13 @@ const chatData={
   ["ㅋㅋㅋㅋㅋ", "me"],
   ["okay wait", "me"],
 
-  ["[Photo: Unreleased backstage photo — Jongin shirtless, sitting on a sofa and making a small heart with his hands]", "me"],
+  ["[kai_waterbomb]", "me"],
 
   ["jonginnie ㅋㅋㅋㅋ", "them"],
 
   ["WHAT", "me"],
 
-  ["the heart", "them"],
+  ["🫦🫦🫦", "them"],
 
   ["it's for you", "me"],
 
@@ -3903,10 +3903,7 @@ const chatData={
 
   ["yes", "me"],
   ["junmyeon hyung", "me"],
-  ["minseok hyung", "me"],
-  ["baekhyun hyung", "me"],
   ["chanyeol hyung", "me"],
-  ["jongdae hyung", "me"],
   ["sehun too", "me"],
   ["everyone who's free", "me"],
 
@@ -4156,7 +4153,7 @@ const chatData={
 
   ["just look", "me"],
 
-  ["[Photo: Jongin's new blonde undercut — freshly dyed blonde hair, closely trimmed sides, showing off his new hairstyle]", "me"],
+  ["[kai_blonde1]", "me"],
 
   ["...", "them"],
 
@@ -4176,17 +4173,17 @@ const chatData={
   ["DO YOU LIKE IT", "me"],
 
   ["jonginnie", "them"],
-  ["turn around", "them"],
+  ["more", "them"],
 
   ["WHAT", "me"],
 
-  ["i want to see the back", "them"],
-  ["and the sides", "them"],
+  ["I NEED", "them"],
+  ["MORE", "them"],
 
   ["HAHAHAHA", "me"],
   ["okay wait", "me"],
 
-  ["[Photo: Side profile of Jongin's blonde undercut, showing the closely shaved sides]", "me"],
+  ["[kai_blonde2]", "me"],
 
   ["oh", "them"],
 
@@ -4227,7 +4224,7 @@ const chatData={
   ["ㅋㅋㅋㅋㅋㅋ", "me"],
   ["okay", "me"],
 
-  ["[Photo: Jongin taking a mirror selfie, running one hand through his newly dyed blonde hair]", "me"],
+  ["[kai_blonde3]", "me"],
 
   ["...", "them"],
 
@@ -6448,10 +6445,80 @@ const mediaLabels={
   "src": "media/my_love.mp3",
   "label": "kyungsoo my love's sweet voice"
  },
- "[kai_sleepy]": {
+"[kai_blonde1]": {
+  "kind": "image",
+  "src": "media/kai_blonde1.jpg",
+  "label": "kai blonde 1"
+},
+"[kai_blonde2]": {
+  "kind": "image",
+  "src": "media/kai_blonde2.jpg",
+  "label": "kai blonde 2"
+},
+"[kai_blonde3]": {
+  "kind": "image",
+  "src": "media/kai_blonde3.jpg",
+  "label": "kai blonde 3"
+},
+"[kai_gym]": {
+  "kind": "image",
+  "src": "media/kai_gym.jpg",
+  "label": "kai gym"
+},
+"[kai_sleepy]": {
   "kind": "image",
   "src": "media/kai_sleepy.jpg",
-  "label": "sleppy kai"
+  "label": "kai sleepy"
+},
+"[kai_waterbomb]": {
+  "kind": "image",
+  "src": "media/kai_waterbomb.jpg",
+  "label": "kai waterbomb"
+},
+"[kai_waterbomb2]": {
+  "kind": "image",
+  "src": "media/kai_waterbomb2.jpg",
+  "label": "kai waterbomb 2"
+},
+"[kaisoo]": {
+  "kind": "image",
+  "src": "media/kaisoo.jpg",
+  "label": "kaisoo"
+},
+"[soo_flower1]": {
+  "kind": "image",
+  "src": "media/soo_flower1.jpg",
+  "label": "soo flower 1"
+},
+"[soo_flower2]": {
+  "kind": "image",
+  "src": "media/soo_flower2.jpg",
+  "label": "soo flower 2"
+},
+"[soo_selfie1]": {
+  "kind": "image",
+  "src": "media/soo_selfie1.jpg",
+  "label": "soo selfie 1"
+},
+"[soo_wallpaper]": {
+  "kind": "image",
+  "src": "media/soo_wallpaper.jpg",
+  "label": "soo wallpaper"
+},
+"[sooduck]": {
+  "kind": "image",
+  "src": "media/sooduck.jpg",
+  "label": "sooduck"
+},
+"[soohood]": {
+  "kind": "image",
+  "src": "media/soohood.jpg",
+  "label": "soohood"
+},
+"[soopoint]": {
+  "kind": "image",
+  "src": "media/soopoint.jpg",
+  "label": "soopoint"
  }
 };
 const photoSections=[
