@@ -3563,6 +3563,7 @@ const chatData={
   ["can i call?", "me"],
 
   ["yes baby", "them"],
+  ["[ssk]", "them"],
 
   ["[KakaoTalk VoiceTalk — 14 minutes]", "date"],
 
