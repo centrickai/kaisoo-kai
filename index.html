@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="phone" style="width: 393px; height: 852px; transform: scale(0.99061);">
-<div id="screen">
+<div id="screen"><div id="iphoneLockFade" aria-hidden="true"></div>
 <div id="wall"></div>
 <div class="layer" id="homeL"><div class="hgrid">
 <button class="widget wcal" data-app="calendar" onclick="openApp('calendar',this)"><div _msthash="1" _msttexthash="116740" class="wd">Saturday</div><div _msthash="2" _msttexthash="10179" class="wn">17</div><div class="we"><font _msthash="3" _mstmutation="1" _msttexthash="134953">Groceries</font><small _msthash="4" _msttexthash="85514">All-day</small></div><div class="we"><font _msthash="5" _mstmutation="1" _msttexthash="97526">Laundry</font><small _msthash="6" _msttexthash="85514">All-day</small></div></button>
@@ -37,4 +37,10 @@
 </div>
 <audio id="player" preload="auto"></audio>
 <script src="bootstrap.js"></script>
+<button id="iphoneSideButton"
+        type="button"
+        onclick="lockIphoneAnimated()"
+        aria-label="Lock iPhone">
+  <span class="sideButtonTooltip">Lock iPhone</span>
+</button>
 </body></html>

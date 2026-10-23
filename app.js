@@ -34,6 +34,8 @@ let lockNotes = [{
 }];
 
 
+
+
 /* ---------- UTILITIES ---------- */
 const pad=n=>String(n).padStart(2,'0');
 const esc=v=>String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
@@ -253,6 +255,50 @@ function unlock(){sfx('unlock');view='home';$('#wall').classList.remove('dim');
  renderHome();HOME.style.visibility='visible';HOME.animate([{transform:'scale(1.18)',opacity:0},{transform:'none',opacity:1}],{duration:560,easing:'cubic-bezier(.2,.9,.22,1)'});
  [...HOME.querySelectorAll('.app,.widget')].forEach((el,i)=>el.animate([{transform:'scale(.7)',opacity:0},{transform:'none',opacity:1}],{duration:520,delay:30+i*14,easing:'cubic-bezier(.2,1.1,.3,1)',fill:'backwards'}));
  setStatus(true);if(pendingOpen){pendingOpen=null;setTimeout(()=>{chatId='Kyungsoo my love 💞';openApp('chat',HOME.querySelector('.app[data-app="kakao"] .icon'))},520)}}
+
+ 
+function lockIphone() {
+  if (view === 'lock' || view === 'pin' || callState) return;
+
+  // Cancel pending app transition animations
+  ++animTok;
+
+  // Close any open keyboard
+  const keyboard = document.querySelector('#kbd');
+  if (keyboard) keyboard.classList.remove('open');
+
+  // Hide any active application
+  APP.getAnimations().forEach(a => a.cancel());
+  APP.querySelectorAll('video').forEach(v => v.pause());
+  APP.style.visibility = 'hidden';
+  APP.innerHTML = '';
+
+  // Hide the home screen
+  HOME.getAnimations().forEach(a => a.cancel());
+  HOME.style.visibility = 'hidden';
+
+  // Restore the lock screen
+  const lockLayer = document.querySelector('#lockL');
+  const lockContent = document.querySelector('#lkc');
+
+  lockLayer.getAnimations().forEach(a => a.cancel());
+  lockLayer.style.visibility = 'visible';
+  lockLayer.style.opacity = '1';
+
+  lockContent.getAnimations().forEach(a => a.cancel());
+  lockContent.style.transform = '';
+  lockContent.style.opacity = '';
+  lockContent.style.pointerEvents = '';
+
+  document.querySelector('#pinL').style.display = 'none';
+  document.querySelector('#wall').classList.remove('dim');
+
+  pendingOpen = null;
+  view = 'lock';
+
+  renderLock();
+  setStatus(true);
+}
 
 /* ============================================================
    HOME SCREEN
@@ -587,7 +633,19 @@ function incomingMsg(text,onDelivered){
 
 /* --- NOTIFICATION BANNER --- */
 function notify(body){sfx('msg');vib([30,60,30]);
- if(view==='lock'||view==='pin'){lockNotes.unshift({title:'Kyungsoo',body,app:'kakao',time:t('now')});renderLock();const c=document.querySelector('.lk-notes .ncard');if(c)c.animate([{transform:'translateY(-30px) scale(.9)',opacity:0},{transform:'none',opacity:1}],{duration:500,easing:'cubic-bezier(.2,1.2,.4,1)'});return}
+ if(view==='lock'||view==='pin'){// Remove previous KakaoTalk notifications
+lockNotes = lockNotes.filter(n => n.app !== 'kakao');
+
+// Add the newest KakaoTalk notification
+lockNotes.unshift({
+  title: 'Kyungsoo',
+  body,
+  app: 'kakao',
+  time: t('now')
+});
+
+// Refresh the lock screen
+renderLock();const c=document.querySelector('.lk-notes .ncard');if(c)c.animate([{transform:'translateY(-30px) scale(.9)',opacity:0},{transform:'none',opacity:1}],{duration:500,easing:'cubic-bezier(.2,1.2,.4,1)'});return}
  OV.querySelectorAll('.banner').forEach(b=>b.remove());const b=document.createElement('div');b.className='banner';b.innerHTML=`<div class="ncard">${ncardHTML({title:'Kyungsoo',body,app:'kakao',time:t('now')})}</div>`;OV.appendChild(b);
  b.animate([{transform:'translateY(-140%) scale(.96)'},{transform:'none'}],{duration:620,easing:'cubic-bezier(.2,1.25,.35,1)'});
  let y0=null,dy=0,mv=false;const hide=()=>{if(!b.isConnected)return;b.animate([{transform:`translateY(${Math.min(0,dy)}px)`},{transform:'translateY(-150%)'}],{duration:320,easing:'ease-in',fill:'forwards'}).onfinish=()=>b.remove()};
@@ -781,7 +839,19 @@ function wireSlider(){const s=$('#slider'),k=s.querySelector('.kn'),lab=s.queryS
  k.addEventListener('pointerup',()=>{if(x0===null)return;x0=null;if(dx>max*.75){answerCall()}else{k.animate([{transform:`translateX(${dx}px)`},{transform:'none'}],{duration:300,easing:'cubic-bezier(.2,1.3,.4,1)'});k.style.transform='';lab.style.opacity=1}})}
 function answerCall(){if(callDir==='in'){curScript=speech;isEnding=true}stopRing();stopRingback();vib(20);callState='active';callStart=Date.now();capIdx=-1;renderCall()}
 function declineCall(){stopRing();callState='';declined++;extraCalls.unshift(['Kyungsoo my love 💞','오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'부재중']);afterDecline();closeCallUI()}
-function missCall(){if(callState!=='ring')return;stopRing();callState='';declined++;extraCalls.unshift(['Kyungsoo my love 💞','오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'부재중']);afterDecline();closeCallUI();if(['lock','pin'].includes(view)){lockNotes.unshift({title:t('missedCall'),body:'Kyungsoo',app:'phone',time:t('now')});renderLock()}}
+function missCall(){if(callState!=='ring')return;stopRing();callState='';declined++;extraCalls.unshift(['Kyungsoo my love 💞','오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'부재중']);afterDecline();closeCallUI();if(['lock','pin'].includes(view)){// Remove previous missed-call notifications
+lockNotes = lockNotes.filter(n => n.app !== 'phone');
+
+// Add the newest missed-call notification
+lockNotes.unshift({
+  title: t('missedCall'),
+  body: 'Kyungsoo',
+  app: 'phone',
+  time: t('now')
+});
+
+// Refresh the lock screen
+renderLock();}}
 function endCall(){if(callState==='dialing'){clearCallTimers();stopRingback();callState='';extraCalls.unshift([callName,'오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'발신']);closeCallUI();if(view==='phone')show('phone');return}
  if(callState!=='active')return;callState='ended';vib(15);const t=$('#ctime');if(t)t.textContent=t_('callEnded');const c=OV.querySelector('.call');c&&c.querySelectorAll('.cb').forEach(b=>b.style.opacity=.4);
  extraCalls.unshift([callName,'오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),callDir==='out'?'발신':'수신']);if(isEnding)phoneDone=true;isEnding=false;setTimeout(()=>{callState='';closeCallUI();if(view==='phone')show('phone')},1100)}
@@ -840,3 +910,34 @@ if(e>=43.5&&incoming===1){
   if(sec>S.length*3+2)endCall()}}
 function fit(){const ph=$('#phone');const mob=innerWidth<=540;ph.classList.toggle('mob',mob);ph.classList.toggle('short',mob&&innerHeight<740);if(mob){ph.style.width=innerWidth+'px';ph.style.height=innerHeight+'px';ph.style.transform='';SC=1}else{ph.style.width='393px';ph.style.height='852px';SC=Math.min((innerHeight-40)/852,(innerWidth-40)/393,1.1);ph.style.transform=`scale(${SC})`}}
 addEventListener('resize',fit);fit();renderLock();renderHome();setStatus(true);setInterval(tick,250);tick();
+
+
+/* Smooth iPhone lock animation */
+function lockIphoneAnimated() {
+  const fade = document.getElementById('iphoneLockFade');
+
+  if (!fade) {
+    lockIphone();
+    return;
+  }
+
+  // Prevent repeated clicks during the transition
+  if (fade.classList.contains('active')) return;
+
+  // Fade to black
+  fade.classList.remove('reveal');
+  fade.classList.add('active');
+
+  setTimeout(() => {
+    // Run the existing lock function
+    lockIphone();
+
+    // Reveal the lock screen
+    fade.classList.remove('active');
+    fade.classList.add('reveal');
+
+    setTimeout(() => {
+      fade.classList.remove('reveal');
+    }, 460);
+  }, 300);
+}
