@@ -509,8 +509,8 @@ VIEWS.phone=()=>{const all=[...extraCalls,...calls].filter(c=>!missOnly||c[2]===
  ${tabbar([['star',t('favorites')],['clock',t('recents')],['contacts',t('contacts')],['keypad',t('keypad')],['voicemail',t('voicemail')]],1)}`}};
 
 /* --- KKT --- */
-const isGroup=n=>/4조|공지|과제방|EXO 🪐|우리 셋 🐻/.test(n);
-const MEMBERS={'우리 셋 🐻':3};
+const isGroup=n=>/EXO 🪐|엑소 🪐|우리 셋 🐻|SM 러닝크루 🏃🔥/.test(n);
+const MEMBERS={'우리 셋 🐻':3,'엑소 🪐': 6,'SM 러닝크루 🏃🔥':9};
 function lastDate(n){const d=((chatData[n]||[]).filter(x=>x[1]==='date').slice(-1)[0]||[''])[0];return d==='10월 16일'?'어제':d}
 function dateKey(n){if(n==='Kyungsoo my love 💞')return 9999;const l=lastDate(n);if(l==='어제')return 1016;const m=l.match(/(\d+)월 (\d+)일/);return m?+m[1]*100+ +m[2]:0}
 function previewText(s,grp){const m=mediaLabels[s];if(m)return m.kind==='image'?t('photo'):t('voiceMsg');const b=s.match(/^\[(.+)\]$/);if(b)return /기프티콘/.test(b[1])?t('giftSent'):/파일/.test(b[1])&&!/영상/.test(b[1])?t('fileColon')+fileInfo(b[1])[0]:/영상/.test(b[1])?t('video'):t('photo');return grp?s.replace(/^.+?: /,''):s}
