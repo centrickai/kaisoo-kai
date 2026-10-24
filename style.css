@@ -14,10 +14,10 @@ svg{display:block}
 /* Keep the physical iPhone frame visible on mobile */
 #phone.mob {
   width: min(
-    calc(100vw - 44px),
-    calc((100dvh - 60px) * 0.4613),
-    430px
-  );
+  calc(100vw - 80px),
+  calc((100dvh - 110px) * 0.4613),
+  393px
+);
 
   height: auto;
   aspect-ratio: 393 / 852;
