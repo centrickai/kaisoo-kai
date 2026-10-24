@@ -705,9 +705,51 @@ function canType(){
     && !replyBusy;
 }
 function tapInput(){openKbd();if(!canType()){setField(pendingText,true);return}typeLine(liveReplies[replyStage].mine[lineIdx])}
-function typeLine(line){typing=true;const steps=LANG==='ko'?jamoSteps(line):genSteps(line);let i=0;setField('',true);
- (function step(){if(view!=='chat'){typing=false;return}if(i>=steps.length){typing=false;pendingText=line;const s=$('#snd');if(s)s.classList.add('on');return}
-  const s=steps[i++];s.k.forEach((k,j)=>setTimeout(()=>pressKey(k),j*45));setField(s.t,true);setTimeout(step,(LANG==='ko'?60:85)+Math.random()*70+(s.k.length>1?s.k.length*45:0)+(s.k[0]==='space'?60:0))})()}
+
+function typeLine(line) {
+  typing = true;
+
+  const steps = LANG === 'ko' ? jamoSteps(line) : genSteps(line);
+  let i = 0;
+
+  setField('', true);
+
+  (function step() {
+    if (view !== 'chat') {
+      typing = false;
+      return;
+    }
+
+    if (i >= steps.length) {
+      typing = false;
+      pendingText = line;
+
+      const s = $('#snd');
+      if (s) s.classList.add('on');
+
+      return;
+    }
+
+    const s = steps[i++];
+
+    // Faster virtual keyboard animation
+    s.k.forEach((k, j) => {
+      setTimeout(() => pressKey(k), j * 20);
+    });
+
+    setField(s.t, true);
+
+    // Faster LIVE REPLIES typing
+    const delay =
+      (LANG === 'ko' ? 25 : 35) +
+      Math.random() * 25 +
+      (s.k.length > 1 ? s.k.length * 20 : 0) +
+      (s.k[0] === 'space' ? 25 : 0);
+
+    setTimeout(step, delay);
+  })();
+}
+
 function sendLine(){if(!pendingText)return;const stage=liveReplies[replyStage];todayChat.push([pendingText,'me',nowAmpm(),'rd']);pendingText='';sfx('send');vib(10);setField('',false);$('#snd').classList.remove('on');refreshChat(true);lineIdx++;
  //if(lineIdx<stage.mine.length){setTimeout(()=>{if(view==='chat'&&chatId==='Kyungsoo my love 💞'&&$('#kbd.open'))typeLine(stage.mine[lineIdx])},500);return}
  //replyStage++;lineIdx=0;replyBusy=true;const them=stage.them.slice();
@@ -726,7 +768,7 @@ function sendLine(){if(!pendingText)return;const stage=liveReplies[replyStage];t
 // Kyungsoo can call only after Jongin sends "call meee"
 if(askedCall && stage.mine===CALL_ASK_REPLY){
   callReplySent=true;
-  nextCallAt=elapsed()+2.5;
+  nextCallAt=elapsed()+4.5;
 }
 
 
