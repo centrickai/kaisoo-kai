@@ -823,9 +823,9 @@ function viewerGestures(v){const img=v.querySelector('.vi'),bg=v.querySelector('
   img.animate([{transform:img.style.transform||'none'},{transform:'none'}],{duration:300,easing:'cubic-bezier(.2,1.2,.4,1)'});img.style.transform='';bg.style.opacity=1})}
 
 /* --- Instagram --- */
-const REELS=[{t:'Off My Face',d:fmtYMD(2023,6,2),v:'3,921',n:214},{t:'What 2 Do',d:fmtYMD(2024,8,19),v:'2,107',n:168},{t:'Boyfriend',d:fmtYMD(2025,10,30),v:'5,866',n:402}];
-VIEWS.instagram=()=>({cls:'ig',html:`<div class="ig-h"><button onclick="closeApp()" style="width:26px">${G.chevLb}</button><b>kyungsoo</b>${G.bell}${G.dotsH}</div><div class="scroll">
- <div class="igp"><div class="pp"><img src="media/kai_instagram_avatar.jpg" alt=""></div><div class="st"><span><b>556</b>${t('posts')}</span><span><b>14.1M</b>${t('followers')}</span><span><b>0</b>${t('following')}</span></div></div>
+const REELS=[{t:'Off My Face',d:fmtYMD(2023,6,2),v:'3,921',n:214},{t:'What 2 Do',d:fmtYMD(2026,4,25),v:'2,107',n:168},{t:'Boyfriend',d:fmtYMD(2025,10,30),v:'5,866',n:402}];
+VIEWS.instagram=()=>({cls:'ig',html:`<div class="ig-h"><button onclick="closeApp()" style="width:26px">${G.chevLb}</button><b>ninibear</b>${G.bell}${G.dotsH}</div><div class="scroll">
+ <div class="igp"><div class="pp"><img src="media/kai_instagram_avatar.jpg" alt=""></div><div class="st"><span><b>3</b>${t('posts')}</span><span><b>124</b>${t('followers')}</span><span><b>7</b>${t('following')}</span></div></div>
  
 <div class="igbio">
   <b></b>
@@ -839,9 +839,34 @@ VIEWS.instagram=()=>({cls:'ig',html:`<div class="ig-h"><button onclick="closeApp
  <div class="igtabs"><span class="on">${G.grid}</span><span>${G.reels}</span><span>${G.tag}</span></div>
  <div class="iggrid">${['off_my_face.jpg','what_2_do.html','boyfriend.jpg'].map((x,i)=>`<button onclick="videoIndex=${i};push('reel')"><img src="photos/${x}" alt=""><svg class="rc" viewBox="0 0 24 24"><path d="M3.5 7.5A4 4 0 0 1 7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4Zm6.5 3v7l6-3.5Z"/></svg><span class="vc">${G.playF.replace('<svg','<svg fill="none" stroke="#fff"')}${REELS[i].v}</span></button>`).join('')}</div></div>
  ${tabbar([['home',''],['search',''],['plusSq',''],['reels',''],['<span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#bbb,#888);display:block"></span>','']],-1)}`});
-function reelInner(i){const r=REELS[i];return `<div class="vwrap"><video src="media/kai_instagram_0${i+1}.mp4" autoplay loop playsinline></video>
- <div class="ract"><div class="liked">${G.heart}<span>${r.n+1}</span></div><div>${G.comment}<span>${12+i*7}</span></div><div>${G.send}<span>${3+i}</span></div><div>${G.dotsH}</div></div>
- <div class="rinfo"><div class="u"><img src="media/kai_instagram_avatar.jpg" alt="">kyungsoo<span>${t('followingTag')}</span></div>${esc(r.t)} ${t('cover')}<br><small>${r.d} · ${t('likedBy','w',r.n)}</small><br><small>${t('origAudio')}</small></div></div>`}
+
+function reelInner(i) {
+  const r = REELS[i];
+
+  return `<div class="vwrap">
+    <video src="media/kai_instagram_0${i+1}.mp4" autoplay loop playsinline></video>
+
+    <div class="ract">
+      <div class="liked">${G.heart}<span>${r.n+1}</span></div>
+      <div>${G.comment}<span>${12+i*7}</span></div>
+      <div>${G.send}<span>${3+i}</span></div>
+      <div>${G.dotsH}</div>
+    </div>
+
+    <div class="rinfo">
+      <div class="u">
+        <img src="media/kai_instagram_avatar.jpg" alt="">
+        ninibear
+      </div>
+      ${esc(r.t)}
+      <br>
+      <small>${r.d} · ${t('likedBy','w',r.n)}</small>
+      <br>
+      <small>${t('origAudio')}</small>
+    </div>
+  </div>`;
+}
+
 VIEWS.reel=()=>({cls:'reel dark',dark:true,html:`<div id="rhost">${reelInner(videoIndex)}</div><div class="rtop"><button class="rback" onclick="back()" aria-label="${t('back')}">${G.chevLb}</button><span>${t('reels')}</span>${G.camera}</div>${tabbar([['home',''],['search',''],['plusSq',''],['reels',''],['person','']],3).replace(/<button class="(on)?">/g,'<button class="$1" onclick="back()">')}`,
  init:pg=>{playReel(pg);let y0=null,dy=0;pg.addEventListener('pointerdown',e=>{if(e.target.closest('button,.tabbar'))return;y0=e.clientY;dy=0});pg.addEventListener('pointermove',e=>{if(y0===null)return;dy=(e.clientY-y0)/SC;const w=pg.querySelector('.vwrap');if(w)w.style.transform=`translateY(${dy*.6}px)`});
   pg.addEventListener('pointerup',()=>{if(y0===null)return;y0=null;const w=pg.querySelector('.vwrap');const n=videoIndex+(dy<0?1:-1);
