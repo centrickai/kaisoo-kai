@@ -8291,8 +8291,8 @@ const events = {
   ],
   "17": [
     "Groceries · 11 AM",
-    "Laundry",
-    "Walk the dogs 🐶 · 5 PM"
+    "Walk the dogs 🐶 · 5 PM",
+    "Laundry"
   ],
   "18": [
     "Brunch with Kyungsoo · 11 AM",
@@ -8356,105 +8356,283 @@ const events = {
     "Movie night with hyung · 10 PM"
   ]
 };
-const searches=[
- "citron tea gift card",
- "motungi interior photos",
- "motungi cream dessert",
- "Sports psychology midterm",
- "birthday gift for 20 year old guy",
- "fish-shaped bread near jungyeon univ",
- "how to save kakaotalk voice message iphone",
- "musinsa return how to",
- "jungyeon univ applied music concert schedule",
- "best drinks for sore throat",
- "jungyeon univ arts hall practice rooms",
- "nike sneaker sizing",
- "gym shower construction how long",
- "jungyeon university gen-ed section change",
- "jungyeon univ gen-ed add/drop period",
- "jungyeon university academic calendar",
- "jungyeon univ transfer student major credit recognition",
- "transfer student previous school credit recognition",
- "jungyeon univ transfer practical exam events",
- "jungyeon univ phys ed transfer admission guidelines",
- "how to get on instagram close friends list",
- "jungyeon univ applied music early admission results",
- "jungyeon university applied music",
- "sohee off my face cover original"
+const searches = [
+  "how to surprise boyfriend without him finding out",
+  "birthday gift ideas for boyfriend who says he wants nothing",
+  "how to make a photo album for boyfriend",
+  "best places for birthday dinner in seoul private room",
+  "flower meanings romantic",
+  "how to write a handwritten birthday letter",
+  "is buying too many gifts bad",
+  "how to hide surprise birthday plans from boyfriend",
+  "couple photo album ideas pinterest",
+  "EXO choreography practice videos",
+  "how to improve dance stamina",
+  "dance warm up routine before rehearsal",
+  "best stretching routine for dancers",
+  "why do my legs hurt after dance practice",
+  "how to remove sweat smell from workout clothes",
+  "nike sneaker sizing korea",
+  "adidas track pants black",
+  "musinsa oversized hoodie",
+  "best winter jackets for men korea",
+  "how to style all black outfit",
+  "men's perfume recommendations",
+  "matching couple bracelets subtle",
+  "restaurants in seoul for quiet date night",
+  "best cheesecake in seoul",
+  "how to make cheesecake at home easy",
+  "how long does cheesecake last in fridge",
+  "best coffee beans for home",
+  "how to make iced americano less bitter",
+  "dog friendly cafes in seoul",
+  "dog treats safe ingredients",
+  "why do dogs sleep in weird positions",
+  "how to take better pictures of dogs",
+  "dog grooming near me",
+  "seoul forest walking trails",
+  "han river park night view",
+  "best places for evening walks in seoul",
+  "how to take good night photos iphone",
+  "how to organize 10000 photos iphone",
+  "how to recover deleted photos iphone",
+  "how to save kakaotalk voice messages iphone",
+  "how to pin someone on kakaotalk",
+  "why does my boyfriend say go to sleep so much",
+  "is it normal to miss your boyfriend after seeing him",
+  "how to stop smiling when thinking about someone",
+  "cute goodnight messages for boyfriend",
+  "how to say i miss you without sounding clingy",
+  "can you fall in love with the same person again",
+  "how to make boyfriend laugh when he's tired",
+  "best food for sore throat",
+  "citron tea benefits for throat",
+  "how to make honey citron tea",
+  "what to cook for someone who is sick",
+  "easy korean dinner recipes",
+  "how to make fluffy omelette",
+  "how to cut onions without crying",
+  "how long to boil eggs",
+  "why does my boyfriend cook better than me",
+  "EXO funny moments compilation",
+  "EXO concert fancams",
+  "KAI rover dance challenge",
+  "KAI peaches choreography",
+  "KAI mmmh live performance",
+  "D.O. singing live compilation",
+  "Kyungsoo cooking videos",
+  "Do Kyungsoo smile compilation",
+  "how to stop watching the same video over and over",
+  "choi minho running marathon",
+  "is running actually necessary for fitness",
+  "can dancing replace running cardio",
+  "how to politely decline a running invitation",
+  "how to mute group chat notifications kakaotalk",
+  "how to apologize for replying late to group chat",
+  "birthday gifts for nephew who likes soccer",
+  "pink gifts for little girls",
+  "what to buy for baby niece",
+  "how to be a fun uncle",
+  "family restaurants in seoul with kids",
+  "best movies to watch with boyfriend",
+  "romantic movies not too cheesy",
+  "how to stay awake during movie night",
+  "how to stop falling asleep while cuddling",
+  "is it normal to sleep better next to someone"
 ];
-const emails=[
- [
-  "Jungyeon Univ. Academic Affairs",
-  "Fall 2026 Midterm Exam Period Notice",
-  "Notice regarding the midterm period and exam room changes.",
-  "어제"
- ],
- [
-  "Professor 김서현",
-  "Re: Gen-ed presentation submissions",
-  "Please check the deadline for group presentation materials.",
-  "어제"
- ],
- [
-  "Naver Pay",
-  "Your order has shipped",
-  "Your order is on its way.",
-  "10/15"
- ],
- [
-  "Jungyeon Univ. Library",
-  "Upcoming book due date",
-  "Here is the due date for your borrowed books.",
-  "10/12"
- ],
- [
-  "MUSINSA",
-  "Please check your order details",
-  "Your order has been received successfully.",
-  "10/10"
- ],
- [
-  "Jungyeon Univ. Academic Support",
-  "Results of previous institution credit recognition",
-  "The first round of credit recognition for courses completed at your previous institution is complete. Some major electives will be announced separately after further review.",
-  "3/04"
- ],
- [
-  "Jungyeon Univ. Registrar",
-  "2026 transfer student enrollment complete",
-  "Your enrollment as a Phys Ed transfer student and student ID have been created.",
-  "2/21"
- ],
- [
-  "Previous University Academic Office",
-  "Notice regarding change in academic status",
-  "Information on processing your status change due to transfer and issuing certificates.",
-  "2/16"
- ],
- [
-  "Jungyeon Univ. Admissions",
-  "2026 Phys Ed transfer admission results",
-  "Congratulations, you have been accepted through the transfer admission process. Please check the enrollment procedures.",
-  "2/06"
- ],
- [
-  "Jungyeon Univ. Admissions",
-  "2026 transfer application documents received",
-  "Your documents for the Phys Ed program have been received.",
-  "1/24"
- ],
- [
-  "Jungyeon Univ. Admissions",
-  "2026 transfer application submitted",
-  "Your transfer application to the Phys Ed program was submitted successfully.",
-  "1/12"
- ],
- [
-  "Jungyeon Univ. Admissions",
-  "2026 transfer admission guidelines",
-  "Check eligibility and the admission schedule for Phys Ed.",
-  "2025"
- ]
+const emails = [
+  [
+    "SM Entertainment",
+    "October 2026 Schedule Update",
+    "Please review the updated rehearsal, recording, and meeting schedule for the remainder of October.",
+    "오늘"
+  ],
+  [
+    "SM Artist Management",
+    "EXO Group Rehearsal Schedule",
+    "The updated rehearsal schedule and practice room arrangements have been shared. Please review before the next session.",
+    "어제"
+  ],
+  [
+    "CENTRICKAI",
+    "Kyungsoo's Birthday — Ideas 🎂",
+    "I found a few decoration ideas. Please don't buy the entire store before we decide on anything.",
+    "어제"
+  ],
+  [
+    "Naver Pay",
+    "Your payment has been completed",
+    "Your payment for an online purchase was processed successfully.",
+    "10/22"
+  ],
+  [
+    "KakaoTalk",
+    "Your Kakao Account Security Notice",
+    "A new sign-in to your Kakao Account was detected. Please review your account activity.",
+    "10/21"
+  ],
+  [
+    "SM Entertainment",
+    "Studio Reservation Confirmation",
+    "Your requested practice studio reservation has been confirmed. Please check the assigned room and time.",
+    "10/20"
+  ],
+  [
+    "MUSINSA",
+    "Your order is on its way",
+    "Good news! Your order has been shipped. Track your package using the link provided.",
+    "10/19"
+  ],
+  [
+    "Nike",
+    "Your Order Confirmation",
+    "Thanks for shopping with Nike. Your order has been confirmed and is being prepared for shipment.",
+    "10/18"
+  ],
+  [
+    "SM Artist Management",
+    "Recording Session — Schedule Confirmation",
+    "Please confirm your availability for the upcoming recording session and review the studio details.",
+    "10/17"
+  ],
+  [
+    "Restaurant Reservations",
+    "Your Dinner Reservation Is Confirmed",
+    "Your table for two has been reserved. We look forward to welcoming you.",
+    "10/16"
+  ],
+  [
+    "Korean Air",
+    "Your Flight Itinerary",
+    "Your upcoming flight itinerary is available. Please review your departure time and baggage information.",
+    "10/15"
+  ],
+  [
+    "Naver Pay",
+    "Your order has shipped",
+    "Your order is on its way. Delivery tracking information is now available.",
+    "10/15"
+  ],
+  [
+    "SM Entertainment",
+    "Artist Schedule Coordination",
+    "Please review the proposed dates for upcoming artist activities and confirm any scheduling conflicts.",
+    "10/14"
+  ],
+  [
+    "Apple",
+    "Your iCloud Storage Is Almost Full",
+    "Your iCloud storage is running low. Manage your photos and backups to continue syncing your devices.",
+    "10/13"
+  ],
+  [
+    "CENTRICKAI",
+    "Re: Photo Album Ideas",
+    "Here are some layouts you can use. And yes, you should absolutely include the handwritten letter.",
+    "10/12"
+  ],
+  [
+    "Seoul Veterinary Clinic",
+    "Grooming Appointment Reminder",
+    "This is a reminder regarding your upcoming pet grooming appointment.",
+    "10/11"
+  ],
+  [
+    "MUSINSA",
+    "Please check your order details",
+    "Your order has been received successfully. You can review your purchase details in your account.",
+    "10/10"
+  ],
+  [
+    "SM Entertainment",
+    "EXO Practice Room Booking",
+    "The practice room has been reserved for the upcoming EXO rehearsal. Please refer to the shared schedule.",
+    "10/09"
+  ],
+  [
+    "Spotify",
+    "Your September Listening Summary",
+    "Your monthly listening highlights are ready. Take a look at the music you've been enjoying.",
+    "10/08"
+  ],
+  [
+    "Korean Air",
+    "Thank You for Flying With Us",
+    "Thank you for choosing Korean Air. We hope you enjoyed your recent journey.",
+    "10/07"
+  ],
+  [
+    "SM Artist Management",
+    "Wardrobe Fitting Appointment",
+    "Please review the wardrobe fitting schedule and confirm your availability with the styling team.",
+    "10/06"
+  ],
+  [
+    "YouTube",
+    "Your Video Upload Has Been Processed",
+    "Your uploaded video has finished processing and is ready for review.",
+    "10/05"
+  ],
+  [
+    "SM Entertainment",
+    "October Artist Activities — Initial Schedule",
+    "The preliminary October schedule has been shared with the relevant teams. Please review the attached information.",
+    "10/02"
+  ],
+  [
+    "Apple",
+    "Your Receipt From Apple",
+    "Thank you for your purchase. Your receipt is available for your records.",
+    "09/28"
+  ],
+  [
+    "MUSINSA",
+    "Your Return Request Has Been Received",
+    "We have received your return request. Please review the instructions for returning your item.",
+    "09/24"
+  ],
+  [
+    "SM Entertainment",
+    "Recording Studio Access Information",
+    "Please review the studio access guidelines and equipment information before your scheduled session.",
+    "09/20"
+  ],
+  [
+    "KAMONG Café",
+    "Photos From the Café",
+    "Sharing the photos from your recent visit. Thank you for stopping by!",
+    "09/15"
+  ],
+  [
+    "SM Artist Management",
+    "Overseas Schedule — Travel Documents",
+    "Please review the travel arrangements and ensure all required documents are prepared before departure.",
+    "09/10"
+  ],
+  [
+    "Nike",
+    "Your Order Has Been Delivered",
+    "Your package has been delivered successfully. We hope you enjoy your new items.",
+    "09/04"
+  ],
+  [
+    "SM Entertainment",
+    "Artist Profile Information Review",
+    "Please review your profile information and notify the management team of any necessary updates.",
+    "08/27"
+  ],
+  [
+    "KakaoTalk",
+    "Kakao Account Password Updated",
+    "Your Kakao Account password was changed successfully. If this wasn't you, please secure your account.",
+    "08/19"
+  ],
+  [
+    "Apple",
+    "Your iCloud+ Subscription",
+    "Your iCloud+ subscription has been renewed. Thank you for using iCloud.",
+    "08/12"
+  ]
 ];
 const calls=[
  [
@@ -8528,27 +8706,50 @@ const calls=[
   "수신"
  ]
 ];
-const songs=[
- [
-  "Off My Face",
-  "media/sohee_01.mp3"
- ],
- [
-  "좋다",
-  "media/sohee_02.mp3"
- ],
- [
-  "Finesse",
-  "media/sohee_03.mp3"
- ],
- [
-  "우주를 건너",
-  "media/sohee_across_the_universe.mp3"
- ],
- [
-  "And July",
-  "media/sohee_04.mp3"
- ]
+const songs = [
+  ["Peaches", "media/kai_peaches.mp3"],
+  ["That's Okay", "media/do_thats_okay.mp3"],
+  ["Montreal", "media/the_weeknd_montreal.mp3"],
+  ["Guitarist", "media/do_guitarist.mp3"],
+  ["The Eve", "media/exo_the_eve.mp3"],
+  ["Amnesia", "media/kai_amnesia.mp3"],
+  ["Rose", "media/do_rose.mp3"],
+  ["Oasis", "media/exo_oasis.mp3"],
+  ["Wait On Me", "media/kai_wait_on_me.mp3"],
+  ["My Everything", "media/bumkey_my_everything.mp3"],
+  ["Somebody", "media/do_somebody.mp3"],
+  ["Mmmh", "media/kai_mmmh.mp3"],
+  ["Been Through", "media/exo_been_through.mp3"],
+  ["Dancing Party", "media/do_dancing_party.mp3"],
+  ["I Do", "media/do_i_do.mp3"],
+  ["Slidin'", "media/kai_slidin.mp3"],
+  ["Baby Don't Cry", "media/exo_baby_dont_cry.mp3"],
+  ["Slower", "media/brandy_slower.mp3"],
+  ["Nothing On Me", "media/kai_nothing_on_me.mp3"],
+  ["Popcorn", "media/do_popcorn.mp3"],
+  ["Universe", "media/exo_universe.mp3"],
+  ["Blue", "media/kai_blue.mp3"],
+  ["I'm Gonna Love You", "media/do_im_gonna_love_you.mp3"],
+  ["Rover", "media/kai_rover.mp3"],
+  ["Sing It Loud", "media/do_sing_it_loud.mp3"],
+  ["Moonlight", "media/exo_moonlight.mp3"],
+  ["Good Night", "media/do_good_night.mp3"],
+  ["Reason", "media/kai_reason.mp3"],
+  ["First Love", "media/exo_first_love.mp3"],
+  ["Adult Swim", "media/kai_adult_swim.mp3"],
+  ["Wonder", "media/do_wonder.mp3"],
+  ["Black Mirror", "media/kai_black_mirror.mp3"],
+  ["Don't Go", "media/exo_dont_go.mp3"],
+  ["Vanilla", "media/kai_vanilla.mp3"],
+  ["Don't You", "media/do_dont_you.mp3"],
+  ["I'm a HOTSHOT", "media/hotshot_im_a_hotshot.mp3"],
+  ["Mars", "media/do_mars.mp3"],
+  ["Ride Or Die", "media/kai_ride_or_die.mp3"],
+  ["Love Me Right", "media/exo_love_me_right.mp3"],
+  ["Walls Don't Talk", "media/kai_walls_dont_talk.mp3"],
+  ["Dear", "media/do_dear.mp3"],
+  ["My Love", "media/do_my_love.mp3"],
+  ["Flight to Paris", "media/kai_flight_to_paris.mp3"]
 ];
 const liveReplies=[
  {

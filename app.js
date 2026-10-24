@@ -210,8 +210,96 @@ document.addEventListener('pointerdown',()=>ac(),{once:true});
 
 /* ---------- STATUS BAR ---------- */
 function setStatus(dark){curDark=!!dark;$('#sb').classList.toggle('light',curDark);$('#hb').classList.toggle('light',curDark)}
-const ART=['media/kyungsoo_01.jpg','media/kyungsoo_02.jpg','media/kyungsoo_03.jpg','','media/kyungsoo_04.jpg'];
-const ARTIST=['kyungsoo','kyungsoo','kyungsoo',t('voiceMemo'),'kyungsoo'];
+const ART = [
+  "media/peaches.jpg",       // Peaches
+  "media/thats_okay.jpg",    // That's Okay
+  "media/montreal.jpg",      // Montreal
+  "media/dopamine.jpg",      // Guitarist
+  "media/the_war.jpg",       // The Eve
+  "media/kai_mmmh.jpg",      // Amnesia
+  "",                       // Rose
+  "media/tempo.jpg",         // Oasis
+  "media/wait_on_me.jpg",    // Wait On Me
+  "media/bumkey.jpg",        // My Everything
+  "media/somebody.jpg",      // Somebody
+  "media/kai_mmmh.jpg",      // Mmmh
+  "media/universe.jpg",      // Been Through
+  "media/dopamine.jpg",      // Dancing Party
+  "media/somebody.jpg",      // I Do
+  "media/rover.jpg",         // Slidin'
+  "media/xoxo.jpg",          // Baby Don't Cry
+  "media/brandy.jpg",        // Slower
+  "media/kai_mmmh.jpg",      // Nothing On Me
+  "media/popcorn.jpg",       // Popcorn
+  "media/universe.jpg",      // Universe
+  "media/peaches.jpg",       // Blue
+  "",                       // I'm Gonna Love You
+  "media/rover.jpg",         // Rover
+  "media/dopamine.jpg",      // Sing It Loud
+  "",                       // Moonlight
+  "media/popcorn.jpg",       // Good Night
+  "media/kai_mmmh.jpg",      // Reason
+  "media/exodis.jpg",       // First Love
+  "media/adult_swim.jpg",    // Adult Swim
+  "media/somebody.jpg",      // Wonder
+  "media/rover.jpg",         // Black Mirror
+  "media/xoxo.jpg",          // Don't Go
+  "media/peaches.jpg",       // Vanilla
+  "media/dopamine.jpg",      // Don't You
+  "media/hotshot.jpg",       // I'm a HOTSHOT
+  "media/popcorn.jpg",       // Mars
+  "media/kai_mmmh.jpg",      // Ride Or Die
+  "",                       // Love Me Right
+  "media/wait_on_me.jpg",    // Walls Don't Talk
+  "media/dopamine.jpg",      // Dear
+  "",                       // My Love
+  "media/wait_on_me.jpg"     // Flight to Paris
+];
+const ARTIST = [
+  "KAI",
+  "D.O.",
+  "The Weeknd",
+  "D.O.",
+  "EXO",
+  "KAI",
+  "D.O.",
+  "EXO",
+  "KAI",
+  "Bumkey",
+  "D.O.",
+  "KAI",
+  "EXO",
+  "D.O.",
+  "D.O.",
+  "KAI",
+  "EXO",
+  "Brandy",
+  "KAI",
+  "D.O.",
+  "EXO",
+  "KAI",
+  "D.O.",
+  "KAI",
+  "D.O.",
+  "EXO",
+  "D.O.",
+  "KAI",
+  "EXO",
+  "KAI",
+  "D.O.",
+  "KAI",
+  "EXO",
+  "KAI",
+  "D.O.",
+  "HOTSHOT",
+  "D.O.",
+  "KAI",
+  "EXO",
+  "KAI",
+  "D.O.",
+  "D.O.",
+  "KAI"
+];
 function updateIsland(){typeof updateCrumb==='function'&&updateCrumb();const on=nowSong>=0&&!PLAYER.paused&&!['music','lock','pin'].includes(view)&&!OV.querySelector('.np,.call,.viewer');const il=$('#island');il.classList.toggle('act',on);if(on){const a=ART[nowSong];il.querySelector('.ia').style.backgroundImage=a?`url(${a})`:'linear-gradient(135deg,#ff9a9e,#fa2d48)'}}
 
 /* ============================================================
@@ -830,8 +918,8 @@ VIEWS.weather=()=>{const h=new Date().getHours();const hrs=[];for(let i=0;i<12;i
 const sIc=(c,i)=>`<span class="st-ic" style="background:${c}">${(G[i]||i).replace('<svg','<svg style="color:#fff" width="18" height="18"')}</span>`;
 const sRow=(c,i,t,r='',fn)=>`<div class="row ${fn?'tap':''}" style="--inset:57px;cursor:${fn?'pointer':'default'}" ${fn?`onclick="${fn}"`:''}>${sIc(c,i)}<span style="flex:1">${t}</span>${r.startsWith('<button')?r:`<span class="muted" style="font-size:17px">${r}</span>${G.chevR}`}</div>`;
 VIEWS.settings=()=>({cls:'grouped',html:navHTML({title:t('app_settings')})+`<div class="scroll"><h1 class="lt">${t('app_settings')}</h1><div class="srch">${G.search}${t('search')}</div>
- <div class="group" style="margin-bottom:22px"><div class="row" style="min-height:76px"><span style="width:58px;height:58px;border-radius:50%;background:linear-gradient(#a8aeb8,#7f858f);color:#fff;font-size:24px;font-weight:600;display:grid;place-items:center">원</span><div style="flex:1"><b style="font-size:20px;font-weight:500">박원빈</b><div class="muted" style="font-size:13px">${t('acct')}</div></div>${G.chevR}</div></div>
- <div class="group" style="margin-bottom:22px">${sRow('#ff9500','<svg viewBox="0 0 24 24"><path d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0v5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5Z" fill="#fff"/></svg>',t('airplane'),sw(false))}${sRow('#007aff','<svg viewBox="0 0 16 12"><path fill="#fff" d="M8 2.3c2.3 0 4.4.9 6 2.4l1.2-1.2A10.3 10.3 0 0 0 8 .6 10.3 10.3 0 0 0 .8 3.5L2 4.7a8.6 8.6 0 0 1 6-2.4Zm0 3.4c1.4 0 2.6.5 3.6 1.4l1.2-1.2A6.8 6.8 0 0 0 8 4a6.8 6.8 0 0 0-4.8 1.9l1.2 1.2c1-.9 2.2-1.4 3.6-1.4Zm0 3.4c-.6 0-1.2.2-1.6.6L8 11.3l1.6-1.6c-.4-.4-1-.6-1.6-.6Z"/></svg>','Wi-Fi','wb_home_5G')}${sRow('#007aff','<svg viewBox="0 0 24 24"><path d="m7 7 10 10-5 4V3l5 4L7 17" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>','Bluetooth',t('on'))}${sRow('#34c759','<svg viewBox="0 0 24 24"><path d="M12 4v16M7 9v11M17 7v13M2 13v7M22 11v9" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>',t('cellular'))}${sRow('#34c759','<svg viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2.5" fill="none" stroke="#fff" stroke-width="2"/><rect x="5.5" y="9.5" width="8" height="5" rx="1" fill="#fff"/></svg>',t('battery'),'64%')}</div>
+ <div class="group" style="margin-bottom:22px"><div class="row" style="min-height:76px"><span style="width:58px;height:58px;border-radius:50%;background:linear-gradient(#a8aeb8,#7f858f);color:#fff;font-size:24px;font-weight:600;display:grid;place-items:center">종</span><div style="flex:1"><b style="font-size:20px;font-weight:500">Kim Jongin</b><div class="muted" style="font-size:13px">${t('acct')}</div></div>${G.chevR}</div></div>
+ <div class="group" style="margin-bottom:22px">${sRow('#ff9500','<svg viewBox="0 0 24 24"><path d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0v5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5Z" fill="#fff"/></svg>',t('airplane'),sw(false))}${sRow('#007aff','<svg viewBox="0 0 16 12"><path fill="#fff" d="M8 2.3c2.3 0 4.4.9 6 2.4l1.2-1.2A10.3 10.3 0 0 0 8 .6 10.3 10.3 0 0 0 .8 3.5L2 4.7a8.6 8.6 0 0 1 6-2.4Zm0 3.4c1.4 0 2.6.5 3.6 1.4l1.2-1.2A6.8 6.8 0 0 0 8 4a6.8 6.8 0 0 0-4.8 1.9l1.2 1.2c1-.9 2.2-1.4 3.6-1.4Zm0 3.4c-.6 0-1.2.2-1.6.6L8 11.3l1.6-1.6c-.4-.4-1-.6-1.6-.6Z"/></svg>','Wi-Fi','nini_home_5G')}${sRow('#007aff','<svg viewBox="0 0 24 24"><path d="m7 7 10 10-5 4V3l5 4L7 17" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>','Bluetooth',t('on'))}${sRow('#34c759','<svg viewBox="0 0 24 24"><path d="M12 4v16M7 9v11M17 7v13M2 13v7M22 11v9" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>',t('cellular'))}${sRow('#34c759','<svg viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2.5" fill="none" stroke="#fff" stroke-width="2"/><rect x="5.5" y="9.5" width="8" height="5" rx="1" fill="#fff"/></svg>',t('battery'),'88%')}</div>
  <div class="group" style="margin-bottom:22px">${sRow('#8e8e93','gear',t('general'))}${sRow('#007aff','person',t('access'))}${sRow('#8e8e93','camera',t('camera'))}${sRow('#32ade6','photo',t('wallpaper'))}${sRow('#8e8e93','search',t('search'))}</div>
  <div class="group" style="margin-bottom:22px">${sRow('#ff3b30','bellF',t('notif'))}${sRow('#ff2d55','speaker',t('sound'))}${sRow('#5856d6','<svg viewBox="0 0 24 24"><path d="M15.5 3.5A8.5 8.5 0 1 0 20.5 15 7 7 0 0 1 15.5 3.5Z" fill="#fff"/></svg>',t('focus'))}${sRow('#5856d6','<svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9h-9Z" fill="#fff"/><path d="M14 3.2V10h6.8A9 9 0 0 0 14 3.2Z" fill="#fff" opacity=".7"/></svg>',t('screenTime'),'',"push('screentime')")}</div>
  <div class="group" style="margin-bottom:22px">${sRow('#34c759','<svg viewBox="0 0 24 24"><path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16M9 9.5v1M15 9.5v1M12 9.5v3.5h-1M9.5 16c1.5 1 3.5 1 5 0" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>',t('faceid'))}${sRow('#007aff','<svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3" fill="none" stroke="#fff" stroke-width="2"/><rect x="5" y="11" width="14" height="10" rx="2" fill="#fff"/></svg>',t('privacy'))}</div></div>`});
