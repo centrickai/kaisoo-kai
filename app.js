@@ -217,7 +217,7 @@ const ART = [
   "media/dopamine.jpg",      // Guitarist
   "media/the_war.jpg",       // The Eve
   "media/kai_mmmh.jpg",      // Amnesia
-  "",                       // Rose
+  "media/rose.jpg",                       // Rose
   "media/tempo.jpg",         // Oasis
   "media/wait_on_me.jpg",    // Wait On Me
   "media/bumkey.jpg",        // My Everything
@@ -233,7 +233,7 @@ const ART = [
   "media/popcorn.jpg",       // Popcorn
   "media/universe.jpg",      // Universe
   "media/peaches.jpg",       // Blue
-  "",                       // I'm Gonna Love You
+  "media/rose.jpg",                       // I'm Gonna Love You
   "media/rover.jpg",         // Rover
   "media/dopamine.jpg",      // Sing It Loud
   "",                       // Moonlight
