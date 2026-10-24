@@ -8951,100 +8951,116 @@ const mediaLabels={
   "label": "soopoint"
  }
 };
-const photoSections=[
- [
-  "2026년 10월",
+
+const photoSections = [
   [
-   "campus_01.jpg",
-   "campus_02.jpg",
-   "campus_03.jpg",
-   "life_04.jpg",
-   "campus_06.jpg",
-   "campus_07.jpg",
-   "img_8353.jpg",
-   "img_8354.jpg",
-   "img_8356.jpg",
-   "img_8357.jpg",
-   "img_8358.jpg",
-   "img_8359.jpg"
+    "2026년 10월",
+    [
+      "pin_649081365091282655.jpg",
+      "pin_639511215873879060.jpg",
+      "pin_403987029094611091.jpg",
+      "pin_432627107968106728.jpg",
+      "pin_1013943303614200540.jpg",
+      "pin_700591285789822090.jpg",
+      "pin_647533252663491755.jpg",
+      "pin_639511215873061216.jpg",
+      "pin_822751425716475968.jpg",
+      "pin_64120006574082366.jpg",
+      "pin_1072841942489982763.jpg",
+      "pin_702913454380491934.jpg",
+      "HIJgqRkXcAMjVoK.jpg",
+      "HIWGVGqXUAACOVi.jpg"
+    ]
+  ],
+  [
+    "2026년 9월",
+    [
+      "HNw9pTiWkAEN8Z4.jpg",
+      "HNw9pTjXkAAwkFp.jpg",
+      "HNw9o_KWIAABihU.jpg",
+      "HRQcLVXE AAGmQo.jpg",
+      "HRQcLVzaAAAUGf7.jpg",
+      "HRQcm4SWUAQZ A3H.jpg",
+      "HSCA5eHaQAAjjO1.jpg",
+      "HSCA5dBXkAIG9rO.jpg",
+      "HUMJb95WMAEwTA4.jpg",
+      "pin_649081365084472494.jpg"
+    ]
+  ],
+  [
+    "2026년 8월",
+    [
+      "pin_581668108171425718.jpg",
+      "pin_581668108171425724.jpg",
+      "pin_581668108171425726.jpg",
+      "pin_581668108171425728.jpg",
+      "pin_581668108171425731.jpg",
+      "pin_581668108171425734.jpg",
+      "pin_581668108171425737.jpg",
+      "pin_581668108171425738.jpg",
+      "pin_581668108171425740.jpg",
+      "pin_581668108171425742.jpg",
+      "pin_581668108171425748.jpg",
+      "pin_581668108171425751.jpg",
+      "pin_581668108171425754.jpg",
+      "pin_581668108171425757.jpg",
+      "pin_581668108171425774.jpg",
+      "pin_581668108171425775.jpg",
+      "pin_581668108171425777.jpg",
+      "pin_581668108171425779.jpg",
+      "pin_581668108171425780.jpg",
+      "pin_581668108171425781.jpg",
+      "pin_581668108171425786.jpg",
+      "pin_581668108171425787.jpg",
+      "pin_581668108171425790.jpg",
+      "pin_581668108171425791.jpg",
+      "pin_581668108171425797.jpg",
+      "pin_581668108171425798.jpg"
+    ]
+  ],
+  [
+    "2026년 7월",
+    [
+      "pin_581668108171444421.jpg",
+      "pin_581668108171444423.jpg",
+      "pin_581668108171444430.jpg",
+      "pin_581668108171444434.jpg",
+      "pin_581668108171444437.jpg",
+      "pin_581668108171444445.jpg",
+      "pin_581668108171444447.jpg",
+      "pin_581668108171444452.jpg",
+      "pin_581668108171444457.jpg",
+      "pin_581668108171444458.jpg",
+      "pin_581668108171444463.jpg",
+      "pin_581668108171444470.jpg",
+      "pin_581668108171444471.jpg",
+      "pin_581668108171444480.jpg",
+      "pin_581668108171444482.jpg"
+    ]
+  ],
+  [
+    "2026년 5월",
+    [
+      "soo_flower2.jpg"
+    ]
+  ],
+  [
+    "2026년 3월",
+    [],
+    "Saved image"
+  ],
+  [
+    "2026년 1월",
+    [],
+    "Saved image"
+  ],
+  [
+    "2025년 12월",
+    [],
+    "Saved image"
   ]
- ],
- [
-  "2026년 9월",
-  [
-   "life_06.jpg",
-   "img_8340.jpg",
-   "img_8341.jpg",
-   "img_8342.jpg",
-   "img_8343.jpg",
-   "img_8344.jpg",
-   "img_8345.jpg",
-   "img_8346.jpg",
-   "img_8347.jpg",
-   "img_8348.jpg",
-   "img_8349.jpg",
-   "img_8350.jpg",
-   "img_8351.jpg",
-   "img_8352.jpg"
-  ]
- ],
- [
-  "2026년 8월",
-  [
-   "campus_04.jpg",
-   "life_01.jpg",
-   "life_02.jpg",
-   "img_8331.jpg",
-   "img_8332.jpg",
-   "img_8333.jpg",
-   "img_8334.jpg",
-   "img_8335.jpg",
-   "img_8336.jpg",
-   "img_8337.jpg",
-   "img_8338.jpg",
-   "img_8339.jpg",
-   "img_8355.jpg"
-  ]
- ],
- [
-  "2026년 7월",
-  [
-   "saved_05.jpg",
-   "saved_08.jpg"
-  ],
-  "Saved image"
- ],
- [
-  "2026년 5월",
-  [
-   "saved_02.jpg",
-   "saved_04.jpg"
-  ],
-  "Saved image"
- ],
- [
-  "2026년 3월",
-  [
-   "saved_06.jpg",
-   "saved_03.jpg"
-  ],
-  "Saved image"
- ],
- [
-  "2026년 1월",
-  [
-   "saved_07.jpg"
-  ],
-  "Saved image"
- ],
- [
-  "2025년 12월",
-  [
-   "saved_01.jpg"
-  ],
-  "Saved image"
- ]
 ];
+
 
 const speech = [
   ["Jongin", "HYUNG."],

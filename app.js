@@ -785,7 +785,7 @@ VIEWS.maild=()=>{const e=emails[mailId],school=![2,4].includes(mailId);const bod
  return{html:navHTML({title:'',back:t('inbox'),right:'',solid:false})+`<div class="scroll"><div class="mail-d"><div class="hd"><span class="ini">${esc(e[0][0])}</span><div style="flex:1"><b>${esc(e[0])}</b><small>${t('toMe')}</small></div><small class="muted">${mailDate(e[3])}</small></div><h2>${esc(e[1])}</h2><div class="bd">${esc(body)}</div></div></div><div class="toolbar">${G.trash}${G.bookmark}${G.share.replace('M12 3v12M8 7l4-4 4 4','M9 15 4 10l5-5M4 10h10a6 6 0 0 1 6 6v3')}${G.compose}</div>`}};
 
 /* --- 사진 --- */
-const allPhotos=[];photoSections.forEach(s=>s[1].forEach(n=>allPhotos.push({src:'photos/'+n,sec:s[0],sub:s[2]})));
+const allPhotos=[];photoSections.forEach(s=>s[1].forEach(n=>allPhotos.push({src:'gallery/'+n,sec:s[0],sub:s[2]})));
 const STORY_I=allPhotos.length;allPhotos.push({src:'photos/story_capture_final.png',thumb:'photos/story_last_thumbnail.jpg',sec:'2025년 11월 27일',sub:t('screenshot',fmtTime(21*60+41))});
 VIEWS.photos=()=>{let k=0;return{html:`<div class="nav"><span></span><div class="nb-title">${t('library')}</div><div class="nb-right">${G.search}<span>${t('select')}</span></div></div><div class="scroll" style="padding-bottom:120px"><h1 class="lt">${t('library')}</h1><div class="muted" style="margin:-6px 16px 10px;font-size:15px">${t('nPhotos',allPhotos.length)}</div>
  ${photoSections.map(s=>`<div class="ph-sec">${fmtLabel(s[0])}</div><div class="ph-grid">${s[1].map(n=>`<button data-pi="${k}" onclick="openViewer(${k++},this.firstElementChild)"><img src="photos/${n}" loading="lazy" alt=""></button>`).join('')}</div>`).join('')}
