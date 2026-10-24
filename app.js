@@ -642,9 +642,41 @@ function bubble(s){const m=mediaLabels[s];
   if(/파일/.test(n)&&!/영상/.test(n)){const f=fileInfo(n);return `<div class="bb file"><span class="fi">${f[0].split('.').pop().toUpperCase()}</span><div><div class="fn">${esc(f[0])}</div><div class="fs">${t('expired')} · ${f[1]}</div></div></div>`}
   const vid=/영상/.test(n);return `<div class="bb exp">${vid?G.video:G.photo}<span>${vid?t('expVideo'):t('expPhoto')}</span></div>`}
  return `<div class="bb">${esc(s)}</div>`}
-function fullDate(l){return fmtLabel(l,true)}
-function chatItems(id){const arr=id==='Kyungsoo my love 💞'?[...chatData[id],...(todayChat.length?[['오늘','date'],...todayChat]:[])]:(chatData[id]||[]);const grp=isGroup(id);const items=[];let tm=0;
- const TT=CHAT_TIMES[id]||[];arr.forEach((m,i)=>{if(m[1]==='date'){items.push({date:m[0]});return}
+//function fullDate(l){return fmtLabel(l,true)}
+
+function fullDate(l) {
+  if (l === currentChatDate()) {
+    return l;
+  }
+
+  return fmtLabel(l, true);
+}
+
+function currentChatDate() {
+  return new Date().toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+
+//function chatItems(id){const arr=id==='Kyungsoo my love 💞'?[...chatData[id],...(todayChat.length?[['오늘','date'],...todayChat]:[])]:(chatData[id]||[]);const grp=isGroup(id);const items=[];let tm=0;
+
+function chatItems(id) {
+  const arr = id === 'Kyungsoo my love 💞'
+    ? [
+        ...chatData[id],
+        ...(todayChat.length
+          ? [[currentChatDate(), 'date'], ...todayChat]
+          : [])
+      ]
+    : (chatData[id] || []);
+
+  const grp = isGroup(id);
+  const items = [];
+  let tm = 0;
+  
+  const TT=CHAT_TIMES[id]||[];arr.forEach((m,i)=>{if(m[1]==='date'){items.push({date:m[0]});return}
   let text=m[0],sender=id==='Kyungsoo my love 💞'?'Kyungsoo my love 💞':id;if(grp&&m[1]==='them'){const mm=text.match(/^(.+?): ([\s\S]*)$/);if(mm){sender=mm[1];text=mm[2]}}
   if(TT[i]!=null)tm=TT[i];else tm+=1;items.push({who:m[1],text,sender,time:m[2]||ampm(tm),rd:m[3]==='rd'})});return items}
 function chatMsgs(id){const it=chatItems(id),grp=isGroup(id);let o='';
