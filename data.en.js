@@ -1,5 +1,5 @@
-// ===== 게임 데이터 (en) — 자동 생성: tr/build.js (한국어 원본 data.ko.js 기준) =====
-// 이름·날짜 표기·채팅방 키는 한글 그대로 둡니다 (코드가 읽음)
+// ===== Game Data (en) — automatically generated: tr/build.js (based on the original Korean file data.ko.js) =====
+// Names, dates, and chat room keys remain unchanged in Korean (the code reads them)
 const chatData={
  "Kyungsoo my love 💞": [
    ["8월 12일", "date"],

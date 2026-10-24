@@ -581,3 +581,18 @@ svg{display:block}
   hyphens: none !important;
 }
 
+/* Improve app icon rendering */
+.icon svg,
+.ic svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+}
+
+/* Keep icons properly contained */
+.ic {
+  overflow: hidden;
+}
+
