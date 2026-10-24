@@ -750,7 +750,7 @@ lockNotes = lockNotes.filter(n => n.app !== 'kakao');
 
 // Add the newest KakaoTalk notification
 lockNotes.unshift({
-  title: 'Kyungsoo',
+  title: 'Kyungsoo my love 💞',
   body,
   app: 'kakao',
   time: t('now')
@@ -997,7 +997,7 @@ lockNotes = lockNotes.filter(n => n.app !== 'phone');
 // Add the newest missed-call notification
 lockNotes.unshift({
   title: t('missedCall'),
-  body: 'Kyungsoo',
+  body: 'Kyungsoo my love 💞',
   app: 'phone',
   time: t('now')
 });
