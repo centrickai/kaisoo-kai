@@ -1163,7 +1163,33 @@ if(e>=43.5&&incoming===1){
  if(callState==='active'){const sec=Math.floor((Date.now()-callStart)/1000);const tm=$('#ctime');if(tm)tm.textContent=pad(Math.floor(sec/60))+':'+pad(sec%60);
   const S=curScript||speech;const idx=Math.min(S.length-1,Math.floor(sec/3));if(idx!==capIdx){capIdx=idx;const c=$('#cap');if(c){c.animate([{opacity:.2,transform:'translateY(6px)'},{opacity:1,transform:'none'}],{duration:280});c.innerHTML=`<small>${esc(dn(S[idx][0]))}</small>${esc(S[idx][1])}`}}
   if(sec>S.length*3+2)endCall()}}
-function fit(){const ph=$('#phone');const mob=innerWidth<=540;ph.classList.toggle('mob',mob);ph.classList.toggle('short',mob&&innerHeight<740);if(mob){ph.style.width=innerWidth+'px';ph.style.height=innerHeight+'px';ph.style.transform='';SC=1}else{ph.style.width='393px';ph.style.height='852px';SC=Math.min((innerHeight-40)/852,(innerWidth-40)/393,1.1);ph.style.transform=`scale(${SC})`}}
+//function fit(){const ph=$('#phone');const mob=innerWidth<=540;ph.classList.toggle('mob',mob);ph.classList.toggle('short',mob&&innerHeight<740);if(mob){ph.style.width=innerWidth+'px';ph.style.height=innerHeight+'px';ph.style.transform='';SC=1}else{ph.style.width='393px';ph.style.height='852px';SC=Math.min((innerHeight-40)/852,(innerWidth-40)/393,1.1);ph.style.transform=`scale(${SC})`}}
+/* Keep the original iPhone shape on desktop and mobile */
+function fit() {
+  const ph = document.getElementById('phone');
+  const W = 393;
+  const H = 852;
+  const padding = 32;
+
+  // Disable the full-screen mobile layout
+  ph.classList.remove('mob', 'short');
+
+  const viewportWidth = window.innerWidth;
+  const viewportHeight =
+    window.visualViewport?.height || window.innerHeight;
+
+  // Scale uniformly without stretching
+  SC = Math.min(
+    (viewportWidth - padding) / W,
+    (viewportHeight - padding) / H,
+    1
+  );
+
+  ph.style.width = W + 'px';
+  ph.style.height = H + 'px';
+  ph.style.transformOrigin = 'center center';
+  ph.style.transform = `scale(${SC})`;
+}
 addEventListener('resize',fit);fit();renderLock();renderHome();setStatus(true);setInterval(tick,250);tick();
 
 
