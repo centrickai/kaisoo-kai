@@ -10,7 +10,29 @@ img{-webkit-user-drag:none}
 svg{display:block}
 #phone{position:relative;width:min(100vw,calc((100dvh - 36px)*.4613),430px);aspect-ratio:393/852;border-radius:58px;overflow:hidden;background:#000;
  box-shadow:0 0 0 10px #121214,0 0 0 12px #3b3b40,0 0 0 13px #18181a,0 40px 90px rgba(0,0,0,.8);isolation:isolate;transform:translateZ(0)}
-#phone.mob{border-radius:0;box-shadow:none;aspect-ratio:auto}
+
+/* Keep the physical iPhone frame visible on mobile */
+#phone.mob {
+  width: min(
+    calc(100vw - 44px),
+    calc((100dvh - 60px) * 0.4613),
+    430px
+  );
+
+  height: auto;
+  aspect-ratio: 393 / 852;
+
+  border-radius: 58px;
+
+  box-shadow:
+    0 0 0 10px #121214,
+    0 0 0 12px #3b3b40,
+    0 0 0 13px #18181a,
+    0 40px 90px rgba(0,0,0,.8);
+
+  overflow: hidden;
+}
+
 #screen{position:absolute;inset:0;overflow:hidden}
 
 #wall {
@@ -548,218 +570,6 @@ svg{display:block}
   -webkit-user-drag: none;
 }
 
-
-/* iPhone side / lock button */
-#phone {
-  position: relative;
-}
-
-#powerBtn {
-  position: absolute;
-  top: 170px;
-  right: -5px;
-
-  width: 5px;
-  height: 82px;
-
-  padding: 0;
-  border: none;
-  border-radius: 0 4px 4px 0;
-
-  background: linear-gradient(
-    to right,
-    #777b84,
-    #c1c4cc,
-    #777b84
-  );
-
-  cursor: pointer;
-  z-index: 100;
-}
-
-#powerBtn:hover {
-  background: #d4d7df;
-  width: 7px;
-  right: -7px;
-}
-
-#powerBtn:active {
-  background: #555861;
-}
-
-
-
-#powerBtn {
-  position: absolute;
-  top: 170px;
-  right: -5px;
-
-  width: 5px;
-  height: 82px;
-
-  padding: 0;
-  border: none;
-  border-radius: 0 4px 4px 0;
-
-  background: linear-gradient(
-    to right,
-    #777b84,
-    #c1c4cc,
-    #777b84
-  );
-
-  cursor: pointer;
-  z-index: 100;
-}
-
-#powerBtn:hover {
-  background: #d4d7df;
-  width: 7px;
-  right: -7px;
-}
-
-#powerBtn:active {
-  background: #555861;
-}
-
-
-//* Physical side / lock button */
-
-#phone {
-  position: relative;
-  overflow: hidden;
-}
-
-#iphoneSideButton {
-  position: absolute;
-
-  /* Attached to the right edge of the phone */
-  top: 170px;
-  left: auto;
-  right: -7px;
-
-  width: 9px;
-  height: 80px;
-
-  border-radius: 0 5px 5px 0;
-
-  /* Realistic graphite titanium finish */
-  background: linear-gradient(
-    90deg,
-    #25262a 0%,
-    #414248 18%,
-    #696a70 42%,
-    #55565c 65%,
-    #292a2e 100%
-  );
-
-  border: 1px solid #36373c;
-  border-left: 1px solid #1d1e22;
-
-  box-shadow:
-    inset 1px 0 1px rgba(255, 255, 255, 0.18),
-    inset -1px 0 2px rgba(0, 0, 0, 0.45),
-    1px 1px 3px rgba(0, 0, 0, 0.5);
-
-  cursor: pointer;
-  z-index: 999999;
-
-  padding: 0;
-  overflow: visible;
-}
-
-/* Hover effect */
-#iphoneSideButton:hover {
-  background: #d1d3da;
-}
-
-/* Tooltip */
-.sideButtonTooltip {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-
-  background: #25252b;
-  color: #fff;
-
-  padding: 8px 12px;
-  border-radius: 7px;
-
-  font: 12px Arial, sans-serif;
-  white-space: nowrap;
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transition: opacity 0.2s ease;
-}
-
-/* Show tooltip */
-#iphoneSideButton:hover .sideButtonTooltip {
-  opacity: 1;
-  visibility: visible;
-}
-
-
-/* Outer container holds the phone and physical button */
-#phoneWrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-#phone {
-  position: relative;
-  width: 393px;
-  height: 852px;
-  overflow: hidden;
-}
-
-/* Side button attached to outer wrapper */
-#iphoneSideButton {
-position: absolute;
-top: 170px;
-left: calc(100% + 2px);
-right: auto;
-
-}
-
-
-/* iPhone lock transition overlay */
-#iphoneLockFade {
-  position: absolute;
-  inset: 0;
-  z-index: 9999999;
-
-  background: #000;
-  border-radius: inherit;
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transition:
-    opacity 0.28s ease-in-out,
-    visibility 0s linear 0.28s;
-}
-
-/* Fade screen to black */
-#iphoneLockFade.active {
-  opacity: 1;
-  visibility: visible;
-
-  transition: opacity 0.28s ease-in-out;
-}
-
-/* Fade back to lock screen */
-#iphoneLockFade.reveal {
-  opacity: 0;
-  visibility: visible;
-
-  transition: opacity 0.45s ease-out;
-}
-
 /* KakaoTalk chat bubbles: prevent words from splitting */
 #chat .bubble,
 #chat .msg,
@@ -771,47 +581,3 @@ right: auto;
   hyphens: none !important;
 }
 
-
-/* ===== MOBILE: SHOW COMPLETE IPHONE FRAME ===== */
-
-@media (max-width: 600px) {
-
-  html,
-  body {
-    margin: 0;
-    min-height: 100%;
-    overflow: auto;
-  }
-
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100dvh;
-    background: #17171b;
-  }
-
-  #phoneWrapper {
-    position: relative;
-    width: 393px;
-    height: 852px;
-    flex: none;
-    overflow: visible;
-    transform-origin: center center;
-  }
-
-  #phone {
-    position: relative;
-    width: 393px;
-    height: 852px;
-    border-radius: 55px;
-    overflow: hidden;
-  }
-
-  #iphoneSideButton {
-    position: absolute;
-    top: 170px;
-    left: calc(100% + 2px);
-    right: auto;
-  }
-}
