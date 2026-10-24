@@ -624,6 +624,12 @@ svg{display:block}
 
 
 //* Physical side / lock button */
+
+#phone {
+  position: relative;
+  overflow: hidden;
+}
+
 #iphoneSideButton {
   position: absolute;
 
@@ -694,6 +700,28 @@ svg{display:block}
 #iphoneSideButton:hover .sideButtonTooltip {
   opacity: 1;
   visibility: visible;
+}
+
+
+/* Outer container holds the phone and physical button */
+#phoneWrapper {
+  position: relative;
+  width: fit-content;
+  overflow: visible;
+}
+
+/* Phone keeps wallpaper clipped */
+#phone {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Side button attached to outer wrapper */
+#iphoneSideButton {
+  position: absolute;
+  top: 170px;
+  left: auto;
+  right: -7px;
 }
 
 

@@ -9,6 +9,7 @@
 <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
+<div id="phoneWrapper">
 <div id="phone" style="width: 393px; height: 852px; transform: scale(0.99061);">
 <div id="screen"><div id="iphoneLockFade" aria-hidden="true"></div>
 <div id="wall"></div>
@@ -32,13 +33,20 @@
 </span></div>
 <div id="island"><span class="ia"></span><span class="ib"><i></i><i></i><i></i><i></i></span></div>
 <div _mstaria-label="45408649" _msthash="40" aria-label="Go to Home Screen" class="light" id="hb"><i></i></div>
-</div><button id="iphoneSideButton"
+
+</div> <!-- End of #phone -->
+
+<button id="iphoneSideButton"
         type="button"
         onclick="lockIphoneAnimated()"
         aria-label="Lock iPhone">
   <span class="sideButtonTooltip">Lock iPhone</span>
 </button>
+
+</div> <!-- End of #phoneWrapper -->
+
 <audio id="player" preload="auto"></audio>
+
 
 <script src="bootstrap.js"></script>
 </body></html>
