@@ -825,9 +825,17 @@ function viewerGestures(v){const img=v.querySelector('.vi'),bg=v.querySelector('
 /* --- Instagram --- */
 const REELS=[{t:'Off My Face',d:fmtYMD(2023,6,2),v:'3,921',n:214},{t:'What 2 Do',d:fmtYMD(2024,8,19),v:'2,107',n:168},{t:'Boyfriend',d:fmtYMD(2025,10,30),v:'5,866',n:402}];
 VIEWS.instagram=()=>({cls:'ig',html:`<div class="ig-h"><button onclick="closeApp()" style="width:26px">${G.chevLb}</button><b>kyungsoo</b>${G.bell}${G.dotsH}</div><div class="scroll">
- <div class="igp"><div class="pp"><img src="media/kai_instagram_avatar.jpg" alt=""></div><div class="st"><span><b>3</b>${t('posts')}</span><span><b>1,284</b>${t('followers')}</span><span><b>312</b>${t('following')}</span></div></div>
- <div class="igbio"><b>소희</b><br>${t('bio')}</div>
- <div class="igbtn"><button>${t('followingBtn')}</button><button>${t('message')}</button><button class="sq">${G.person.replace('<svg','<svg width="18" height="18"')}</button></div>
+ <div class="igp"><div class="pp"><img src="media/kai_instagram_avatar.jpg" alt=""></div><div class="st"><span><b>556</b>${t('posts')}</span><span><b>14.1M</b>${t('followers')}</span><span><b>0</b>${t('following')}</span></div></div>
+ 
+<div class="igbio">
+  <b></b>
+  <br>${t('🐻🐧 says i post too much')}
+  <div class="ig-bio-link">
+    ${G.link || '🔗'} <span>youtu.be/QqkLnNClpAQ?si=8e15YlTIWPcPjzoD and 1 more</span>
+  </div>
+</div>
+
+ <div class="igbtn"><button>${t('Edit profile')}</button><button>${t('Share profile')}</button><button class="sq">${G.person.replace('<svg','<svg width="18" height="18"')}</button></div>
  <div class="igtabs"><span class="on">${G.grid}</span><span>${G.reels}</span><span>${G.tag}</span></div>
  <div class="iggrid">${['off_my_face.jpg','what_2_do.html','boyfriend.jpg'].map((x,i)=>`<button onclick="videoIndex=${i};push('reel')"><img src="photos/${x}" alt=""><svg class="rc" viewBox="0 0 24 24"><path d="M3.5 7.5A4 4 0 0 1 7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4Zm6.5 3v7l6-3.5Z"/></svg><span class="vc">${G.playF.replace('<svg','<svg fill="none" stroke="#fff"')}${REELS[i].v}</span></button>`).join('')}</div></div>
  ${tabbar([['home',''],['search',''],['plusSq',''],['reels',''],['<span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#bbb,#888);display:block"></span>','']],-1)}`});
