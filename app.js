@@ -236,7 +236,7 @@ const ART = [
   "media/rose.jpg",                       // I'm Gonna Love You
   "media/rover.jpg",         // Rover
   "media/dopamine.jpg",      // Sing It Loud
-  "",                       // Moonlight
+  "media/overdose.jpg",                       // Moonlight
   "media/popcorn.jpg",       // Good Night
   "media/kai_mmmh.jpg",      // Reason
   "media/exodis.jpg",       // First Love
@@ -249,10 +249,10 @@ const ART = [
   "media/hotshot.jpg",       // I'm a HOTSHOT
   "media/popcorn.jpg",       // Mars
   "media/kai_mmmh.jpg",      // Ride Or Die
-  "",                       // Love Me Right
+  "media/exodis.jpg",                       // Love Me Right
   "media/wait_on_me.jpg",    // Walls Don't Talk
   "media/dopamine.jpg",      // Dear
-  "",                       // My Love
+  "media/rose.jpg",                       // My Love
   "media/wait_on_me.jpg"     // Flight to Paris
 ];
 const ARTIST = [
