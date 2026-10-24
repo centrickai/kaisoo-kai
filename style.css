@@ -706,7 +706,8 @@ svg{display:block}
 /* Outer container holds the phone and physical button */
 #phoneWrapper {
   position: relative;
-  width: fit-content;
+  width: 393px;
+  height: 852px;
   overflow: visible;
 }
 
@@ -719,9 +720,9 @@ svg{display:block}
 /* Side button attached to outer wrapper */
 #iphoneSideButton {
   position: absolute;
-  top: 170px;
-  left: auto;
-  right: -10px;
+top: 170px;
+right: -12px;
+left: auto;
 }
 
 
