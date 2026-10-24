@@ -709,20 +709,23 @@ svg{display:block}
   width: 393px;
   height: 852px;
   overflow: visible;
+  transform-origin: center center;
 }
 
-/* Phone keeps wallpaper clipped */
 #phone {
   position: relative;
+  width: 393px;
+  height: 852px;
   overflow: hidden;
 }
 
 /* Side button attached to outer wrapper */
 #iphoneSideButton {
-  position: absolute;
+position: absolute;
 top: 170px;
-right: -18px;
-left: auto;
+left: calc(100% + 2px);
+right: auto;
+
 }
 
 
