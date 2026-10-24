@@ -823,13 +823,13 @@ function viewerGestures(v){const img=v.querySelector('.vi'),bg=v.querySelector('
   img.animate([{transform:img.style.transform||'none'},{transform:'none'}],{duration:300,easing:'cubic-bezier(.2,1.2,.4,1)'});img.style.transform='';bg.style.opacity=1})}
 
 /* --- Instagram --- */
-const REELS=[{t:'Off My Face',d:fmtYMD(2023,6,2),v:'3,921',n:214},{t:'What 2 Do',d:fmtYMD(2026,4,25),v:'2,107',n:168},{t:'Boyfriend',d:fmtYMD(2025,10,30),v:'5,866',n:402}];
+const REELS=[{t:'my shy sweet baby doll',d:fmtYMD(2026,10,24),v:'4,451',n:214},{t:'🐻🐧',d:fmtYMD(2026,9,11),v:'12,143',n:168},{t:'after practice',d:fmtYMD(2025,11,25),v:'14,888',n:888}];
 VIEWS.instagram=()=>({cls:'ig',html:`<div class="ig-h"><button onclick="closeApp()" style="width:26px">${G.chevLb}</button><b>ninibear</b>${G.bell}${G.dotsH}</div><div class="scroll">
  <div class="igp"><div class="pp"><img src="media/kai_instagram_avatar.jpg" alt=""></div><div class="st"><span><b>3</b>${t('posts')}</span><span><b>124</b>${t('followers')}</span><span><b>7</b>${t('following')}</span></div></div>
  
 <div class="igbio">
   <b></b>
-  <br>${t('🐻🐧 says i post too much')}
+  <br>${t('you found me')}
   <div class="ig-bio-link">
     ${G.link || '🔗'} <span>youtu.be/QqkLnNClpAQ?si=8e15YlTIWPcPjzoD and 1 more</span>
   </div>
@@ -837,7 +837,7 @@ VIEWS.instagram=()=>({cls:'ig',html:`<div class="ig-h"><button onclick="closeApp
 
  <div class="igbtn"><button>${t('Edit profile')}</button><button>${t('Share profile')}</button><button class="sq">${G.person.replace('<svg','<svg width="18" height="18"')}</button></div>
  <div class="igtabs"><span class="on">${G.grid}</span><span>${G.reels}</span><span>${G.tag}</span></div>
- <div class="iggrid">${['media/kai_instagram_01.jpg','kai_instagram_02.jpg','kai_instagram_03.jpg'].map((x,i)=>`<button onclick="videoIndex=${i};push('reel')"><img src="photos/${x}" alt=""><svg class="rc" viewBox="0 0 24 24"><path d="M3.5 7.5A4 4 0 0 1 7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4Zm6.5 3v7l6-3.5Z"/></svg><span class="vc">${G.playF.replace('<svg','<svg fill="none" stroke="#fff"')}${REELS[i].v}</span></button>`).join('')}</div></div>
+ <div class="iggrid">${['kai_instagram_01.jpg','kai_instagram_02.jpg','kai_instagram_03.jpg'].map((x,i)=>`<button onclick="videoIndex=${i};push('reel')"><img src="media/${x}" alt=""><svg class="rc" viewBox="0 0 24 24"><path d="M3.5 7.5A4 4 0 0 1 7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4Zm6.5 3v7l6-3.5Z"/></svg><span class="vc">${G.playF.replace('<svg','<svg fill="none" stroke="#fff"')}${REELS[i].v}</span></button>`).join('')}</div></div>
  ${tabbar([['home',''],['search',''],['plusSq',''],['reels',''],['<span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#bbb,#888);display:block"></span>','']],-1)}`});
 
 function reelInner(i) {
@@ -860,9 +860,9 @@ function reelInner(i) {
       </div>
       ${esc(r.t)}
       <br>
-      <small>${r.d} · ${t('likedBy','w',r.n)}</small>
+      <small>${r.d} · ${t('likedBy','d0hk',r.n)}</small>
       <br>
-      <small>${t('origAudio')}</small>
+      <small>ninibear · Original Audio</small>
     </div>
   </div>`;
 }
