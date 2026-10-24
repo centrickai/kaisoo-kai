@@ -4939,7 +4939,7 @@ const chatData={
   ["큰누나: mom said you and kyungsoo might visit", "them"],
   ["yeah ㅎㅎ", "me"],
   ["작은누나: YESSSS", "them"],
-  ["작은누나: tell kyungsoo oppa i miss him", "them"],
+  ["작은누나: tell kyungsoo i miss him", "them"],
   ["what about me", "me"],
   ["작은누나: you're coming too?", "them"],
   ["...", "me"],
