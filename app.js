@@ -484,19 +484,35 @@ const BDAY_DAY = 12;
 
 // Calendar events
 function calEvents() {
-  if (calYear === BDAY_YEAR && calMonth === BDAY_MONTH) {
-    return selectedDay === BDAY_DAY
-      ? ['🎂 ' + t('bdayEvent')]
-      : [];
-  }
+  let monthEvents = {};
 
-  // Preserve original October 2026 events
   if (calYear === 2026 && calMonth === 10) {
-    return events[selectedDay] || [];
+    monthEvents = events;
+  } else if (calYear === 2026 && calMonth === 11) {
+    monthEvents = novemberEvents;
+  } else if (calYear === 2026 && calMonth === 12) {
+    monthEvents = decemberEvents;
+  } else if (calYear === 2027 && calMonth === 1) {
+    monthEvents = januaryEvents;
   }
 
-  return [];
+  const dayEvents = monthEvents[selectedDay] || [];
+
+  const isBirthday =
+    calYear === BDAY_YEAR &&
+    calMonth === BDAY_MONTH &&
+    selectedDay === BDAY_DAY;
+
+  if (isBirthday) {
+    return [
+      "🎂 Kyungsoo's Birthday 💞",
+      ...dayEvents.filter(x => !x.includes("KYUNGSOO'S BIRTHDAY"))
+    ];
+  }
+
+  return dayEvents;
 }
+
 
 // Calendar screen
 VIEWS.calendar = () => {
@@ -516,12 +532,16 @@ VIEWS.calendar = () => {
       calYear === BDAY_YEAR &&
       calMonth === BDAY_MONTH &&
       d === BDAY_DAY;
+      
+      const monthEvents =
+      calYear === 2026 && calMonth === 10 ? events :
+      calYear === 2026 && calMonth === 11 ? novemberEvents :
+      calYear === 2026 && calMonth === 12 ? decemberEvents :
+      calYear === 2027 && calMonth === 1 ? januaryEvents :
+      {};
+      
+      const has = isBirthday || !!monthEvents[d]?.length;
 
-    const has =
-      isBirthday ||
-      (calYear === 2026 &&
-       calMonth === 10 &&
-       !!events[d]);
 
     const today = new Date();
 

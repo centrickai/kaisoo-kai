@@ -588,10 +588,6 @@ svg{display:block}
 }
 
 
-/* iPhone side / lock button */
-#phone {
-  position: relative;
-}
 
 #powerBtn {
   position: absolute;
@@ -627,108 +623,41 @@ svg{display:block}
 }
 
 
-
-/* Power button wrapper */
-#powerBtnWrap {
-  position: absolute;
-  top: 170px;
-  right: -6px;
-  width: 8px;
-  height: 82px;
-  z-index: 99999;
-  overflow: visible;
-}
-
-/* Physical side button */
-#powerBtn {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  background: linear-gradient(
-    to right,
-    #777b84,
-    #c1c4cc,
-    #777b84
-  );
-  cursor: pointer;
-}
-
-/* Tooltip */
-#powerTooltip {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%) translateX(-5px);
-
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: #24242a;
-  color: white;
-
-  font: 500 12px Arial, sans-serif;
-  white-space: nowrap;
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.2s, transform 0.2s;
-
-  z-index: 100000;
-}
-
-/* Show tooltip on hover */
-#powerBtnWrap:hover #powerTooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(-50%) translateX(0);
-}
-
-/* Button hover */
-#powerBtn:hover {
-  background: #d4d7df;
-}
-
-#powerTooltip {
-  opacity: 1 !important;
-  visibility: visible !important;
-  background: red !important;
-}
-
-
-/* iPhone physical lock button */
+//* Physical side / lock button */
 #iphoneSideButton {
-  position: fixed;
+  position: absolute;
+
+  /* Attached to the right edge of the phone */
   top: 170px;
-  left: calc(50% + 173px);
+  left: auto;
+  right: -7px;
 
   width: 9px;
   height: 80px;
-  border: 1px solid #85858d;
+
   border-radius: 0 5px 5px 0;
 
- /* Realistic graphite titanium finish */
-background: linear-gradient(
-  90deg,
-  #25262a 0%,
-  #414248 18%,
-  #696a70 42%,
-  #55565c 65%,
-  #292a2e 100%
-);
+  /* Realistic graphite titanium finish */
+  background: linear-gradient(
+    90deg,
+    #25262a 0%,
+    #414248 18%,
+    #696a70 42%,
+    #55565c 65%,
+    #292a2e 100%
+  );
 
-border: 1px solid #36373c;
-border-left: 1px solid #1d1e22;
+  border: 1px solid #36373c;
+  border-left: 1px solid #1d1e22;
 
-box-shadow:
-  inset 1px 0 1px rgba(255, 255, 255, 0.18),
-  inset -1px 0 2px rgba(0, 0, 0, 0.45),
-  1px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    inset 1px 0 1px rgba(255, 255, 255, 0.18),
+    inset -1px 0 2px rgba(0, 0, 0, 0.45),
+    1px 1px 3px rgba(0, 0, 0, 0.5);
 
   cursor: pointer;
   z-index: 999999;
+
   padding: 0;
   overflow: visible;
 }

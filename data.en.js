@@ -8249,9 +8249,12 @@ const events = {
     "Recording studio · 3 PM"
   ],
   "7": [
-    "Meeting at SM · 1 PM",
-    "Dinner with Chanyeol hyung · 7 PM"
-  ],
+  "🎂 YIXING HYUNG'S BIRTHDAY 🐑",
+  "Send birthday message to Yixing hyung 💌 · 9 AM",
+  "Video call Yixing hyung if he's free 📱",
+  "Meeting at SM · 1 PM",
+  "Dinner with Chanyeol hyung · 7 PM"
+],
   "8": [
     "Dance practice · 11 AM",
     "Call Kyungsoo 💞 · 9 PM"
@@ -8355,6 +8358,126 @@ const events = {
     "Movie night with hyung · 10 PM"
   ]
 };
+
+/* ===== NOVEMBER 2026 ===== */
+const novemberEvents = {
+  "1": ["Rest day", "Walk the dogs 🐶 · 4 PM"],
+  "2": ["EXO practice at SM · 11 AM", "Dinner with Kyungsoo 💞 · 7 PM"],
+  "3": ["Recording session · 1 PM", "Choreography review · 5 PM"],
+  "4": ["Gym · 10 AM", "Visit KAMONG Café · 3 PM"],
+  "5": ["Management meeting · 11 AM", "Dinner with Junmyeon hyung · 7 PM"],
+  "6": ["Dance practice · 12 PM", "Call Kyungsoo 💞 · 9 PM"],
+  "7": ["Brunch with hyung · 11 AM", "Grocery shopping 🛒"],
+  "8": ["Rest day", "Movie marathon with Kyungsoo 🍿 · 8 PM"],
+  "9": ["EXO rehearsal · 11 AM", "Recording session · 4 PM"],
+  "10": ["Dance practice · 1 PM", "Dinner with Chanyeol hyung · 7 PM"],
+  "11": ["Gym · 10 AM", "Call Mom · 7 PM"],
+  "12": ["Studio recording · 2 PM", "Dinner with Kyungsoo 💞 · 7 PM"],
+  "13": ["EXO practice · 11 AM", "Choreography review · 4 PM"],
+  "14": ["Visit noona and the kids · 1 PM", "Bring snacks for Raeon & Rahee 🍪"],
+  "15": ["Rest day", "Walk the dogs 🐶 · 4 PM"],
+  "16": ["Management meeting · 10 AM", "Dance practice · 2 PM"],
+  "17": ["Recording session · 1 PM", "Dinner with hyung · 7 PM"],
+  "18": ["EXO practice at SM · 11 AM", "Call Sehun · 8 PM"],
+  "19": ["Gym · 10 AM", "Choreography filming · 3 PM"],
+  "20": ["Management meeting · 1 PM", "Dinner with Kyungsoo 💞 · 7 PM"],
+  "21": ["Coffee with CK · 2 PM", "Browse Christmas gifts 🎁"],
+  "22": ["Rest day", "Cook dinner with Kyungsoo 🍳 · 6 PM"],
+  "23": ["EXO rehearsal · 11 AM", "Recording session · 3 PM"],
+  "24": ["Dance practice · 1 PM", "Check December schedule"],
+  "25": ["Lunch with Mom · 12 PM", "Apartment maintenance fee due"],
+  "26": ["Studio recording · 2 PM", "Date night with hyung 💞 · 7 PM"],
+  "27": [
+  "🎂 CHANYEOL HYUNG'S BIRTHDAY 🎉",
+  "Send birthday wishes in EXO group chat 📱",
+  "EXO practice · 11 AM",
+  "Birthday dinner with the members 🎂 · 7 PM",
+  "Take birthday pictures with Chanyeol hyung 📸"
+],
+  "28": ["Visit KAMONG Café · 2 PM", "Play with the dogs 🐶"],
+  "29": ["Rest day", "Movie night with Kyungsoo 🍿 · 8 PM"],
+  "30": ["Management meeting · 11 AM", "Finalize December plans"]
+};
+
+/* ===== DECEMBER 2026 ===== */
+const decemberEvents = {
+  "1": ["EXO rehearsal · 11 AM", "Start Christmas shopping 🎄"],
+  "2": ["Recording session · 1 PM", "Dinner with Kyungsoo 💞 · 7 PM"],
+  "3": ["Dance practice · 11 AM", "Visit KAMONG Café · 4 PM"],
+  "4": ["Gym · 10 AM", "Christmas gift ideas for hyung 🎁"],
+  "5": ["EXO practice · 12 PM", "Dinner with Chanyeol hyung · 7 PM"],
+  "6": ["Rest day", "Decorate apartment with Kyungsoo 🎄"],
+  "7": ["Recording studio · 1 PM", "Choreography review · 5 PM"],
+  "8": ["Management meeting · 11 AM", "Dinner with Kyungsoo 💞 · 7 PM"],
+  "9": ["EXO rehearsal · 10 AM", "Call Mom · 8 PM"],
+  "10": ["Dance practice · 12 PM", "Order Christmas presents 🎁"],
+  "11": ["Recording session · 2 PM", "Movie night with hyung 🍿 · 8 PM"],
+  "12": ["Visit noona and the kids · 1 PM", "Christmas gifts for Raeon & Rahee 🎁"],
+  "13": ["Rest day", "Walk the dogs 🐶 · 4 PM"],
+  "14": ["EXO practice at SM · 11 AM", "Choreography review · 4 PM"],
+  "15": ["Recording session · 1 PM", "Dinner with Junmyeon hyung · 7 PM"],
+  "16": ["Gym · 10 AM", "Dance practice · 2 PM"],
+  "17": ["Management meeting · 11 AM", "Dinner with Kyungsoo 💞 · 7 PM"],
+  "18": ["EXO rehearsal · 11 AM", "Christmas dinner planning"],
+  "19": ["Christmas shopping with Kyungsoo 🎄 · 2 PM", "Hot chocolate date ☕"],
+  "20": ["Rest day", "Wrap presents 🎁", "Christmas movies with hyung"],
+  "21": ["Recording studio · 1 PM", "EXO group dinner · 7 PM"],
+  "22": ["Dance practice · 11 AM", "Buy groceries for Christmas"],
+  "23": ["Visit KAMONG Café · 2 PM", "Deliver presents to noona's family 🎁"],
+  "24": ["Christmas Eve 🎄", "Dinner with Kyungsoo · 7 PM", "Exchange gifts at midnight 💞"],
+  "25": ["Merry Christmas! 🎄", "Christmas lunch with family · 12 PM", "Movie night with hyung 🍿"],
+  "26": ["Rest day", "Walk Monggu, Jjanggu & Jjangah 🐶"],
+  "27": ["Coffee with CK · 2 PM", "Start planning Kyungsoo's birthday 🎂"],
+  "28": ["EXO rehearsal · 11 AM", "Recording session · 3 PM"],
+  "29": ["Dinner with Kyungsoo 💞 · 7 PM", "Review year-end photos"],
+  "30": ["Visit Mom · 1 PM", "Prepare New Year's plans"],
+  "31": ["New Year's Eve 🎆", "Year-end dinner with Kyungsoo · 7 PM", "Midnight countdown together 💞"]
+};
+
+/* ===== JANUARY 2027 ===== */
+const januaryEvents = {
+  "1": ["Happy New Year! 🎆", "New Year's brunch with Kyungsoo · 11 AM", "Call family"],
+  "2": ["Rest day", "Walk the dogs 🐶 · 4 PM"],
+  "3": ["Visit KAMONG Café · 2 PM", "Birthday gift ideas for Kyungsoo 🎁"],
+  "4": ["EXO practice at SM · 11 AM", "Recording session · 3 PM"],
+  "5": ["Dance practice · 12 PM", "Call CK about birthday surprise 🤫"],
+  "6": ["Management meeting · 11 AM", "Dinner with Kyungsoo 💞 · 7 PM"],
+  "7": ["Recording studio · 1 PM", "Order Kyungsoo's birthday cake 🎂"],
+  "8": ["EXO rehearsal · 11 AM", "Pick up birthday gift for hyung 🎁"],
+  "9": ["Visit noona and the kids · 1 PM", "Ask Raeon & Rahee to make birthday cards"],
+  "10": ["Rest day", "Finalize birthday surprise for Kyungsoo 💞"],
+  "11": ["EXO practice · 11 AM", "Pick up birthday cake 🎂", "Prepare surprise for hyung 🤫"],
+  "12": ["🎂 KYUNGSOO'S BIRTHDAY 💞", "Birthday breakfast · 9 AM", "Birthday date · 2 PM", "Special dinner · 7 PM", "Give hyung his present 🎁"],
+  "13": ["Rest day", "Breakfast with Kyungsoo · 10 AM", "Organize birthday photos 📸"],
+  "14": [
+  "🎂 MY BIRTHDAY 🐻🎉",
+  "Birthday breakfast with Kyungsoo 💞 · 9 AM",
+  "Birthday messages from EXO members 📱",
+  "Birthday lunch with Mom and noona's family · 12 PM",
+  "Surprise birthday date planned by hyung 🎁 · 4 PM",
+  "Birthday dinner with Kyungsoo 💞 · 7 PM",
+  "Make a birthday wish together 🎂 · 10 PM"
+],
+  "15": ["Management meeting · 11 AM", "Dinner with Chanyeol hyung · 7 PM"],
+  "16": ["Visit KAMONG Café · 2 PM", "Walk the dogs 🐶 · 5 PM"],
+  "17": ["Rest day", "Movie night with Kyungsoo 🍿 · 8 PM"],
+  "18": ["EXO practice at SM · 11 AM", "Choreography review · 4 PM"],
+  "19": ["Recording session · 1 PM", "Dinner with Kyungsoo 💞 · 7 PM"],
+  "20": ["Gym · 10 AM", "Dance practice · 2 PM"],
+  "21": ["EXO rehearsal · 11 AM", "Call Sehun · 8 PM"],
+  "22": ["Management meeting · 11 AM", "Date night with hyung 💞 · 7 PM"],
+  "23": ["Brunch with Kyungsoo · 11 AM", "Grocery shopping together 🛒"],
+  "24": ["Rest day", "Walk Monggu, Jjanggu & Jjangah 🐶"],
+  "25": ["Lunch with Mom · 12 PM", "Apartment maintenance fee due"],
+  "26": ["Recording studio · 1 PM", "EXO practice · 4 PM"],
+  "27": ["Dance practice · 11 AM", "Dinner with Kyungsoo 💞 · 7 PM"],
+  "28": ["Management meeting · 11 AM", "Choreography filming · 3 PM"],
+  "29": ["EXO rehearsal · 1 PM", "Dinner with the members · 7 PM"],
+  "30": ["Recording session · 11 AM", "Check February schedules"],
+  "31": ["Rest day", "Cook dinner with Kyungsoo 🍳 · 6 PM"]
+};
+
+
 const searches = [
   "how to surprise boyfriend without him finding out",
   "birthday gift ideas for boyfriend who says he wants nothing",
