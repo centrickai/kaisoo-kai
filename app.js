@@ -239,7 +239,7 @@ const ART = [
   "media/overdose.jpg",                       // Moonlight
   "media/popcorn.jpg",       // Good Night
   "media/kai_mmmh.jpg",      // Reason
-  "media/exodis.jpg",       // First Love
+  "media/lmr.jpg",       // First Love
   "media/adult_swim.jpg",    // Adult Swim
   "media/somebody.jpg",      // Wonder
   "media/rover.jpg",         // Black Mirror
@@ -249,7 +249,7 @@ const ART = [
   "media/hotshot.jpg",       // I'm a HOTSHOT
   "media/popcorn.jpg",       // Mars
   "media/kai_mmmh.jpg",      // Ride Or Die
-  "media/exodis.jpg",                       // Love Me Right
+  "media/lmr.jpg",                       // Love Me Right
   "media/wait_on_me.jpg",    // Walls Don't Talk
   "media/dopamine.jpg",      // Dear
   "media/rose.jpg",                       // My Love
