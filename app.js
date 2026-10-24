@@ -844,7 +844,7 @@ function reelInner(i) {
   const r = REELS[i];
 
   return `<div class="vwrap">
-    <video src="media/kai_instagram_0${i+1}.mp4" autoplay loop playsinline></video>
+    <video src="media/kai_instagram_0${i+1}.mp4" loop playsinline></video>
 
     <div class="ract">
       <div class="liked">${G.heart}<span>${r.n+1}</span></div>
@@ -872,7 +872,14 @@ VIEWS.reel=()=>({cls:'reel dark',dark:true,html:`<div id="rhost">${reelInner(vid
   pg.addEventListener('pointerup',()=>{if(y0===null)return;y0=null;const w=pg.querySelector('.vwrap');const n=videoIndex+(dy<0?1:-1);
    if(Math.abs(dy)>80&&REELS[n]){w.animate([{transform:w.style.transform},{transform:`translateY(${dy<0?-100:100}%)`}],{duration:250,fill:'forwards'});setTimeout(()=>{videoIndex=n;$('#rhost').innerHTML=reelInner(n);$('#rhost .vwrap').animate([{transform:`translateY(${dy<0?100:-100}%)`},{transform:'none'}],{duration:330,easing:'cubic-bezier(.2,.9,.25,1)'});playReel(pg)},240)}
    else{if(w){w.style.transform='';if(Math.abs(dy)<6){const vd=w.querySelector('video');vd.paused?vd.play():vd.pause()}}}})}});
-function playReel(pg){const v=pg.querySelector('video');if(!v)return;if(nowSong>=0)PLAYER.pause();v.muted=false;v.play().catch(()=>{v.muted=true;v.play().catch(()=>{})})}
+function playReel(pg){const v=pg.querySelector('video');if(!v)return;
+v.muted = false;
+v.volume = 1;
+
+v.play().catch(err => {
+  console.warn("Reel audio playback blocked:", err);
+});
+if(nowSong>=0)PLAYER.pause();v.muted=false;v.play().catch(()=>{v.muted=true;v.play().catch(()=>{})})}
 
 /* --- MUSIC --- */
 const artStyle=i=>ART[i]?`background-image:url(${ART[i]})`:'';
