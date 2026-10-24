@@ -8743,7 +8743,7 @@ const songs = [
   ["Vanilla", "music/Vanilla - KAI.mp3"],
   ["Don't You", "music/Don't You - D.O.mp3"],
   ["I'm a HOTSHOT", "music/I'm a HOTSHOT - HotShot.mp3"],
-  ["Mars", "music/Mars.mp3"],
+  ["Mars", "music/Mars - D.O.mp3"],
   ["Ride Or Die", "music/Ride Or Die - KAI.mp3"],
   ["Love Me Right", "music/LOVE ME RIGHT - EXO.mp3"],
   ["Walls Don't Talk", "music/Walls Don't Talk - KAI.mp3"],

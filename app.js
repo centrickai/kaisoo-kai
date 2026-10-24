@@ -825,7 +825,7 @@ function viewerGestures(v){const img=v.querySelector('.vi'),bg=v.querySelector('
 /* --- Instagram --- */
 const REELS=[{t:'Off My Face',d:fmtYMD(2023,6,2),v:'3,921',n:214},{t:'What 2 Do',d:fmtYMD(2024,8,19),v:'2,107',n:168},{t:'Boyfriend',d:fmtYMD(2025,10,30),v:'5,866',n:402}];
 VIEWS.instagram=()=>({cls:'ig',html:`<div class="ig-h"><button onclick="closeApp()" style="width:26px">${G.chevLb}</button><b>kyungsoo</b>${G.bell}${G.dotsH}</div><div class="scroll">
- <div class="igp"><div class="pp"><img src="media/kyungsoo_instagram_avatar.jpg" alt=""></div><div class="st"><span><b>3</b>${t('posts')}</span><span><b>1,284</b>${t('followers')}</span><span><b>312</b>${t('following')}</span></div></div>
+ <div class="igp"><div class="pp"><img src="media/kai_instagram_avatar.jpg" alt=""></div><div class="st"><span><b>3</b>${t('posts')}</span><span><b>1,284</b>${t('followers')}</span><span><b>312</b>${t('following')}</span></div></div>
  <div class="igbio"><b>소희</b><br>${t('bio')}</div>
  <div class="igbtn"><button>${t('followingBtn')}</button><button>${t('message')}</button><button class="sq">${G.person.replace('<svg','<svg width="18" height="18"')}</button></div>
  <div class="igtabs"><span class="on">${G.grid}</span><span>${G.reels}</span><span>${G.tag}</span></div>
