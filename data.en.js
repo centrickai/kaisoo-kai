@@ -8063,7 +8063,6 @@ const chatData={
   ["준면: ㅎㅎ", "them"],
   ["민호: JONGIN", "them"],
   ["민호: YOU CAN DO IT", "them"],
-  ["...", "me"],
   ["창민: he's gone again", "them"],
   ["찬열: ㅋㅋㅋㅋㅋㅋ", "them"],
   ["민호: I'M NOT GIVING UP 🔥", "them"]
