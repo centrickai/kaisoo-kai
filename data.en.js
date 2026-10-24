@@ -8728,7 +8728,7 @@ const songs = [
   ["Nothing On Me", "music/Nothing On Me - KAI.mp3"],
   ["Popcorn", "music/Popcorn - D.O.mp3"],
   ["Universe", "music/Universe - EXO.mp3"],
-  ["Blue", "music/Blue - KAI.mp3"],
+  ["Blue", "music/Blue.mp3"],
   ["I'm Gonna Love You", "music/I'm Gonna Love You - D.O., Wonstein.mp3"],
   ["Rover", "music/Rover - KAI.mp3"],
   ["Sing It Loud", "music/Sing It Loud - D.O.mp3"],
