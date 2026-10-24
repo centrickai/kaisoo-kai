@@ -7678,7 +7678,6 @@ const decemberEvents = {
 
 /* ===== JANUARY 2027 ===== */
 const januaryEvents = {
- const januaryEvents = {
   "1": ["새해 복 많이 받아! 🎆", "경수 형이랑 새해 브런치 · 오전 11시", "가족들한테 전화하기"],
   "2": ["쉬는 날", "강아지들 산책 🐶 · 오후 4시"],
   "3": ["카몽 카페 방문 · 오후 2시", "경수 형 생일 선물 아이디어 생각하기 🎁"],
@@ -7810,196 +7809,197 @@ const searches = [
 const emails = [
   [
     "SM Entertainment",
-    "October 2026 Schedule Update",
-    "Please review the updated rehearsal, recording, and meeting schedule for the remainder of October.",
+    "2026년 10월 스케줄 변경 안내",
+    "10월 남은 기간의 리허설, 녹음 및 미팅 일정이 변경되었습니다. 업데이트된 스케줄을 확인해 주시기 바랍니다.",
     "오늘"
   ],
   [
     "SM Artist Management",
-    "EXO Group Rehearsal Schedule",
-    "The updated rehearsal schedule and practice room arrangements have been shared. Please review before the next session.",
+    "EXO 단체 리허설 일정 안내",
+    "변경된 리허설 일정과 연습실 배정 정보를 공유드립니다. 다음 연습 전까지 확인해 주시기 바랍니다.",
     "어제"
   ],
   [
     "CENTRICKAI",
-    "Kyungsoo's Birthday — Ideas 🎂",
-    "I found a few decoration ideas. Please don't buy the entire store before we decide on anything.",
+    "경수 생일 — 아이디어 🎂",
+    "장식 아이디어 몇 개 찾아봤어. 근데 뭐로 할지 정하기도 전에 가게 통째로 사 오지는 마 제발.",
     "어제"
   ],
   [
     "Naver Pay",
-    "Your payment has been completed",
-    "Your payment for an online purchase was processed successfully.",
+    "결제가 완료되었습니다",
+    "온라인 쇼핑 결제가 정상적으로 완료되었습니다.",
     "10/22"
   ],
   [
     "KakaoTalk",
-    "Your Kakao Account Security Notice",
-    "A new sign-in to your Kakao Account was detected. Please review your account activity.",
+    "카카오계정 보안 알림",
+    "카카오계정에서 새로운 로그인 기록이 감지되었습니다. 계정의 로그인 활동을 확인해 주세요.",
     "10/21"
   ],
   [
     "SM Entertainment",
-    "Studio Reservation Confirmation",
-    "Your requested practice studio reservation has been confirmed. Please check the assigned room and time.",
+    "연습실 예약 확정 안내",
+    "요청하신 연습실 예약이 확정되었습니다. 배정된 연습실과 이용 시간을 확인해 주시기 바랍니다.",
     "10/20"
   ],
   [
     "MUSINSA",
-    "Your order is on its way",
-    "Good news! Your order has been shipped. Track your package using the link provided.",
+    "주문하신 상품이 배송 중입니다",
+    "좋은 소식이에요! 주문하신 상품이 발송되었습니다. 안내된 링크에서 배송 현황을 확인하실 수 있습니다.",
     "10/19"
   ],
   [
     "Nike",
-    "Your Order Confirmation",
-    "Thanks for shopping with Nike. Your order has been confirmed and is being prepared for shipment.",
+    "주문이 정상적으로 접수되었습니다",
+    "나이키를 이용해 주셔서 감사합니다. 주문이 확정되었으며 현재 배송 준비 중입니다.",
     "10/18"
   ],
   [
     "SM Artist Management",
-    "Recording Session — Schedule Confirmation",
-    "Please confirm your availability for the upcoming recording session and review the studio details.",
+    "녹음 일정 확인 요청",
+    "예정된 녹음 일정에 참석 가능하신지 확인 부탁드리며, 스튜디오 관련 세부 사항도 함께 검토해 주시기 바랍니다.",
     "10/17"
   ],
   [
     "Restaurant Reservations",
-    "Your Dinner Reservation Is Confirmed",
-    "Your table for two has been reserved. We look forward to welcoming you.",
+    "저녁 식사 예약이 확정되었습니다",
+    "요청하신 2인석 예약이 확정되었습니다. 방문해 주시기를 기다리겠습니다.",
     "10/16"
   ],
   [
     "Korean Air",
-    "Your Flight Itinerary",
-    "Your upcoming flight itinerary is available. Please review your departure time and baggage information.",
+    "항공편 여정 안내",
+    "예정된 항공편의 여정 정보를 확인하실 수 있습니다. 출발 시간과 수하물 관련 안내 사항을 확인해 주시기 바랍니다.",
     "10/15"
   ],
   [
     "Naver Pay",
-    "Your order has shipped",
-    "Your order is on its way. Delivery tracking information is now available.",
+    "주문하신 상품이 발송되었습니다",
+    "주문하신 상품이 배송 중입니다. 배송 조회 정보를 확인하실 수 있습니다.",
     "10/15"
   ],
   [
     "SM Entertainment",
-    "Artist Schedule Coordination",
-    "Please review the proposed dates for upcoming artist activities and confirm any scheduling conflicts.",
+    "아티스트 스케줄 조율 안내",
+    "향후 아티스트 활동의 예정 일정을 확인하시고, 일정이 겹치는 경우 회신해 주시기 바랍니다.",
     "10/14"
   ],
   [
     "Apple",
-    "Your iCloud Storage Is Almost Full",
-    "Your iCloud storage is running low. Manage your photos and backups to continue syncing your devices.",
+    "iCloud 저장 공간이 거의 가득 찼습니다",
+    "iCloud 저장 공간이 부족해지고 있습니다. 기기 간 동기화를 계속하려면 사진과 백업 데이터를 관리해 주세요.",
     "10/13"
   ],
   [
     "CENTRICKAI",
-    "Re: Photo Album Ideas",
-    "Here are some layouts you can use. And yes, you should absolutely include the handwritten letter.",
+    "Re: 포토앨범 아이디어",
+    "참고할 만한 레이아웃 몇 개 보내줄게. 그리고 손편지는 무조건 넣어. 그건 진짜 꼭 넣어야 돼.",
     "10/12"
   ],
   [
     "Seoul Veterinary Clinic",
-    "Grooming Appointment Reminder",
-    "This is a reminder regarding your upcoming pet grooming appointment.",
+    "반려동물 미용 예약 알림",
+    "예정된 반려동물 미용 예약 일정을 안내드립니다.",
     "10/11"
   ],
   [
     "MUSINSA",
-    "Please check your order details",
-    "Your order has been received successfully. You can review your purchase details in your account.",
+    "주문 내역을 확인해 주세요",
+    "주문이 정상적으로 접수되었습니다. 계정에서 구매 내역을 확인하실 수 있습니다.",
     "10/10"
   ],
   [
     "SM Entertainment",
-    "EXO Practice Room Booking",
-    "The practice room has been reserved for the upcoming EXO rehearsal. Please refer to the shared schedule.",
+    "EXO 연습실 예약 안내",
+    "예정된 EXO 리허설을 위한 연습실 예약이 완료되었습니다. 공유된 스케줄을 참고해 주시기 바랍니다.",
     "10/09"
   ],
   [
     "Spotify",
-    "Your September Listening Summary",
-    "Your monthly listening highlights are ready. Take a look at the music you've been enjoying.",
+    "9월 음악 감상 리포트",
+    "9월 한 달 동안의 음악 감상 기록이 준비되었습니다. 이번 달 즐겨 들으신 음악들을 확인해 보세요.",
     "10/08"
   ],
   [
     "Korean Air",
-    "Thank You for Flying With Us",
-    "Thank you for choosing Korean Air. We hope you enjoyed your recent journey.",
+    "대한항공을 이용해 주셔서 감사합니다",
+    "대한항공을 이용해 주셔서 감사합니다. 최근 여행이 즐거운 시간이 되셨기를 바랍니다.",
     "10/07"
   ],
   [
     "SM Artist Management",
-    "Wardrobe Fitting Appointment",
-    "Please review the wardrobe fitting schedule and confirm your availability with the styling team.",
+    "의상 피팅 일정 안내",
+    "의상 피팅 일정을 확인하시고 스타일링팀에 참석 가능 여부를 전달해 주시기 바랍니다.",
     "10/06"
   ],
   [
     "YouTube",
-    "Your Video Upload Has Been Processed",
-    "Your uploaded video has finished processing and is ready for review.",
+    "동영상 업로드 처리가 완료되었습니다",
+    "업로드하신 동영상의 처리가 완료되어 확인하실 수 있습니다.",
     "10/05"
   ],
   [
     "SM Entertainment",
-    "October Artist Activities — Initial Schedule",
-    "The preliminary October schedule has been shared with the relevant teams. Please review the attached information.",
+    "10월 아티스트 활동 — 1차 스케줄 안내",
+    "10월 아티스트 활동의 1차 스케줄이 관련 팀에 공유되었습니다. 첨부된 내용을 확인해 주시기 바랍니다.",
     "10/02"
   ],
   [
     "Apple",
-    "Your Receipt From Apple",
-    "Thank you for your purchase. Your receipt is available for your records.",
+    "Apple 영수증",
+    "구매해 주셔서 감사합니다. 구매 내역 확인을 위한 영수증이 발급되었습니다.",
     "09/28"
   ],
   [
     "MUSINSA",
-    "Your Return Request Has Been Received",
-    "We have received your return request. Please review the instructions for returning your item.",
+    "반품 요청이 접수되었습니다",
+    "반품 요청이 정상적으로 접수되었습니다. 상품 반품 절차 및 안내 사항을 확인해 주세요.",
     "09/24"
   ],
   [
     "SM Entertainment",
-    "Recording Studio Access Information",
-    "Please review the studio access guidelines and equipment information before your scheduled session.",
+    "녹음실 출입 및 이용 안내",
+    "예정된 녹음 일정 전에 스튜디오 출입 수칙과 장비 관련 안내 사항을 확인해 주시기 바랍니다.",
     "09/20"
   ],
   [
     "KAMONG Café",
-    "Photos From the Café",
-    "Sharing the photos from your recent visit. Thank you for stopping by!",
+    "카몽에서 찍은 사진들 ☕",
+    "지난번에 왔을 때 찍은 사진들 보내줄게! 들러줘서 고마워 ㅎㅎ",
     "09/15"
   ],
   [
     "SM Artist Management",
-    "Overseas Schedule — Travel Documents",
-    "Please review the travel arrangements and ensure all required documents are prepared before departure.",
+    "해외 스케줄 — 출국 서류 안내",
+    "해외 일정과 관련된 이동 및 항공편 정보를 확인하시고, 출국 전 필요한 서류를 모두 준비해 주시기 바랍니다.",
     "09/10"
   ],
   [
     "Nike",
-    "Your Order Has Been Delivered",
-    "Your package has been delivered successfully. We hope you enjoy your new items.",
+    "주문하신 상품이 배송 완료되었습니다",
+    "주문하신 상품이 정상적으로 배송 완료되었습니다. 새로 구매하신 제품을 만족스럽게 사용하시길 바랍니다.",
     "09/04"
   ],
   [
     "SM Entertainment",
-    "Artist Profile Information Review",
-    "Please review your profile information and notify the management team of any necessary updates.",
+    "아티스트 프로필 정보 확인 요청",
+    "등록된 아티스트 프로필 정보를 확인하시고, 수정이 필요한 사항이 있다면 매니지먼트팀에 전달해 주시기 바랍니다.",
     "08/27"
   ],
   [
     "KakaoTalk",
-    "Kakao Account Password Updated",
-    "Your Kakao Account password was changed successfully. If this wasn't you, please secure your account.",
+    "카카오계정 비밀번호 변경 완료",
+    "카카오계정 비밀번호가 정상적으로 변경되었습니다. 본인이 변경한 것이 아니라면 즉시 계정 보안 상태를 확인해 주세요.",
     "08/19"
   ],
   [
     "Apple",
-    "Your iCloud+ Subscription",
-    "Your iCloud+ subscription has been renewed. Thank you for using iCloud.",
+    "iCloud+ 구독 갱신 안내",
+    "iCloud+ 구독이 정상적으로 갱신되었습니다. iCloud를 이용해 주셔서 감사합니다.",
     "08/12"
   ]
+
 ];
 const calls=[
  [
