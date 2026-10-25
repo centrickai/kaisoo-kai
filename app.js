@@ -621,7 +621,7 @@ const isGroup=n=>/EXO 🪐|엑소 🪐|우리 셋 🐻|SM 러닝크루 🏃🔥/
 const MEMBERS={'우리 셋 🐻':3,'엑소 🪐': 6,'SM 러닝크루 🏃🔥':9};
 function lastDate(n){const d=((chatData[n]||[]).filter(x=>x[1]==='date').slice(-1)[0]||[''])[0];return d==='10월 16일'?'어제':d}
 function dateKey(n){if(n==='Kyungsoo my love 💞')return 9999;const l=lastDate(n);if(l==='어제')return 1016;const m=l.match(/(\d+)월 (\d+)일/);return m?+m[1]*100+ +m[2]:0}
-function previewText(s,grp){const m=mediaLabels[s];if(m)return m.kind==='image'?t('photo'):t('voiceMsg');const b=s.match(/^\[(.+)\]$/);if(b)return /기프티콘/.test(b[1])?t('giftSent'):/파일/.test(b[1])&&!/영상/.test(b[1])?t('fileColon')+fileInfo(b[1])[0]:/영상/.test(b[1])?t('video'):t('photo');return grp?s.replace(/^.+?: /,''):s}
+function previewText(s,grp){const m=mediaLabels[s];if(m)return m.kind==='image'?t('photo'):t('voiceMsg');const b=s.match(/^\[(.+)\]$/);if(b)return /기프티콘/.test(b[1])?t('giftSent'):/파일/.test(b[1])&&!/영상/.test(b[1])?t('fileColon')+fileInfo(b[1])[0]:/영상/.test(b[1])?t('video'):t('photo');return grp?s.replace(/^[^:：]+[:：]\s*/,''):s}
 function avatarFor(name,group){if(/Kyungsoo my love 💞/.test(name))return '<img src="media/kyungsoo_kakao_profile.jpg" alt="">';if(group)return `<svg viewBox="0 0 24 24"><circle cx="8.5" cy="9" r="3" fill="#fff"/><circle cx="15.5" cy="9" r="3" fill="#fff"/><path d="M2.5 19c.4-3 2.9-5 6-5s5.6 2 6 5ZM9.5 19c.4-3 2.9-5 6-5s5.6 2 6 5Z" fill="#fff"/></svg>`;return G.sil}
 function otherUnread(){return Object.entries(unread).filter(([k])=>k!==chatId).reduce((a,[,b])=>a+b,0)+(chatId==='Kyungsoo my love 💞'?0:ksooUnread)}
 VIEWS.kakao=()=>{const list=chatNames.slice().sort((a,b)=>dateKey(b)-dateKey(a));
@@ -677,7 +677,7 @@ function chatItems(id) {
   let tm = 0;
   
   const TT=CHAT_TIMES[id]||[];arr.forEach((m,i)=>{if(m[1]==='date'){items.push({date:m[0]});return}
-  let text=m[0],sender=id==='Kyungsoo my love 💞'?'Kyungsoo my love 💞':id;if(grp&&m[1]==='them'){const mm=text.match(/^(.+?): ([\s\S]*)$/);if(mm){sender=mm[1];text=mm[2]}}
+  let text=m[0],sender=id==='Kyungsoo my love 💞'?'Kyungsoo my love 💞':id;if(grp&&m[1]==='them'){const mm=text.match(/^([^:：]+)[:：]\s*([\s\S]*)$/);if(mm){sender=mm[1];text=mm[2]}}
   if(TT[i]!=null)tm=TT[i];else tm+=1;items.push({who:m[1],text,sender,time:m[2]||ampm(tm),rd:m[3]==='rd'})});return items}
 function chatMsgs(id){const it=chatItems(id),grp=isGroup(id);let o='';
  it.forEach((x,i)=>{if(x.date){o+=`<div class="dpill"><span>${G.calSm.replace('<svg','<svg width="12" height="12"')}${fullDate(x.date)}</span></div>`;return}
@@ -702,10 +702,11 @@ function kbdHTML(){const k=c=>`<div class="key" data-k="${c}" data-c="${c}">${c}
  if(LANG==='ja'){const side=['⌫','空白','改行','🌐'];rows=KB_JA.map((r,i)=>`<div class="kr"><div class="key sp" style="max-width:none;flex:1" data-k="${i===0?'→':i===1?'abc':i===2?'あいう':'☺'}">${i===0?'→':i===1?'ABC':i===2?'あいう':'☺'}</div>${r.map(c=>`<div class="key" style="max-width:none;flex:1.3;font-size:20px" data-k="${c}" data-c="${c}">${c}</div>`).join('')}<div class="key sp" style="max-width:none;flex:1;font-size:14px" data-k="${['⌫','space','ret','emo'][i]}">${side[i]==='⌫'?G.bksp:side[i]}</div></div>`).join('');
   return `<div class="kin" onclick="event.stopPropagation();kbdTap(event)">${rows}<div class="kbot">${G.globe}${G.mic}</div></div>`}
  const R=LANG==='ko'?KR:LANG==='th'?KB_TH:KB_LAT;
- return `<div class="kin" onclick="event.stopPropagation();kbdTap(event)"><div class="kr">${R[0].map(k).join('')}</div><div class="kr" style="padding:0 ${R[1].length<10?20:3}px">${R[1].map(k).join('')}</div>
+ const isChinese=LANG==='zh';
+ const chineseCandidates=isChinese?`<div class="zh-candidates" style="display:flex;align-items:center;justify-content:space-between;height:35px;padding:0 12px;color:#333;font-size:14px;gap:10px"><span style="font-weight:600">拼音</span><span style="flex:1;text-align:center;color:#666">中文输入</span><span>⌄</span></div>`:''; return `<div class="kin" onclick="event.stopPropagation();kbdTap(event)">${chineseCandidates}<div class="kr">${R[0].map(k).join('')}</div><div class="kr" style="padding:0 ${R[1].length<10?20:3}px">${R[1].map(k).join('')}</div>
  <div class="kr"><div class="key sp" data-k="⇧">${G.shift}</div><span style="width:6px"></span>${R[2].map(k).join('')}<span style="width:6px"></span><div class="key sp" data-k="⌫">${G.bksp}</div></div>
- <div class="kr"><div class="key sp" data-k="123" style="font-size:16px">123</div><div class="key sp" data-k="emo" style="font-size:20px">🙂</div><div class="key wide" data-k="space">${t('space')}</div><div class="key ret" data-k="ret">${t('ret')}</div></div>
- <div class="kbot">${G.globe}${G.mic}</div></div>`}
+ <div class="kr"><div class="key sp" data-k="123" style="font-size:16px">123</div><div class="key sp" data-k="emo" style="font-size:${isChinese?14:20}px">${isChinese?'中/英':'🙂'}</div><div class="key wide" data-k="space">${isChinese?'空格':t('space')}</div><div class="key ret" data-k="ret">${isChinese?'发送':t('ret')}</div></div>
+ <div class="kbot">${isChinese?'<span style="font-size:12px;font-weight:600;margin-right:8px">简体中文 · 拼音</span>':''}${G.globe}${G.mic}</div></div>`}
 function openKbd(){const k=$('#kbd');if(!k||k.classList.contains('open'))return;k.classList.add('open');$('#cin').classList.remove('safe');const t0=performance.now();(function f(){scrollChat();if(performance.now()-t0<420)requestAnimationFrame(f)})()}
 function closeKbd(){const k=$('#kbd');if(!k||!k.classList.contains('open'))return;k.classList.remove('open');$('#cin').classList.add('safe')}
 function pressKey(k){const el=document.querySelector(`#kbd [data-k="${k}"]`);if(!el)return;el.classList.add('dn');if(!el.classList.contains('sp')&&!el.classList.contains('wide')&&!el.classList.contains('ret'))el.classList.add('pv');sfx('key');setTimeout(()=>el.classList.remove('dn','pv'),95)}
@@ -1072,7 +1073,11 @@ function startRing(){ringOnce();clearInterval(ringIv);ringIv=setInterval(()=>{ri
 function stopRing(){clearInterval(ringIv);ringIv=null;clearTimeout(ringTo);try{navigator.vibrate&&navigator.vibrate(0)}catch(e){}}
 function incomingCall(){callName='Kyungsoo my love 💞';callDir='in';callPrev=view;callState='ring';if(nowSong>=0||PLAYER.dataset.voice)PLAYER.pause();APP.querySelectorAll('video').forEach(v=>v.pause());OV.querySelectorAll('.banner').forEach(b=>b.remove());renderCall();startRing();ringTo=setTimeout(missCall,30000)}
 function callTop(){const sh=callName==='Kyungsoo my love 💞';return `<div class="cav">${sh?'<img src="media/kyungsoo_kakao_profile.jpg" alt="">':/^[0-9*-]+$/.test(callName)?`<span style="width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(#a5abb6,#7f858f)">${G.sil.replace('<svg','<svg width="64"')}</span>`:`<span style="width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(#a5abb6,#7f858f);font-size:42px;font-weight:500">${esc(/^[가-힣]{3}$/.test(callName)?callName[1]:[...dn(callName)][0].toUpperCase())}</span>`}</div><div class="cnm">${esc(dn(callName))}</div>`}
-function renderCall(){let c=OV.querySelector('.call');if(!c){c=document.createElement('div');c.className='call';OV.appendChild(c);c.animate([{opacity:0,transform:'scale(1.05)'},{opacity:1,transform:'none'}],{duration:380,easing:'cubic-bezier(.2,.9,.25,1)'})}
+function renderCall(){OV.style.pointerEvents = 'auto';
+OV.style.zIndex = '9999';
+OV.style.visibility = 'visible';
+
+let c=OV.querySelector('.call');if(!c){c=document.createElement('div');c.className='call';OV.appendChild(c);c.animate([{opacity:0,transform:'scale(1.05)'},{opacity:1,transform:'none'}],{duration:380,easing:'cubic-bezier(.2,.9,.25,1)'})}
  setStatus(true);const locked=['lock','pin'].includes(callPrev);c.classList.toggle('act',callState!=='ring');
  if(callState==='ring'){c.innerHTML=callTop()+`<div class="csub">${t('mobile')}</div>`+(locked?`<div class="ring-top"><div class="cb"><span class="cc" style="width:50px;height:50px">${G.bellF}</span>${t('remind')}</div><div class="cb"><span class="cc" style="width:50px;height:50px">${G.msgF}</span>${t('message2')}</div></div><div class="slider" id="slider"><div class="kn">${G.handset}</div><span>${t('slideAnswer')}</span></div>`:
   `<div class="ring-top"><div class="cb"><span class="cc" style="width:50px;height:50px">${G.bellF}</span>${t('remind')}</div><div class="cb"><span class="cc" style="width:50px;height:50px">${G.msgF}</span>${t('message2')}</div></div><div class="ring"><button class="cb red" onclick="declineCall()"><span class="cc"><span style="display:block;transform:rotate(135deg)">${G.handset}</span></span>${t('decline')}</button><button class="cb grn" onclick="answerCall()"><span class="cc">${G.handset}</span>${t('accept')}</button></div>`);
@@ -1083,7 +1088,9 @@ function renderCall(){let c=OV.querySelector('.call');if(!c){c=document.createEl
 function wireSlider(){const s=$('#slider'),k=s.querySelector('.kn'),lab=s.querySelector('span');let x0=null,dx=0;const max=s.clientWidth-k.clientWidth-12;
  k.addEventListener('pointerdown',e=>{x0=e.clientX;k.setPointerCapture(e.pointerId)});k.addEventListener('pointermove',e=>{if(x0===null)return;dx=Math.max(0,Math.min(max,(e.clientX-x0)/SC));k.style.transform=`translateX(${dx}px)`;lab.style.opacity=1-dx/max});
  k.addEventListener('pointerup',()=>{if(x0===null)return;x0=null;if(dx>max*.75){answerCall()}else{k.animate([{transform:`translateX(${dx}px)`},{transform:'none'}],{duration:300,easing:'cubic-bezier(.2,1.3,.4,1)'});k.style.transform='';lab.style.opacity=1}})}
-function answerCall(){if(callDir==='in'){curScript=speech;isEnding=true}stopRing();stopRingback();vib(20);callState='active';callStart=Date.now();capIdx=-1;renderCall()}
+function answerCall(){if(callDir==='in'){curScript=speech;isEnding=true}stopRing();stopRingback();vib(20);callState='active';callStart=Date.now();
+resetCaptionTimer();
+renderCall()}
 function declineCall(){stopRing();callState='';declined++;extraCalls.unshift(['Kyungsoo my love 💞','오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'부재중']);afterDecline();closeCallUI()}
 function missCall(){if(callState!=='ring')return;stopRing();callState='';declined++;extraCalls.unshift(['Kyungsoo my love 💞','오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'부재중']);afterDecline();closeCallUI();if(['lock','pin'].includes(view)){// Remove previous missed-call notifications
 lockNotes = lockNotes.filter(n => n.app !== 'phone');
@@ -1105,6 +1112,31 @@ function endCall(){if(callState==='dialing'){clearCallTimers();stopRingback();ca
 function afterDecline(){nextCallAt=elapsed()+90;if(declineSent)return;declineSent=true;CALL_DECLINED.forEach((m,k)=>setTimeout(()=>incomingMsg(m),3000+k*2600))}
 /* 플레이어가 거는 전화 */
 let callDir='in',curScript=null,isEnding=false;
+let captionElapsed = 0;
+let captionLastUpdate = 0;
+
+function resetCaptionTimer() {
+  captionElapsed = 0;
+  captionLastUpdate = performance.now();
+  capIdx = -1;
+}
+
+function getCaptionSeconds() {
+  const now = performance.now();
+
+  if (!document.hidden && callState === 'active') {
+    // Prevent large jumps after Safari resumes.
+    const delta = Math.min(
+      (now - captionLastUpdate) / 1000,
+      0.5
+    );
+
+    captionElapsed += Math.max(0, delta);
+  }
+
+  captionLastUpdate = now;
+  return Math.floor(captionElapsed);
+}
 function clearCallTimers(){callTimers.forEach(clearTimeout);callTimers=[]}
 function startRingback(){const r=()=>{tone(440,0,1,.05);tone(480,0,1,.05)};r();clearInterval(rbIv);rbIv=setInterval(r,3000)}
 function stopRingback(){clearInterval(rbIv);rbIv=null}
@@ -1117,52 +1149,159 @@ function dial(name){if(callState)return;callName=name;callDir='out';callPrev=vie
  else{callTimers.push(setTimeout(()=>{if(callState==='dialing')rejectOut(t('noAnswer'))},9000))}}
 function rejectOut(msg){stopRingback();clearCallTimers();const t=$('#ctime');if(t)t.textContent=msg;tone(480,0,.25,.05);tone(480,.35,.25,.05);tone(480,.7,.25,.05);extraCalls.unshift([callName,'오늘 '+new Date().getHours()+':'+pad(new Date().getMinutes()),'발신']);callState='ended';
  const c=OV.querySelector('.call');c&&c.querySelectorAll('.cb').forEach(b=>b.style.opacity=.4);setTimeout(()=>{callState='';closeCallUI();if(view==='phone')show('phone')},1300)}
-function closeCallUI(){const c=OV.querySelector('.call');if(!c)return;c.animate([{opacity:1},{opacity:0,transform:'scale(1.04)'}],{duration:320,fill:'forwards'}).onfinish=()=>{c.remove();setStatus(viewDark());updateIsland();if(view==='home')renderHome()}}
+function closeCallUI(){const c=OV.querySelector('.call');if(!c){OV.style.pointerEvents='';return;}c.animate([{opacity:1},{opacity:0,transform:'scale(1.04)'}],{duration:320,fill:'forwards'}).onfinish=()=>{c.remove();OV.style.pointerEvents='';OV.style.zIndex='';OV.style.visibility='';setStatus(viewDark());updateIsland();if(view==='home')renderHome()}}
 
 /* ============================================================
    LOOP/START
    ============================================================ */
-let lastMin=-1;
-function tick(){typeof updateCrumb==="function"&&updateCrumb();const now=new Date();$('#sbt').textContent=clock12();const lk=$('#lkt');if(lk)lk.textContent=clock12();
- //if(now.getMinutes()!==lastMin){lastMin=now.getMinutes();if(view==='home'&&!HOME.getAnimations().length)renderHome()}
-if(
-  askedCall &&
-  callReplySent &&
-  e>=nextCallAt &&
-  !phoneDone &&
-  !callState
-){
-  incomingCall();
-}
- const e=elapsed();
- if(e>=40&&incoming===0){
-  incoming=1;
 
-  incomingMsg(INCOMING[0],()=>{
-    introDelivered++;
-  });
-}
+let lastMin = -1;
 
-if(e>=43.5&&incoming===1){
-  incoming=2;
+function tick() {
+  const e = elapsed();
+  if (typeof updateCrumb === 'function') updateCrumb();
 
-  incomingMsg(INCOMING[1],()=>{
-    introDelivered++;
+  const now = new Date();
+ 
 
-    setTimeout(()=>{
-      if(introDelivered>=2){
-        introReady=true;
+  $('#sbt').textContent = clock12();
+
+  const lk = $('#lkt');
+  if (lk) lk.textContent = clock12();
+
+  // First incoming message
+  if (e >= 40 && incoming === 0) {
+    incoming = 1;
+
+    incomingMsg(INCOMING[0], () => {
+      introDelivered++;
+    });
+  }
+
+  // Second incoming message
+  if (e >= 43.5 && incoming === 1) {
+    incoming = 2;
+
+    incomingMsg(INCOMING[1], () => {
+      introDelivered++;
+
+      setTimeout(() => {
+        if (introDelivered >= 2) {
+          introReady = true;
+        }
+      }, 700);
+    });
+  }
+
+  // Kyungsoo asks to call
+  if (
+    e >= CALL_ASK_AT &&
+    incoming >= 2 &&
+    !askedCall &&
+    !replyBusy &&
+    !typing
+  ) {
+    askedCall = true;
+    replyStage = liveReplies.length;
+    lineIdx = 0;
+    pendingText = '';
+
+    setTimeout(() => {
+      liveReplies.push({
+        mine: CALL_ASK_REPLY,
+        them: []
+      });
+
+      replyStage = liveReplies.length - 1;
+      lineIdx = 0;
+    }, CALL_ASK.length * 2600 + 1700);
+
+    nextCallAt = e + CALL_ASK.length * 2.6 + 8;
+
+    CALL_ASK.forEach((m, k) => {
+      setTimeout(() => incomingMsg(m), k * 2600);
+    });
+  }
+
+  // Trigger the scheduled incoming call
+  if (
+    askedCall &&
+    e >= nextCallAt &&
+    !phoneDone &&
+    !callState
+  ) {
+    incomingCall();
+  }
+
+  // Update active call duration and captions
+  
+if (callState === 'active') {
+  const sec = getCaptionSeconds();
+
+  const tm = $('#ctime');
+  if (tm) {
+    tm.textContent =
+      pad(Math.floor(sec / 60)) + ':' + pad(sec % 60);
+  }
+
+  const S = curScript || speech;
+
+  if (Array.isArray(S) && S.length > 0) {
+    const idx = Math.min(
+      S.length - 1,
+      Math.floor(sec / 3)
+    );
+
+    let c = OV.querySelector('.call #cap');
+    if (!c) {
+      const callScreen = OV.querySelector('.call');
+      if (callScreen) {
+        c = document.createElement('div');
+        c.className = 'cap';
+        c.id = 'cap';
+        const controls = callScreen.querySelector('.cgrid');
+        if (controls) callScreen.insertBefore(c, controls);
+        else callScreen.appendChild(c);
+        capIdx = -1;
       }
-    },700);
-  });
+    }
+    if (c) {
+      c.style.visibility = 'visible';
+      c.style.opacity = '1';
+    }
+
+    // Update if the caption changed or its DOM element
+    // was recreated while the call was active.
+    if (c && (
+      idx !== capIdx ||
+      c.dataset.captionIndex !== String(idx)
+    )) {
+      capIdx = idx;
+      c.dataset.captionIndex = String(idx);
+
+      c.innerHTML =
+        `<small>${esc(dn(S[idx][0]))}</small>` +
+        esc(S[idx][1]);
+
+      c.animate(
+        [
+          { opacity: 0.2, transform: 'translateY(6px)' },
+          { opacity: 1, transform: 'none' }
+        ],
+        {
+          duration: 280,
+          easing: 'ease-out'
+        }
+      );
+    }
+
+    if (sec > S.length * 3 + 2) {
+      endCall();
+    }
+  }
 }
- //if(e>=40&&incoming===0){incoming=1;incomingMsg(INCOMING[0])}
- //if(e>=43.5&&incoming===1){incoming=2;incomingMsg(INCOMING[1])}
- if(e>=CALL_ASK_AT&&incoming>=2&&!askedCall&&!replyBusy&&!typing){askedCall=true;replyStage=liveReplies.length;lineIdx=0;pendingText='';setTimeout(()=>{liveReplies.push({mine:CALL_ASK_REPLY,them:[]});replyStage=liveReplies.length-1;lineIdx=0},CALL_ASK.length*2600+1700);nextCallAt=e+CALL_ASK.length*2.6+8;CALL_ASK.forEach((m,k)=>setTimeout(()=>incomingMsg(m),k*2600))}
- if(askedCall&&e>=nextCallAt&&!phoneDone&&!callState)incomingCall();
- if(callState==='active'){const sec=Math.floor((Date.now()-callStart)/1000);const tm=$('#ctime');if(tm)tm.textContent=pad(Math.floor(sec/60))+':'+pad(sec%60);
-  const S=curScript||speech;const idx=Math.min(S.length-1,Math.floor(sec/3));if(idx!==capIdx){capIdx=idx;const c=$('#cap');if(c){c.animate([{opacity:.2,transform:'translateY(6px)'},{opacity:1,transform:'none'}],{duration:280});c.innerHTML=`<small>${esc(dn(S[idx][0]))}</small>${esc(S[idx][1])}`}}
-  if(sec>S.length*3+2)endCall()}}
+}
+
 //function fit(){const ph=$('#phone');const mob=innerWidth<=540;ph.classList.toggle('mob',mob);ph.classList.toggle('short',mob&&innerHeight<740);if(mob){ph.style.width=innerWidth+'px';ph.style.height=innerHeight+'px';ph.style.transform='';SC=1}else{ph.style.width='393px';ph.style.height='852px';SC=Math.min((innerHeight-40)/852,(innerWidth-40)/393,1.1);ph.style.transform=`scale(${SC})`}}
 /* Keep the original iPhone shape on desktop and mobile */
 function fit() {
@@ -1191,10 +1330,10 @@ function fit() {
   ph.style.transform = `scale(${SC})`;
 }
 addEventListener('resize',fit);fit();renderLock();renderHome();setStatus(true);setInterval(tick,250);tick();
-
-
 /* Smooth iPhone lock animation */
 function lockIphoneAnimated() {
+  // Never lock or obscure an incoming/active call.
+  if (callState === 'ring' || callState === 'active' || callState === 'dialing' || callState === 'ended') return;
   const fade = document.getElementById('iphoneLockFade');
 
   if (!fade) {
@@ -1222,3 +1361,22 @@ function lockIphoneAnimated() {
     }, 460);
   }, 300);
 }
+
+// Recover the call UI and captions after Safari suspends/repaints the page.
+function resumeCallUI() {
+  captionLastUpdate = performance.now();
+  if (document.hidden) return;
+  if (callState === 'active' || callState === 'ring' || callState === 'dialing') {
+    const fade = document.getElementById('iphoneLockFade');
+    if (fade) fade.classList.remove('active', 'reveal');
+    if (!OV.querySelector('.call')) renderCall();
+    OV.style.visibility = 'visible';
+    OV.style.pointerEvents = 'auto';
+    OV.style.zIndex = '9999';
+    capIdx = -1;
+  }
+  tick();
+}
+document.addEventListener('visibilitychange', resumeCallUI);
+window.addEventListener('pageshow', resumeCallUI);
+window.addEventListener('focus', resumeCallUI);

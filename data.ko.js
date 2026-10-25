@@ -7459,8 +7459,7 @@ const notes = [
     "엄마 / 누나 / 멤버들 / 스케줄",
     "엄마한테 전화하기\n누나 보러 가기\n멤버들한테 답장하기\n스케줄 확인하기\n강아지들 미용 예약하기\n\n메시지 읽씹 좀 그만하자\n\n특히 준면이 형 거\n\n형은 진짜 전화한다",
     "2026-09-01"
-  
-]
+  ]
 
 ];
 const events = {
@@ -8807,7 +8806,7 @@ const OTHER_CALLS={
 ["준면", "그래, 안녕. 단톡방 꼭 확인해!"]
 
  ],
- "070-****-4821": [
+ "070-****-0114": [
   [
    "안내 음성",
    "안녕하세요, 고객님. 저금리 대출 상품 안내를 위해 연락드렸습니다."
@@ -8995,7 +8994,6 @@ const OTHER_CALLS={
  ]
 };
 const KYUNGSOO_AFTER=[
-  
 ["경수", "종인아?"],
 ["종인", "혀어엉."],
 ["경수", "너 방금 집에 들어간 거 아니야?"],
@@ -9080,8 +9078,7 @@ const KYUNGSOO_AFTER=[
 ["경수", "응, 잘 자. 우리 예쁜 종인이."]
 ];
 
-const MAP_PLACES = [
-  
+const MAP_PLACES = [ 
 {
   id: "home",
   name: "집",
@@ -9099,7 +9096,7 @@ const MAP_PLACES = [
 },
 {
   id: "kyungsoo",
-  name: "경수 형 집 💞",
+  name: "경수네 집 💞",
   sub: "집 · 즐겨찾기",
   x: 772,
   y: 792,
@@ -9114,7 +9111,7 @@ const MAP_PLACES = [
 },
 {
   id: "sm",
-  name: "SM 엔터테인먼트",
+  name: "SM엔터테인먼트",
   sub: "연예 기획사 · 연습실",
   x: 455,
   y: 250,
@@ -9256,18 +9253,18 @@ const MAP_PLACES = [
 ];
 
 const MAP_RECENTS = [
-  ["Kyungsoo's Place 💞", "Directions · Oct 23"],
-  ["SM Entertainment", "Practice · Oct 22"],
-  ["KAMONG Café", "Café · Oct 20"],
-  ["Gym", "Fitness Center · Oct 19"],
-  ["Our Dinner Spot", "Restaurant · Oct 18"],
-  ["Seoul Forest", "Park · Oct 17"],
-  ["Kyungsoo's Place 💞", "Directions · Oct 16"],
-  ["Convenience Store", "Oct 15"],
-  ["Han River Park", "Park · Oct 13"],
-  ["Blooming Day", "Florist · Oct 12"],
-  ["Paw & Coffee", "Pet-Friendly Café · Oct 10"],
-  ["Incheon International Airport", "Airport · Oct 7"]
+  ["경수네 집 💞", "길찾기 · 10월 23일"],
+  ["SM엔터테인먼트", "연습 · 10월 22일"],
+  ["카몽 카페", "카페 · 10월 20일"],
+  ["헬스장", "피트니스 센터 · 10월 19일"],
+  ["우리 단골 식당", "식당 · 10월 18일"],
+  ["서울숲", "공원 · 10월 17일"],
+  ["경수네 집 💞", "길찾기 · 10월 16일"],
+  ["편의점", "10월 15일"],
+  ["한강공원", "공원 · 10월 13일"],
+  ["블루밍 데이", "꽃집 · 10월 12일"],
+  ["포앤커피", "반려동물 동반 가능 카페 · 10월 10일"],
+  ["인천국제공항", "공항 · 10월 7일"]
 ];
 
 const INCOMING=[

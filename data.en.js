@@ -8069,12 +8069,6 @@ const chatData={
 ],
 
 
-
-
-
-
-
-
 };
 const chatNames=[
  "Kyungsoo my love 💞",
@@ -9556,7 +9550,7 @@ const OTHER_CALLS={
   ["Jongin", "Bye!"],
   ["Suho", "Bye. And check the group chat!"]
  ],
- "070-****-4821": [
+ "070-****-0114": [
   [
    "안내 음성",
    "Hello, valued customer. We're calling to tell you about our low-interest loan products."

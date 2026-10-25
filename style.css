@@ -617,3 +617,21 @@ body {
   justify-content: center;
   overflow: hidden;
 }
+
+/* Incoming calls appear above every simulator app */
+#ov:has(> .call) {
+  z-index: 9999 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+#ov > .call {
+  position: absolute;
+  inset: 0;
+  z-index: 10000 !important;
+  pointer-events: auto;
+}
+/* Keep call overlay above lock animation and app layers */
+#ov:has(> .call) { z-index: 9999 !important; visibility: visible !important; pointer-events: auto !important; }
+#ov > .call { z-index: 10000 !important; }
+#ov > .call .cap { visibility: visible; }
